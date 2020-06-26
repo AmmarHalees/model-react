@@ -5,6 +5,8 @@ import Footer from '../Footer/Footer';
 import List from '../List/List';
 
 function App() {
+
+  console.log(process)
   return (
     <div className="App">
 
