@@ -25,11 +25,8 @@
     "fix": "npm audit fix",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start-server": "json-server --watch db.json --port 3004",
-
     "clean-build": "npm run clean && npm install && npm build",
-
     "build-analyze": "npm run build && npm run analyze"
-
   },
   "eslintConfig": {
     "extends": "react-app"
