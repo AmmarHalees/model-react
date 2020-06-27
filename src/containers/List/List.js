@@ -3,18 +3,18 @@ import React , {Component} from 'react';
 class List extends Component {
     constructor(props) {
         super(props);
-        this.state = { data:{} }
+        this.state = { data:[] }
     }
 
     componentDidMount() {
 
-        // fetch('https://jsonplaceholder.typicode.com/todos/1')
-        // .then(response => response.json())
-        // .then(jsonData => this.setState({
+        fetch('https://jsonplaceholder.typicode.com/todos')
+        .then(response => response.json())
+        .then(jsonData => this.setState({
 
-        //     data:jsonData
+            data:jsonData
 
-        // }))
+        }))
     }
     render() { 
 
@@ -22,7 +22,15 @@ class List extends Component {
         return ( 
 
             <div>
-                List
+                {this.state.data.map(x=>(
+
+                    <div key={x.id}>
+
+                        {x.title}
+                    
+                    </div>
+
+                ))}
             </div>
          );
     }
