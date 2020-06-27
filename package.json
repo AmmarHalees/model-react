@@ -25,7 +25,7 @@
     "fix": "npm audit fix",
     "hard-build": "npm run clean && npm install && npm build",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "full-deploy": "npm run hard-build && npm run analyze",
+    "full-build": "npm run hard-build && npm run analyze",
     "start-server": "json-server --watch db.json --port 3004"
   },
   "eslintConfig": {

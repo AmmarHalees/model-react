@@ -8,11 +8,6 @@ class List extends Component {
 
     componentDidMount() {
 
-
-
-
-
-
         fetch('http://localhost:3004/posts')
         .then(response=>response.json())
         .then(jsonData => this.setState({
@@ -23,7 +18,7 @@ class List extends Component {
     }
     render() { 
 
-        // console.log(this.state.data)
+        console.log(this.state.data)
         return ( 
 
             <div>
