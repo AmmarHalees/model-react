@@ -23,10 +23,13 @@
     "clean": "rm -rf node_modules",
     "audit": "npm audit",
     "fix": "npm audit fix",
-    "hard-build": "npm run clean && npm install && npm build",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "full-build": "npm run hard-build && npm run analyze",
-    "start-server": "json-server --watch db.json --port 3004"
+    "start-server": "json-server --watch db.json --port 3004",
+
+    "clean-build": "npm run clean && npm install && npm build",
+
+    "build-analyze": "npm run build && npm run analyze"
+
   },
   "eslintConfig": {
     "extends": "react-app"
