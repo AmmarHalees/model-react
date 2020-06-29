@@ -1,8 +1,8 @@
 import React, { Suspense, lazy } from 'react';
-import './App.css';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
 import { Route, Switch } from 'react-router-dom';
+import './App.css';
+import SiteHeader from '../../components/Headers/SiteHeader/SiteHeader';
+import SiteFooter from '../../components/Footers/SiteFooter/SiteFooter';
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
 
-      <Header />
+      <SiteHeader />
 
         <Suspense fallback={<div>Loading...</div>}>
          
@@ -35,7 +35,7 @@ function App() {
         </Suspense>
 
 
-      <Footer />
+      <SiteFooter />
 
     </div>
   );
