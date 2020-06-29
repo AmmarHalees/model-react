@@ -8,15 +8,18 @@ import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter>
 
-      <ErrorBoundary>
+    <ErrorBoundary>
+
+      <HashRouter>
 
         <App />
 
-      </ErrorBoundary>
 
-    </HashRouter>
+      </HashRouter>
+
+    </ErrorBoundary>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
