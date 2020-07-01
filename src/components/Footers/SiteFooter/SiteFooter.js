@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 const SiteFooter = () => {
     return (
@@ -11,4 +11,4 @@ const SiteFooter = () => {
     );
 }
 
-export default SiteFooter;
+export default memo(SiteFooter);
