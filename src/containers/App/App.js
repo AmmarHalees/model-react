@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, memo } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import SiteHeader from '../../components/Headers/SiteHeader/SiteHeader';
 import SiteFooter from '../../components/Footers/SiteFooter/SiteFooter';
@@ -17,7 +17,6 @@ function App() {
   const Settings = lazy(() => import('../Settings/Settings'));
 
   const PageNotFound = lazy(() => import('../../components/Result/PageNotFound/PageNotFound'));
-
 
   return (
     <div className="App">
@@ -50,4 +49,4 @@ function App() {
   );
 }
 
-export default App;
+export default memo(App);

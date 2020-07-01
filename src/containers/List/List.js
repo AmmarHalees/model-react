@@ -1,4 +1,5 @@
-import React , {Component} from 'react';
+import React , {PureComponent, Component} from 'react';
+import Axios from 'axios';
 
 class List extends Component {
     constructor(props) {
@@ -8,17 +9,16 @@ class List extends Component {
 
     componentDidMount() {
 
-        fetch('https://jsonplaceholder.typicode.com/todos')
-        .then(response => response.json())
-        .then(jsonData => this.setState({
+        Axios.get(`${process.env.REACT_APP_API_BASE_URL}/todos`)
+        .then((response) => {
 
-            data:jsonData
+           this.setState({  data:response.data  })
 
-        }))
+        });
+       
     }
     render() { 
 
-        console.log(this.state.data)
         return ( 
 
             <div>
