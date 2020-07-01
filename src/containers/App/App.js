@@ -1,8 +1,12 @@
 import React, { Suspense, lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import './App.css';
 import SiteHeader from '../../components/Headers/SiteHeader/SiteHeader';
 import SiteFooter from '../../components/Footers/SiteFooter/SiteFooter';
+import GuestOnlyRoute from '../../comp-router/GuestOnlyRoute';
+import AuthOnlyRoute from '../../comp-router/AuthOnlyRoute';
+import SkeletonBasic from '../../components/Loading/Skeleton/SkeletonBasic';
+
+import './App.css';
 
 function App() {
 
@@ -10,6 +14,8 @@ function App() {
   const List = lazy(() => import('../List/List'));
   const Signin = lazy(() => import('../Signin/Signin'));
   const Register = lazy(() => import('../Register/Register'));
+  const Settings = lazy(() => import('../Settings/Settings'));
+
   const PageNotFound = lazy(() => import('../../components/Result/PageNotFound/PageNotFound'));
 
 
@@ -18,15 +24,18 @@ function App() {
 
       <SiteHeader />
 
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<SkeletonBasic/>}>
          
           <Switch>
 
-            <Route path="/list" component={List} />
-            <Route path="/signin" component={Signin} />
-            <Route path="/register" component={Register} />
+            <AuthOnlyRoute path="/settings" component={Settings} />
 
+            <GuestOnlyRoute path="/signin" component={Signin} />
+            <GuestOnlyRoute path="/register" component={Register} />
+
+            <Route path="/list" component={List} />
             <Route exact path="/" component={Feed} />
+
             <Route render={()=><PageNotFound/>} />
 
 

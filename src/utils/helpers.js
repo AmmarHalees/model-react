@@ -1,0 +1,1 @@
+export const FAKE_IS_AUTH_FLAG = false;
