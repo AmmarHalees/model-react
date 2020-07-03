@@ -5,6 +5,8 @@ import SiteFooter from '../../components/Footers/SiteFooter/SiteFooter';
 import GuestOnlyRoute from '../../comp-router/GuestOnlyRoute';
 import AuthOnlyRoute from '../../comp-router/AuthOnlyRoute';
 import SkeletonBasic from '../../components/Loading/Skeleton/SkeletonBasic';
+import PageNotFound from '../../components/Result/PageNotFound/PageNotFound'
+import { Signin, Register, List, Feed } from '../../utils/routes';
 
 import './App.css';
 
@@ -19,7 +21,7 @@ function App() {
          
           <Switch>
 
-            <AuthOnlyRoute path="/settings" component={} />
+            <AuthOnlyRoute path="/settings" component={Signin} />
 
             <GuestOnlyRoute path="/signin" component={Signin} />
             <GuestOnlyRoute path="/register" component={Register} />
