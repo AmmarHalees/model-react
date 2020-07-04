@@ -1,39 +1,41 @@
-import React , {PureComponent, Component} from 'react';
-import Axios from 'axios';
+import React, { PureComponent } from 'react';
+import { getTodos } from '../../services/posts';
 
-class List extends Component {
+class List extends PureComponent {
     constructor(props) {
         super(props);
-        this.state = { data:[] }
+        this.state = { data: [] }
     }
 
     componentDidMount() {
 
-        Axios.get(`${process.env.REACT_APP_API_BASE_URL}/todos`)
-        .then((response) => {
+        getTodos().then(response => {
 
-           this.setState({  data:response.data  })
+            this.setState({
+                data: response
+            })
 
-        });
-       
+        })
+
+
     }
-    render() { 
+    render() {
 
-        return ( 
+        return (
 
             <div>
-                {this.state.data.map(x=>(
+                {this.state.data.map(x => (
 
                     <div key={x.id}>
 
                         {x.title}
-                    
+
                     </div>
 
                 ))}
             </div>
-         );
+        );
     }
 }
- 
+
 export default List;
