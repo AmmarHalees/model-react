@@ -6,14 +6,29 @@ import GuestOnlyRoute from '../../comp-router/GuestOnlyRoute';
 import AuthOnlyRoute from '../../comp-router/AuthOnlyRoute';
 import SkeletonBasic from '../../components/Loading/Skeleton/SkeletonBasic';
 import PageNotFound from '../../components/Result/PageNotFound/PageNotFound'
-import { Signin, Register, List, Feed } from '../../utils/routes';
-
+import { Signin, Register, List, Feed, Settings } from '../../utils/routes';
+import { connect } from 'react-redux';
+import { handleauth } from '../../redux/actioncreators/actioncreators';
+import {compose} from 'redux';
 import './App.css';
 
-function App() {
+
+function App(props) {
+
+
+const { handleauth, auth_state } = props
+
+const handleLogin = (new_auth_state) => {
+
+  handleauth(new_auth_state)
+
+}
+
 
   return (
     <div className="App">
+
+      <button onClick={() => handleLogin(auth_state === true ? false : true)}>{auth_state === true ? "Quick Logout" : "Quick Login"}</button>
 
       <SiteHeader />
 
@@ -21,7 +36,7 @@ function App() {
          
           <Switch>
 
-            <AuthOnlyRoute path="/settings" component={Signin} />
+            <AuthOnlyRoute path="/settings" component={Settings} />
 
             <GuestOnlyRoute path="/signin" component={Signin} />
             <GuestOnlyRoute path="/register" component={Register} />
@@ -43,4 +58,44 @@ function App() {
   );
 }
 
-export default memo(App);
+
+
+
+
+
+const mapStateToProps = (state) => {
+
+  return {
+
+    auth_state: state.auth
+
+  }
+
+}
+
+const actionCreators = {
+
+  handleauth
+
+}
+
+
+// export default compose(
+//   memo,
+//   connect(
+//     mapStateToProps
+//     ,
+//     actionCreators
+  
+//   )
+// )(App)
+
+
+
+
+export default connect(
+  mapStateToProps
+  ,
+  actionCreators
+
+)(App);
