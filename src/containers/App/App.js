@@ -15,7 +15,6 @@ import './App.css';
 
 function App(props) {
 
-
 const { handleauth, auth_state } = props
 
 const handleLogin = (new_auth_state) => {
@@ -80,22 +79,22 @@ const actionCreators = {
 }
 
 
-// export default compose(
-//   memo,
-//   connect(
-//     mapStateToProps
-//     ,
-//     actionCreators
+export default compose(
+  memo,
+  connect(
+    mapStateToProps
+    ,
+    actionCreators
   
-//   )
-// )(App)
+  )
+)(App)
 
 
 
 
-export default connect(
-  mapStateToProps
-  ,
-  actionCreators
+// export default connect(
+//   mapStateToProps
+//   ,
+//   actionCreators
 
-)(App);
+// )(App);
