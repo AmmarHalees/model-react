@@ -8,47 +8,61 @@ import SkeletonBasic from '../../components/Loading/Skeleton/SkeletonBasic';
 import PageNotFound from '../../components/Result/PageNotFound/PageNotFound'
 import { Signin, Register, List, Feed, Settings } from '../../utils/routes';
 import { connect } from 'react-redux';
-import { handleauth } from '../../redux/actioncreators/actioncreators';
-import {compose} from 'redux';
+import { handleUser, handleAuth } from '../../redux/actioncreators/actioncreators';
+
+import { compose } from 'redux';
+import Strings from '../../utils/constants/strings.json';
 import './App.css';
 
 
 function App(props) {
 
-const { handleauth, auth_state } = props;
+  const {handleAuth, handleUser ,user , auth_state } = props;
 
-const handleLogin = (new_auth_state) => {
+  const signIn = (user) => {
 
-  handleauth(new_auth_state)
+    handleUser(user);
+    handleAuth(true);
 
-}
+    
+  }
 
+  const signOut = (user) => {
+
+    handleUser(user);
+    handleAuth(false);
+
+    
+  }
 
   return (
     <div className="App">
 
-      <button onClick={() => handleLogin(auth_state === true ? false : true)}>{auth_state === true ? "Quick Logout" : "Quick Login"}</button>
+        {user.name}
+
+        {!auth_state && <button onClick = {() => signIn(Strings.fake_user , true)}> Sign in </button>}
+        {auth_state && <button onClick = {() => signOut({} , false)}> Sign Out </button>}
 
       <SiteHeader />
 
-        <Suspense fallback={<SkeletonBasic/>}>
-         
-          <Switch>
+      <Suspense fallback={<SkeletonBasic />}>
 
-            <AuthOnlyRoute path="/settings" component={Settings} />
+        <Switch>
 
-            <GuestOnlyRoute path="/signin" component={Signin} />
-            <GuestOnlyRoute path="/register" component={Register} />
+          <AuthOnlyRoute path="/settings" component={Settings} />
 
-            <Route path="/list" component={List} />
-            <Route exact path="/" component={Feed} />
+          <GuestOnlyRoute path="/signin" component={Signin} />
+          <GuestOnlyRoute path="/register" component={Register} />
 
-            <Route render={()=><PageNotFound/>} />
+          <Route path="/list" component={List} />
+          <Route exact path="/" component={Feed} />
+
+          <Route render={() => <PageNotFound />} />
 
 
-          </Switch>
+        </Switch>
 
-        </Suspense>
+      </Suspense>
 
 
       <SiteFooter />
@@ -66,7 +80,9 @@ const mapStateToProps = (state) => {
 
   return {
 
-    auth_state: state.auth
+    auth_state: state.auth,
+    user: state.user
+
 
   }
 
@@ -74,7 +90,8 @@ const mapStateToProps = (state) => {
 
 const actionCreators = {
 
-  handleauth
+  handleUser,
+  handleAuth
 
 }
 
@@ -85,7 +102,7 @@ export default compose(
     mapStateToProps
     ,
     actionCreators
-  
+
   )
 )(App)
 

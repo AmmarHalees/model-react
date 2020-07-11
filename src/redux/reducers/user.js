@@ -4,7 +4,7 @@ export const user = (state={}, action)=>{
 
     switch(action.type){
 
-        case 'SET_USER':
+        case 'CHANGE_AUTH_USER':
 
             return  action.value;
 
