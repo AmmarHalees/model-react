@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { getTodos } from '../../services/posts';
+import './List.css';
 
 class List extends PureComponent {
     constructor(props) {
@@ -21,14 +22,18 @@ class List extends PureComponent {
     }
     render() {
 
+        const {data} = this.state;
+
+        console.log(data);
+
         return (
 
-            <div>
+            <div className="list-container"> 
                 {this.state.data.map(x => (
 
                     <div key={x.id}>
 
-                        {x.title}
+                       <img src={x.largeImageURL} alt="something hapenning" />
 
                     </div>
 

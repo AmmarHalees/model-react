@@ -15,7 +15,7 @@ import './App.css';
 
 function App(props) {
 
-const { handleauth, auth_state } = props
+const { handleauth, auth_state } = props;
 
 const handleLogin = (new_auth_state) => {
 

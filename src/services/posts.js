@@ -1,22 +1,11 @@
-import api from './api';
-
-
-// axios.get(`${process.env.REACT_APP_API_BASE_URL}/todos`)
-// .then((response) => {
-
-
-//    this.setState({  data:response.data  })
-
-// });
+import axios from 'axios';
 
 
 export function getTodos() {
-    return api.get('/todos',{
+    return axios.get(`${process.env.REACT_APP_IMAGE_API_BASE_URL}/?key=${process.env.REACT_APP_IMAGE_API_KEY}`, {
         // headers: {
         //     'Authorization': 'Bearer ' + localStorage.getItem('token')
         // }
     })
-    .then((response) => {return response.data})
-    
-    ;
+        .then((response) => response.data.hits);
 }
