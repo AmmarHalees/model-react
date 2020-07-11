@@ -9,7 +9,7 @@ import PageNotFound from '../../components/Result/PageNotFound/PageNotFound'
 import { Signin, Register, List, Feed, Settings } from '../../utils/routes';
 import { connect } from 'react-redux';
 import { handleUser, handleAuth } from '../../redux/actioncreators/actioncreators';
-
+import {ReactComponent as HomeIcon} from '../../assets/icons/home.svg'; 
 import { compose } from 'redux';
 import Strings from '../../utils/constants/strings.json';
 import './App.css';
@@ -42,6 +42,9 @@ function App(props) {
 
         {!auth_state && <button onClick = {() => signIn(Strings.fake_user , true)}> Sign in </button>}
         {auth_state && <button onClick = {() => signOut({} , false)}> Sign Out </button>}
+
+
+        <HomeIcon/>
 
       <SiteHeader />
 
