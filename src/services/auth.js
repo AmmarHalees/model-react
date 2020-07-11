@@ -1,7 +1,7 @@
 import api from './api';
 
 
-export function getTodos(userid) {
+export function getUser(userid) {
     return api.get(`/users/${userid}`,{
         // headers: {
         //     'Authorization': 'Bearer ' + localStorage.getItem('token')
