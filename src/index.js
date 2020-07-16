@@ -4,15 +4,13 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import App from './containers/App/App';
 import { HashRouter } from 'react-router-dom';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
+// import { store } from './redux/store';
+import configureStore from './redux/store';
 
-import { rootReducer } from './redux/reducers';
-
-const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-
+const store = configureStore({});
 
 ReactDOM.render(
   <React.StrictMode>
