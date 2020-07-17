@@ -1,12 +1,13 @@
 import React from 'react';
+import styles from './CardBasic.module.css'
 
-
-const CardBasic = () => {
+const CardBasic = ({children}) => {
     return ( 
 
-        <div>
+        <div  className={styles.card} >
 
-            
+            hi
+
 
         </div>
 

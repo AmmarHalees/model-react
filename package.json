@@ -25,12 +25,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "clean": "rm -rf node_modules",
+    "clean": "rimraf node_modules",
     "audit": "npm audit",
     "fix": "npm audit fix",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start-server": "json-server --watch db.json --port 3004",
-    "clean-build": "npm run clean && npm install && npm build",
+    "clean:build": "npm run clean && npm install && npm build",
     "build-analyze": "npm run build && npm run analyze"
   },
   "eslintConfig": {

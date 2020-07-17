@@ -1,12 +1,18 @@
 import React, { memo } from 'react';
+import FooterStyles from './SiteFooter.module.css';
 
 const SiteFooter = () => {
     return (
+        <footer className={FooterStyles.footer} >
 
-        <footer>
-            SiteFooter
+            <div className="_layout">
+
+                footer
+
+            </div>
 
         </footer>
+
 
     );
 }

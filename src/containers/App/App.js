@@ -36,7 +36,7 @@ function App(props) {
   }
 
   return (
-    <div className="App">
+    <div id="App">
 
         {user.name}
 
@@ -44,7 +44,7 @@ function App(props) {
         {auth_state && <button onClick = {() => signOut({} , false)}> Sign Out </button>}
 
 
-        <HomeIcon/>
+        {/* <HomeIcon/> */}
 
       <SiteHeader />
 
