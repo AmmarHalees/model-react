@@ -3,8 +3,8 @@
 
 :root {
 
-    --bg-color: #6200EE;
-    --accent-color: #ef64d9;
+    --bg-primary-color: #6200EE;
+    --bg-accent-color: #ef64d9;
 
     --title-color: rgba(0, 0, 0, 0.9);
     --paragraph-color: rgba(0, 0, 0, 0.7);
@@ -16,7 +16,7 @@
     --box-shadow: rgb(235, 235, 235) -1px 1px 13px 0px;
     --backdrop-filter: saturate(180%) blur(20px);
 
-    --border: 1px solid var(--accent-color, green);
+    --border: 1px solid var(--bg-primary-color, #6200EE);
     --border-radius: 10px;
 
     --padding: 1rem;
@@ -86,6 +86,14 @@ span{
     color: var(--paragraph-color);
 }
 
+button{
+    border:none;
+}
+
+button:hover{
+
+    cursor: pointer;
+}
 
 
 /*-----Custom classes . This style sheet is mobile first ------*/
@@ -111,8 +119,7 @@ span{
     max-width: var(--max-page-width);
 
     margin: auto;
-    text-align: center;
-
+    
 }
 
 

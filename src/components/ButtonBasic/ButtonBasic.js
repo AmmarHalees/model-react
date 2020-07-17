@@ -1,10 +1,17 @@
 import React, { memo } from 'react';
-import './ButtonBasic.css';
+import style from './ButtonBasic.module.css';
+import { mapTypeToClass } from '../../utils/helpers';
 
-const ButtonBasic = ({ text, onClick, type }) => {
+const ButtonBasic = ({ children, onClick, type,icon }) => {
     return (
 
-        <button onClick={onClick}>{text}</button>
+        <button className={`${style.button} ${style[mapTypeToClass[type]]}`} onClick={onClick}>
+            
+            {icon}
+            
+            {children}
+            
+            </button>
 
     );
 }

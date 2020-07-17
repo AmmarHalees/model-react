@@ -1,0 +1,25 @@
+.button{
+
+    width: fit-content;
+    min-width: 100px;
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+.primary{
+
+    background-color: var(--bg-primary-color);
+    color: var(--overlay-or-button-text-color);
+    box-shadow: var(--box-shadow);
+
+}
+
+.secondary{
+
+    background-color: transparent;
+    color: var(--bg-primary-color);
+    border: var(--border);
+    
+
+}
