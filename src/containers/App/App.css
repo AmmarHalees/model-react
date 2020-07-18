@@ -115,15 +115,16 @@ button:hover{
 
     display: grid;
     gap: var(--layout-gap);
+    justify-content: center;
 
-    width: 99%;
+    width: 95%;
 
 
     min-width: var(--min-page-width);
     max-width: var(--max-page-width);
 
     margin: auto;
-    min-height: calc(100vh - (var(--footer-height) + var(--header-height)));
+    /* min-height: calc(100vh - (var(--footer-height) + var(--header-height))); */
 }
 
 
@@ -139,7 +140,9 @@ button:hover{
 @media all and (min-width: 768px) {
 
     ._layout{
-        width: 90%;
+        width: 80%;
+        justify-content: start;
+
     }
 }
 
