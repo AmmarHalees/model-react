@@ -1,0 +1,25 @@
+
+
+.buttonWithIcon{
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: 30px 1fr;
+    gap: 10px;
+
+
+}
+
+.iconContainer{
+
+ width: 30px;
+ height: 30px;
+
+}
+
+
+.buttonWithIcon svg{
+
+    height: inherit;
+    width: inherit;
+}

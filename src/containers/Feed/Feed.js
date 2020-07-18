@@ -2,6 +2,7 @@ import React from 'react';
 import CardBasic from '../../components/CardBasic/CardBasic';
 import ButtonBasic from '../../components/ButtonBasic/ButtonBasic';
 import {ReactComponent as HomeIcon} from '../../assets/icons/home.svg'; 
+import ButtonWithIcon from '../../components/ButtonWithIcon/ButtonWithIcon';
 
 const Feed = () => {
     return (
@@ -18,7 +19,7 @@ const Feed = () => {
 
                 <CardBasic />
 
-                <ButtonBasic type="primary" icon={ <HomeIcon/>}>
+                <ButtonBasic type="primary">
 
                     Im a button
 
@@ -29,6 +30,12 @@ const Feed = () => {
                     Im a button
 
                 </ButtonBasic>
+
+                <ButtonWithIcon type="primary" icon={ <HomeIcon/>} >
+
+                    Im a button
+
+                </ButtonWithIcon>
 
                 <a href="/settings">Click me</a>
 
