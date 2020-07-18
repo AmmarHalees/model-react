@@ -4,7 +4,7 @@ import {ReactComponent as PageNotFoundVector} from '../../../assets/images/pagen
 const PageNotFound = () => {
     return (<div className="_layout">
 
-<PageNotFoundVector/> 
+{/* <PageNotFoundVector/>  */}
     </div> );
 }
  
