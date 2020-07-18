@@ -28,6 +28,10 @@
     --app-gap: 1rem;
     --layout-gap: 2rem;
 
+    --header-height: 40px;
+    --footer-height: 40px;
+
+
     --min-page-width: 20rem; /*--- 320px or the width of the smallest device---*/
     --max-page-width : 120rem /*-- 1920px or the width ----*/
 }
@@ -42,7 +46,7 @@ html{
     font-size: 100%;
     box-sizing: border-box;
     font-family: var(--font-family, sans-serif, Arial, Helvetica);
-
+    height: 100vh;
 }
 
 
@@ -119,7 +123,7 @@ button:hover{
     max-width: var(--max-page-width);
 
     margin: auto;
-    
+    min-height: calc(100vh - (var(--footer-height) + var(--header-height)));
 }
 
 

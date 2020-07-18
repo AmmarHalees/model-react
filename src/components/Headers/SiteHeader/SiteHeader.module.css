@@ -4,5 +4,6 @@
     color: var(--overlay-or-button-text-color);
   
     min-width: 100%;
-    
+    height: var(--header-height);
+
   }
