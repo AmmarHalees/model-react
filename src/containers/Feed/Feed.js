@@ -1,5 +1,6 @@
 import React from 'react';
 import PageNotFound from '../../components/Result/PageNotFound/PageNotFound';
+import AlertBasic from '../../components/Feedback/AlertBasic/AlertBasic';
 
 const Feed = () => {
     return (
@@ -12,6 +13,8 @@ const Feed = () => {
 
                 Content, not "page not found"
 
+
+                    <AlertBasic type="success"/>
 
             </main>
 
