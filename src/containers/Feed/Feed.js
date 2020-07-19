@@ -1,9 +1,5 @@
 import React from 'react';
-import CardBasic from '../../components/CardBasic/CardBasic';
-import ButtonBasic from '../../components/ButtonBasic/ButtonBasic';
-import { ReactComponent as HomeIcon } from '../../assets/icons/home.svg';
-import ButtonWithIcon from '../../components/ButtonWithIcon/ButtonWithIcon';
-import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
+import PageNotFound from '../../components/Result/PageNotFound/PageNotFound';
 
 const Feed = () => {
     return (
@@ -14,37 +10,8 @@ const Feed = () => {
 
             <main className="_layout">
 
+                Content, not "page not found"
 
-
-                <p>this is a p</p>
-
-                <CardBasic />
-
-                <ButtonBasic type="primary" >
-
-                    Im a button
-
-                </ButtonBasic>
-
-                <ButtonBasic type="terinary" >
-
-                    Im a button
-
-                </ButtonBasic>
-
-                <ButtonWithIcon type="link" icon={<HomeIcon />}  >
-
-                    Im a button
-
-                </ButtonWithIcon>
-
-                <ButtonIcon type="link" icon={<HomeIcon />}  >
-
-                    Im a button
-
-                </ButtonIcon>   
-
-                <a href="/settings">Click me</a>
 
             </main>
 
