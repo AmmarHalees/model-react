@@ -8,6 +8,8 @@
     text-align: center;
 }
 
+
+
 .primary{
 
     background-color: var(--bg-primary-color);
@@ -25,7 +27,35 @@
 
 }
 
+/*--------Interactions-----------*/
 
+button:disabled,
+button[disabled]{
+    color: rgba(0, 0, 0, 0.26);
+    box-shadow: none;
+}
+button:disabled:hover,
+button[disabled]:hover{
+ cursor: default;
+ pointer-events: none;
+}
+
+
+button.primary:disabled ,
+button.primary[disabled]{
+
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+button.secondary:disabled ,
+button.secondary[disabled]{
+
+    background-color: transparent;
+    border-color:  rgba(0, 0, 0, 0.12);
+}
+
+
+/*--------Media Queries-----------*/
 
 @media all and (min-width: 768px) {
 

@@ -19,19 +19,19 @@ const Feed = () => {
 
                 <CardBasic />
 
-                <ButtonBasic type="primary">
+                <ButtonBasic type="primary" disabled>
 
                     Im a button
 
                 </ButtonBasic>
 
-                <ButtonBasic type="secondary">
+                <ButtonBasic type="secondary" disabled>
 
                     Im a button
 
                 </ButtonBasic>
 
-                <ButtonWithIcon type="primary" icon={ <HomeIcon/>} >
+                <ButtonWithIcon type="primary" icon={ <HomeIcon/>} disabled >
 
                     Im a button
 
