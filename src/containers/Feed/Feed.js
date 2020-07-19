@@ -14,7 +14,7 @@ const Feed = () => {
                 Content, not "page not found"
 
 
-                    <AlertBasic type="success"/>
+                    <AlertBasic type="warning"/>
 
             </main>
 

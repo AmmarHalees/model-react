@@ -1,13 +1,30 @@
 .alert{
 
-    width: 100%;
+    /* width: 100%; */
     min-width: var(--min-width);
     padding: var(--padding);
+    border-radius: var(--border-radius);
 }
+/*---Success with errors---*/
 
 .success{
 
     background-color: var(--success-bg-color);
     border: 1px solid var(--success-accent-color);
+
+}
+
+/*---Success with errors---*/
+
+.warning{
+    background-color: var(--warning-bg-color);
+    border: 1px solid var(--warning-accent-color);
+
+}
+/*---error---*/
+
+.error{
+    background-color: var(--error-bg-color);
+    border: 1px solid var(--error-accent-color);
 
 }

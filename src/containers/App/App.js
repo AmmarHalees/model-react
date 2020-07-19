@@ -9,7 +9,7 @@ import PageNotFound from '../../components/Result/PageNotFound/PageNotFound'
 import { Signin, Register, List, Feed, Settings } from '../../utils/routes';
 import { connect } from 'react-redux';
 import { handleUser, handleAuth } from '../../redux/actioncreators/actioncreators';
-import {ReactComponent as HomeIcon} from '../../assets/icons/home.svg'; 
+import { ReactComponent as HomeIcon } from '../../assets/icons/home.svg';
 import { compose } from 'redux';
 import Strings from '../../utils/constants/strings.json';
 import './App.css';
@@ -17,14 +17,14 @@ import './App.css';
 
 function App(props) {
 
-  const {handleAuth, handleUser ,user , auth_state } = props;
+  const { handleAuth, handleUser, user, auth_state } = props;
 
   const signIn = (user) => {
 
     handleUser(user);
     handleAuth(true);
 
-    
+
   }
 
   const signOut = (user) => {
@@ -32,40 +32,47 @@ function App(props) {
     handleUser(user);
     handleAuth(false);
 
-    
+
   }
 
   return (
     <div id="App">
 
-        {user.name}
+      {/* {user.name}
 
-        {!auth_state && <button onClick = {() => signIn(Strings.fake_user , true)}> Sign in </button>}
-        {auth_state && <button onClick = {() => signOut({} , false)}> Sign Out </button>}
+      {!auth_state && <button onClick={() => signIn(Strings.fake_user, true)}> Sign in </button>}
+      {auth_state && <button onClick={() => signOut({}, false)}> Sign Out </button>}
+ */}
 
-
-        {/* <HomeIcon/> */}
+      {/* <HomeIcon/> */}
 
       <SiteHeader />
 
-      <Suspense fallback={<SkeletonBasic />}>
-
-        <Switch>
-
-          <AuthOnlyRoute path="/settings" component={Settings} />
-
-          <GuestOnlyRoute path="/signin" component={Signin} />
-          <GuestOnlyRoute path="/register" component={Register} />
-
-          <Route path="/list" component={List} />
-          <Route exact path="/" component={Feed} />
-
-          <Route render={() => <PageNotFound />} />
+      <div className="_main">
 
 
-        </Switch>
+        <Suspense fallback={<SkeletonBasic />}>
 
-      </Suspense>
+          <Switch>
+
+            <AuthOnlyRoute path="/settings" component={Settings} />
+
+            <GuestOnlyRoute path="/signin" component={Signin} />
+            <GuestOnlyRoute path="/register" component={Register} />
+
+            <Route path="/list" component={List} />
+            <Route exact path="/" component={Feed} />
+
+            <Route render={() => <PageNotFound />} />
+
+
+          </Switch>
+
+        </Suspense>
+
+
+
+      </div>
 
 
       <SiteFooter />

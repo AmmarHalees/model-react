@@ -12,8 +12,14 @@
     --paragraph-color: rgba(0, 0, 0, 0.7);
     --overlay-or-button-text-color: rgb(255, 255, 255);
 
-    --success-bg-color: #e6f7ff;
-    --success-accent-color: #91d5ff;
+    --success-bg-color: #f6ffed;
+    --success-accent-color: #b7eb8f;
+
+    --warning-bg-color: #fffbe6;
+    --warning-accent-color: #ffe58f;
+
+    --error-bg-color: #fff2f0;
+    --error-accent-color: #ffccc7;
 
     --bg-disabled-color: rgba(0, 0, 0, 0.12);
     --titel-disabled-color: rgba(0, 0, 0, 0.12);
@@ -39,7 +45,6 @@
 
     --header-height: 40px;
     --footer-height: 40px;
-
 
     --min-page-width: 20rem; /*--- 320px or the width of the smallest device---*/
     --max-page-width : 120rem /*-- 1920px or the width ----*/
@@ -135,9 +140,9 @@ button:hover{
 /*-----Custom classes------*/
 
 #App{
-
+/* 
     display: grid;
-    gap: var(--app-gap);
+    gap: var(--app-gap); */
     /* min-height: ; */
 
 }
@@ -157,6 +162,10 @@ button:hover{
 
     margin: auto;
     /* min-height: calc(100vh - (var(--footer-height) + var(--header-height))); */
+}
+
+._main{
+    min-height: calc(100vh - 80px);
 }
 
 
