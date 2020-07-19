@@ -1,0 +1,6 @@
+.link{
+    width: fit-content;
+    min-width: 50px;
+    padding: var(--padding);
+    background-color: red;
+}
