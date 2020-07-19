@@ -1,3 +1,5 @@
+/*---- This style sheet is mobile first  ----*/
+
 /*-----Variables------*/
 
 
@@ -9,6 +11,13 @@
     --title-color: rgba(0, 0, 0, 0.9);
     --paragraph-color: rgba(0, 0, 0, 0.7);
     --overlay-or-button-text-color: rgb(255, 255, 255);
+
+    --success-bg-color: #e6f7ff;
+    --success-accent-color: #91d5ff;
+
+    --bg-disabled-color: rgba(0, 0, 0, 0.12);
+    --titel-disabled-color: rgba(0, 0, 0, 0.12);
+    --highlight-color : yellow;
 
     --font-size: 1rem;
     --font-size-x2: 2em;
@@ -98,9 +107,32 @@ button:hover{
 
     cursor: pointer;
 }
+/*-----Utility classes ------*/
 
+._d-none{
+    display: none;
+}
 
-/*-----Custom classes . This style sheet is mobile first ------*/
+._d-block{
+    display: block;
+}
+
+._d-inline{
+    display: inline;
+}
+
+._d-inline-block{
+    display: inline-block;
+}
+
+._highlight{
+
+    background-color: var(--highlight-color);
+    color: var(--paragraph-color);
+
+}
+
+/*-----Custom classes------*/
 
 #App{
 

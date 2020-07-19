@@ -1,5 +1,1 @@
-export const mapTypeToClass ={
-
-    "primary":"primary",
-    "secondary":"secondary"
-}
+export const mapTypeToClass = JSON.parse('{"primary":"primary", "secondary":"secondary",  "terinary":"terinary",  "link":"link"}')

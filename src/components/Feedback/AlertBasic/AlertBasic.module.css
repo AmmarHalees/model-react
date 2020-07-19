@@ -1,0 +1,13 @@
+.alert{
+
+    width: 100%;
+    min-width: var(--min-width);
+    padding: var(--padding);
+}
+
+.success{
+
+    background-color: var(--success-bg-color);
+    border: 1px solid var(--success-accent-color);
+
+}
