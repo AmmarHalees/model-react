@@ -1,7 +1,7 @@
 .button{
 
     width: 100%;
-    min-width: 100px;
+    min-width: 50px;
     padding: var(--padding);
     border-radius: var(--border-radius);
     font-size: 1rem;
@@ -27,6 +27,19 @@
 
 }
 
+.terinary{
+
+    background-color: transparent;
+    color: var(--title-color);
+    box-shadow: var(--box-shadow);
+}
+
+.link{
+
+    background-color: transparent;
+    color: var(--title-color);
+    box-shadow: none;
+}
 /*--------Interactions-----------*/
 
 button:disabled,

@@ -1,5 +1,7 @@
 export const mapTypeToClass ={
 
     "primary":"primary",
-    "secondary":"secondary"
+    "secondary":"secondary",
+    "terinary":"terinary",
+    "link":"link"
 }
