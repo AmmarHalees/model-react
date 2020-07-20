@@ -1,6 +1,9 @@
 import React from 'react';
-import PageNotFound from '../../components/Result/PageNotFound/PageNotFound';
 import AlertBasic from '../../components/Feedback/AlertBasic/AlertBasic';
+import NotificationBasic from '../../components/Feedback/NotificationBasic/NotificationBasic';
+import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
+import {ReactComponent as HomeIcon} from '../../assets/icons/arrow-left.svg'
+import ButtonBasic from '../../components/ButtonBasic/ButtonBasic';
 
 const Feed = () => {
     return (
@@ -14,10 +17,15 @@ const Feed = () => {
                 Content, not "page not found"
 
 
-                    <AlertBasic type="warning"/>
+                    <AlertBasic type="warning" />
+
+                <NotificationBasic text="User successfully deleted" />
+
+                <ButtonBasic rounded icon={<HomeIcon rounded/>} >
+                    hi there my name is ammar
+                </ButtonBasic>
 
             </main>
-
 
         </div>
 

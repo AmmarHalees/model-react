@@ -1,11 +1,18 @@
 /*---- This style sheet is mobile first  ----*/
 
+/*-----Lab----*/
+
+    /* 
+    
+    box-shadow: 0 3px 6px -4px rgba(0,0,0,0.12), 0 6px 16px 0 rgba(0,0,0,0.08), 0 9px 28px 8px rgba(0,0,0,0.05);
+    transition: color .3s;
+
+    */
+
 /*-----Variables------*/
 
-
 :root {
-
-    --bg-primary-color: #6200EE;
+    --bg-primary-color: #6200ee;
     --bg-accent-color: #ef64d9;
 
     --title-color: rgba(0, 0, 0, 0.9);
@@ -23,7 +30,7 @@
 
     --bg-disabled-color: rgba(0, 0, 0, 0.12);
     --titel-disabled-color: rgba(0, 0, 0, 0.12);
-    --highlight-color : yellow;
+    --highlight-color: yellow;
 
     --font-size: 1rem;
     --font-size-x2: 2em;
@@ -31,7 +38,7 @@
     --box-shadow: rgb(235, 235, 235) -1px 1px 13px 0px;
     --backdrop-filter: saturate(180%) blur(20px);
 
-    --border: 1px solid var(--bg-primary-color, #6200EE);
+    --border: 1px solid var(--bg-primary-color, #6200ee);
     --border-radius: 10px;
 
     --padding: 1rem;
@@ -47,22 +54,17 @@
     --footer-height: 40px;
 
     --min-page-width: 20rem; /*--- 320px or the width of the smallest device---*/
-    --max-page-width : 120rem /*-- 1920px or the width ----*/
+    --max-page-width: 120rem; /*-- 1920px or the width ----*/
 }
-
-
 
 /*-----Generic------*/
 
-
-html{
-
+html {
     font-size: 100%;
     box-sizing: border-box;
     font-family: var(--font-family, sans-serif, Arial, Helvetica);
     height: 100vh;
 }
-
 
 body,
 ul,
@@ -93,69 +95,60 @@ h2,
 h3,
 h4,
 h5,
-h6{
-
+h6 {
     color: var(--title-color);
 }
 
 p,
-span{
-
+span {
     color: var(--paragraph-color);
 }
 
-button{
-    border:none;
+button {
+    border: none;
 }
 
-button:hover{
-
+button:hover {
     cursor: pointer;
 }
 /*-----Utility classes ------*/
 
-._d-none{
+._d-none {
     display: none;
 }
 
-._d-block{
+._d-block {
     display: block;
 }
 
-._d-inline{
+._d-inline {
     display: inline;
 }
 
-._d-inline-block{
+._d-inline-block {
     display: inline-block;
 }
 
-._highlight{
-
+._highlight {
     background-color: var(--highlight-color);
     color: var(--paragraph-color);
-
 }
 
 /*-----Custom classes------*/
 
-#App{
-/* 
+#App {
+    /* 
     display: grid;
     gap: var(--app-gap); */
     /* min-height: ; */
-
 }
 
-
-._layout{
-
+._layout {
     display: grid;
     gap: var(--layout-gap);
     justify-content: center;
 
     width: 95%;
-
 
     min-width: var(--min-page-width);
     max-width: var(--max-page-width);
@@ -164,37 +157,28 @@ button:hover{
     /* min-height: calc(100vh - (var(--footer-height) + var(--header-height))); */
 }
 
-._main{
+._main {
     min-height: calc(100vh - 80px);
 }
-
 
 /*-----Media Queries------*/
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media all and (min-width: 600px) {
-
-
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media all and (min-width: 768px) {
-
-    ._layout{
+    ._layout {
         width: 80%;
         justify-content: start;
-
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media all and (min-width: 992px) {
-
-
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media all and (min-width: 1200px) {
-
-
 }

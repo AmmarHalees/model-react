@@ -4,6 +4,7 @@
     min-width: var(--min-width);
     padding: var(--padding);
     border-radius: var(--border-radius);
+    text-align: left;
 }
 /*---Success with errors---*/
 

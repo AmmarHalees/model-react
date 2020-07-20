@@ -2,10 +2,10 @@ import React, { memo } from 'react';
 import ButtonBasic from '../ButtonBasic/ButtonBasic';
 import styles from './ButtonIcon.module.css';
 
-const ButtonIcon = ({ children, onClick, type, icon , disabled, size}) => {
+const ButtonIcon = ({ onClick, type, icon, disabled, rounded, size }) => {
     return (
 
-        <ButtonBasic type={type} onClick={onClick} disabled={disabled}>
+        <ButtonBasic type={type} onClick={onClick} disabled={disabled} rounded>
 
             <div className={styles.ButtonIcon}>
 
