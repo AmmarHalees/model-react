@@ -1,0 +1,7 @@
+.chip{
+    border-radius: var(--border-radius-x2);
+    padding: var(--padding);
+    display: inline-block;
+    box-shadow: var(--box-shadow);
+
+}   

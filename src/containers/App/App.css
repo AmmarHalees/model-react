@@ -40,6 +40,7 @@
 
     --border: 1px solid var(--bg-primary-color, #6200ee);
     --border-radius: 10px;
+    --border-radius-x2: 20px;
 
     --padding: 1rem;
     --margin: 1rem;
@@ -110,6 +111,7 @@ button {
 
 button:hover {
     cursor: pointer;
+    filter: contrast(200%);
 }
 /*-----Utility classes ------*/
 
@@ -146,7 +148,7 @@ button:hover {
 ._layout {
     display: grid;
     gap: var(--layout-gap);
-    justify-content: center;
+    /* justify-content: center; */
 
     width: 95%;
 
@@ -171,7 +173,7 @@ button:hover {
 @media all and (min-width: 768px) {
     ._layout {
         width: 80%;
-        justify-content: start;
+        /* justify-content: start; */
     }
 }
 

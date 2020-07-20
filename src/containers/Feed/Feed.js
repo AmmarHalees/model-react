@@ -1,9 +1,9 @@
 import React from 'react';
-import AlertBasic from '../../components/Feedback/AlertBasic/AlertBasic';
-import NotificationBasic from '../../components/Feedback/NotificationBasic/NotificationBasic';
-import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
-import {ReactComponent as HomeIcon} from '../../assets/icons/arrow-left.svg'
+
+import ButtonWithIcon from '../../components/ButtonWithIcon/ButtonWithIcon';
+import { ReactComponent as HomeIcon } from '../../assets/icons/arrow-left.svg'
 import ButtonBasic from '../../components/ButtonBasic/ButtonBasic';
+import Chip from '../../components/Chip/Chip';
 
 const Feed = () => {
     return (
@@ -14,16 +14,28 @@ const Feed = () => {
 
             <main className="_layout">
 
-                Content, not "page not found"
+                <div style={{display:"grid", gridTemplateColumns:"1fr 1fr", width:"100%",gap:"10px"}}>
+
+                    <ButtonBasic type="secondary">Cancel</ButtonBasic>
+                    <ButtonBasic type="primary">Sign in</ButtonBasic>
+                    <ButtonWithIcon icon={<HomeIcon/>} type="terinary">Sign in</ButtonWithIcon>
+
+                </div>
 
 
-                    <AlertBasic type="warning" />
+                <div>
 
-                <NotificationBasic text="User successfully deleted" />
+                <Chip text="hi"/>
+                <Chip text="my name is ammar"/>
+                <Chip text="where are you"/>
 
-                <ButtonBasic rounded icon={<HomeIcon rounded/>} >
-                    hi there my name is ammar
-                </ButtonBasic>
+
+                </div>
+
+
+
+
+
 
             </main>
 
