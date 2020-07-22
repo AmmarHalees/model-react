@@ -1,6 +1,6 @@
 .button{
 
-    width: 100%;
+    /* width: 100%; */
     min-width: 50px;
     padding: var(--padding);
     border-radius: var(--border-radius);

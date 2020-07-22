@@ -2,7 +2,7 @@ import React from 'react';
 import './TooltipBasic.css';
 
 
-const TooltipBasic = ({ children }) => {
+const TooltipBasic = ({ children , position='top' }) => {
     return (
 
         <span className="tooltip top">

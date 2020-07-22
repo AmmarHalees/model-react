@@ -5,7 +5,7 @@ import { mapTypeToClass } from '../../utils/helpers';
 const ButtonBasic = ({ children =<div>button</div>, onClick, type ="primary" , disabled = false ,rounded =false ,loading=false }) => {
     return (
 
-        <button className={`${style.button} ${style[mapTypeToClass[type]]} ${rounded&&style.rounded}`} disabled={disabled} onClick={onClick}>
+        <button onClick={()=>onClick()} className={`${style.button} ${style[mapTypeToClass[type]]} ${rounded&&style.rounded}`} disabled={disabled} onClick={onClick}>
                         
 
             

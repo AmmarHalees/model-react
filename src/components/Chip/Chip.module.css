@@ -1,7 +1,8 @@
 .chip{
+    color: var(--bg-primary-color);
     border-radius: var(--border-radius-x2);
+    border: var(--border);
     padding: var(--padding);
     display: inline-block;
-    box-shadow: var(--box-shadow);
 
 }   

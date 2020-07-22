@@ -1,12 +1,35 @@
 import React from 'react';
 
 import ButtonWithIcon from '../../components/ButtonWithIcon/ButtonWithIcon';
-import { ReactComponent as HomeIcon } from '../../assets/icons/arrow-left.svg'
+import { ReactComponent as CloseIcon } from '../../assets/icons/x.svg'
 import ButtonBasic from '../../components/ButtonBasic/ButtonBasic';
 import Chip from '../../components/Chip/Chip';
 import TooltipBasic from '../../components/TooltipBasic/TooltipBasic';
+import ModalBasic from '../../components/ModalBasic/ModalBasic';
+import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
+import data from '../../utils/constants/strings.json';
+
+
 
 const Feed = () => {
+
+
+
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function afterOpenModal() {
+        // references are now sync'd and can be accessed.
+
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
+
+
     return (
 
         <div>
@@ -17,9 +40,9 @@ const Feed = () => {
 
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", width: "100%", gap: "10px" }}>
 
-                    <ButtonBasic type="secondary">Cancel</ButtonBasic>
-                    <ButtonBasic type="primary">Sign in</ButtonBasic>
-                    <ButtonWithIcon icon={<HomeIcon />} type="terinary">Sign in</ButtonWithIcon>
+                    <ButtonBasic type="secondary" >Cancel</ButtonBasic>
+                    <ButtonBasic type="primary" onClick={openModal}>Sign in</ButtonBasic>
+                    <ButtonWithIcon icon={<CloseIcon />} type="terinary">Sign in</ButtonWithIcon>
 
                 </div>
 
@@ -36,13 +59,50 @@ const Feed = () => {
 
                 <TooltipBasic>
 
-                  <span style={{width:"fitContent"}}>hi</span>
+                    <span style={{ width: "fitContent" }}>hi</span>
 
 
                 </TooltipBasic>
 
 
+                <ModalBasic
+
+
+                    isOpen={modalIsOpen}
+                    onAfterOpen={afterOpenModal}
+                    onRequestClose={closeModal}
+                    contentLabel="Example Modal"
+
+
+                >
+
+                    {/* <header>
+
+                        <ButtonIcon onClick={closeModal} icon={<CloseIcon />} type="terinary" />
+
+                    </header>
+
+                    <main > */}
+
+                        <img style={{
+
+                            width: "auto",
+                            maxHeight: "80vh",
+                            maxWidth: "100%"
+
+                        }} 
+                        alt="hi"
+
+                        src= {data['fake normal sized image']} />
+
+
+                    {/* </main> */}
+
+
+                </ModalBasic>
             </main>
+
+
 
         </div>
 

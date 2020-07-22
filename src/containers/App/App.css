@@ -12,8 +12,14 @@
 /*-----Variables------*/
 
 :root {
-    --bg-primary-color: #6200ee;
+
+    --page-color: #fff;
+
+    --bg-primary-color: #6200ee; 
     --bg-accent-color: #ef64d9;
+
+    --bg-overlay-color: rgba(0, 0, 0, 0.5);
+
 
     --title-color: rgba(0, 0, 0, 0.9);
     --paragraph-color: rgba(0, 0, 0, 0.7);
@@ -46,7 +52,7 @@
     --margin: 1rem;
 
     --font-family: sans-serif, Arial, Helvetica;
-    --speed: 300ms;
+    --speed: 400ms;
 
     --app-gap: 1rem;
     --layout-gap: 2rem;
@@ -184,3 +190,22 @@ button:hover {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media all and (min-width: 1200px) {
 }
+
+
+/*-----Libraries------*/
+
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity var(--speed) ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0;
+}
+
+/*--------------------*/

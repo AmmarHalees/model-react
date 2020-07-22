@@ -1,0 +1,39 @@
+.overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: var(--bg-overlay-color);
+    backdrop-filter: saturate(180%) blur(20px);
+
+    
+}
+
+.content {
+    /* position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+
+     */
+
+    /* overflow: auto; */
+    /* outline: none;
+
+    width: fit-content;
+    margin: auto; */
+
+
+    background: var(--page-color);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+
+}
+
+
