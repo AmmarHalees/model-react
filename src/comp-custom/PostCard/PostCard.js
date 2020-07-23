@@ -11,25 +11,26 @@ console.log(data['fake normal sized image'])
 const PostCard = ({ title = data['default title'], paragraph = data["default paragraph"], src = data['fake normal sized image'] }) => {
     return (
 
+
         <PaperBasic>
 
-            <div className={styles.card} >
+            <div className={styles.postCard}>
 
-                <div className={styles.cardImage}>
+                <ImageBasic src={src} alt="car" />
 
-                    <ImageBasic src={src} />
-
-                </div>
-
-                <div className={styles.cardBody}>
-
-                    <h3>{title}</h3>
+                <div className={styles.postControls}>
+                    <h2 className={styles.title}>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</h2>
 
                 </div>
+
 
             </div>
 
+
+
         </PaperBasic>
+
+
 
     );
 }

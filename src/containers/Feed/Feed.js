@@ -10,6 +10,8 @@ import InfoCard from '../../comp-custom/InfoCard/InfoCard';
 import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
 import data from '../../utils/constants/strings.json';
 import PostCard from '../../comp-custom/PostCard/PostCard';
+import ResponsiveList from '../../components/Lists/ResponsiveList/ResponsiveList';
+import ImageBasic from '../../components/ImageBasic/ImageBasic';
 
 
 
@@ -79,22 +81,25 @@ const Feed = () => {
                 >
 
 
-                        <img style={{
-
-                            width: "auto",
-                            maxHeight: "80vh",
-                            maxWidth: "100%"
-
-                        }} 
+                    <ImageBasic 
                         alt="hi"
 
-                        src= {data['fake normal sized image']} />
+                        src={data['fake normal sized image']} />
 
 
                 </ModalBasic>
 
+                <ResponsiveList>
 
-                <PostCard/>
+                    <PostCard />
+                    <PostCard />
+                    <PostCard />
+                    <PostCard />
+                    <PostCard />
+
+
+                </ResponsiveList>
+                <PostCard />
 
 
             </main>

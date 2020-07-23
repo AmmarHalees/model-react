@@ -60,8 +60,12 @@
     --header-height: 40px;
     --footer-height: 40px;
 
-    --min-page-width: 20rem; /*--- 320px or the width of the smallest device---*/
+    --min-page-width: 19rem; /*--- 320px or the width of the smallest device - a margin of safety = 304---*/
     --max-page-width: 120rem; /*-- 1920px or the width ----*/
+
+
+    --min-post-width: var(--min-page-width) ; /*--- 288---*/
+
 }
 
 /*-----Generic------*/
@@ -156,7 +160,7 @@ button:hover {
     gap: var(--layout-gap);
     /* justify-content: center; */
 
-    width: 95%;
+    width: 98%;
 
     min-width: var(--min-page-width);
     max-width: var(--max-page-width);

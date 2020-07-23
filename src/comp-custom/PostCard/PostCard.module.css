@@ -1,24 +1,23 @@
-.card{
+.postCard{
 
 
-    width: fit-content;
-    min-width: 300px;
-    min-height: 100px;
+    width: 100%;
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+.postControls{
+
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    padding: 1rem;
+    background: black;
+    max-width: 100%;
 
 }
 
-.cardImage{
+.title{
 
-    max-width: 300px;
-    height: auto;
-    border-radius: var(--border-radius)  var(--border-radius) 0px 0px;
-
-}
-
-.cardBody{
-
-    padding: var(--padding);
-    display: grid;
-    gap: var(--app-gap);
-
+    color: white;
 }
