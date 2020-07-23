@@ -1,11 +1,11 @@
 import React from 'react';
-import './TooltipBasic.css';
+import styles from './TooltipBasic.module.css';
 
 
 const TooltipBasic = ({ children , position='top' }) => {
     return (
 
-        <span className="tooltip top">
+        <span className={`${styles.tooltip} ${styles.bottom}`}>
 
             {children}
 
