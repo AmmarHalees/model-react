@@ -6,8 +6,10 @@ import ButtonBasic from '../../components/ButtonBasic/ButtonBasic';
 import Chip from '../../components/Chip/Chip';
 import TooltipBasic from '../../components/TooltipBasic/TooltipBasic';
 import ModalBasic from '../../components/ModalBasic/ModalBasic';
+import InfoCard from '../../comp-custom/InfoCard/InfoCard';
 import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
 import data from '../../utils/constants/strings.json';
+import PostCard from '../../comp-custom/PostCard/PostCard';
 
 
 
@@ -76,6 +78,7 @@ const Feed = () => {
 
                 >
 
+
                         <img style={{
 
                             width: "auto",
@@ -89,6 +92,11 @@ const Feed = () => {
 
 
                 </ModalBasic>
+
+
+                <PostCard/>
+
+
             </main>
 
 
