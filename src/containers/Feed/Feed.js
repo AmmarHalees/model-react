@@ -57,7 +57,7 @@ const Feed = () => {
                 </div>
 
 
-                <TooltipBasic>
+                <TooltipBasic >
 
                     <span style={{ width: "fitContent" }}>hi</span>
 
@@ -76,14 +76,6 @@ const Feed = () => {
 
                 >
 
-                    {/* <header>
-
-                        <ButtonIcon onClick={closeModal} icon={<CloseIcon />} type="terinary" />
-
-                    </header>
-
-                    <main > */}
-
                         <img style={{
 
                             width: "auto",
@@ -94,9 +86,6 @@ const Feed = () => {
                         alt="hi"
 
                         src= {data['fake normal sized image']} />
-
-
-                    {/* </main> */}
 
 
                 </ModalBasic>

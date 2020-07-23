@@ -30,14 +30,14 @@
     transform: translate(-50%, calc(100% + 10px));
 }
 
-.tooltip.right::after {
+.right::after {
     content: 'right';
     top: 0;
     right: 0;
     transform: translateX(calc(100% + 10px));
 }
 
-.tooltip.left::after {
+.left::after {
     content: 'left';
     top: 0;
     left: 0;
@@ -74,13 +74,13 @@
     transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
 }
 
-.tooltip.right::before {
+.right::before {
     top: 50%;
     right: 0;
     transform: translate(calc(100% + 5px), -50%) rotate(45deg);
 }
 
-.tooltip.left::before {
+.left::before {
     top: 50%;
     left: 0;
     transform: translate(calc(-100% - 5px), -50%) rotate(45deg);

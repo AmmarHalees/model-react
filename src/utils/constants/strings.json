@@ -17,7 +17,8 @@
 
     "defaultsrc":"https://www.kindpng.com/picc/m/130-1300217_user-icon-member-icon-png-transparent-png.png",
     "defaultalt":"beautiful landscape",
+    "default notification text": "Have a nice day",
 
-    "default notification text": "Have a nice day"
+    "tooltip initial position":"top"
 
 }
