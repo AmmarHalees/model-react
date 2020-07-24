@@ -6,8 +6,12 @@ import ButtonBasic from '../../components/ButtonBasic/ButtonBasic';
 import Chip from '../../components/Chip/Chip';
 import TooltipBasic from '../../components/TooltipBasic/TooltipBasic';
 import ModalBasic from '../../components/ModalBasic/ModalBasic';
+import InfoCard from '../../comp-custom/InfoCard/InfoCard';
 import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
 import data from '../../utils/constants/strings.json';
+import PostCard from '../../comp-custom/PostCard/PostCard';
+import ResponsiveList from '../../components/Lists/ResponsiveList/ResponsiveList';
+import ImageBasic from '../../components/ImageBasic/ImageBasic';
 
 
 
@@ -57,7 +61,7 @@ const Feed = () => {
                 </div>
 
 
-                <TooltipBasic>
+                <TooltipBasic >
 
                     <span style={{ width: "fitContent" }}>hi</span>
 
@@ -76,30 +80,28 @@ const Feed = () => {
 
                 >
 
-                    {/* <header>
 
-                        <ButtonIcon onClick={closeModal} icon={<CloseIcon />} type="terinary" />
-
-                    </header>
-
-                    <main > */}
-
-                        <img style={{
-
-                            width: "auto",
-                            maxHeight: "80vh",
-                            maxWidth: "100%"
-
-                        }} 
+                    <ImageBasic 
                         alt="hi"
 
-                        src= {data['fake normal sized image']} />
-
-
-                    {/* </main> */}
+                        src={data['fake normal sized image']} />
 
 
                 </ModalBasic>
+
+                <ResponsiveList>
+
+                    <PostCard />
+                    <PostCard />
+                    <PostCard />
+                    <PostCard />
+                    <PostCard />
+
+
+                </ResponsiveList>
+                <PostCard />
+
+
             </main>
 
 

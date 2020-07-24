@@ -2,4 +2,7 @@
 
     max-width: 100%;
     border-radius: inherit ;
+    height: auto;
+    display: block;
+    /* vertical-align: middle; */
 }
