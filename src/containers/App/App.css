@@ -2,7 +2,7 @@
 
 /*-----Lab----*/
 
-    /* 
+/* 
     
     box-shadow: 0 3px 6px -4px rgba(0,0,0,0.12), 0 6px 16px 0 rgba(0,0,0,0.08), 0 9px 28px 8px rgba(0,0,0,0.05);
     transition: color .3s;
@@ -15,7 +15,7 @@
 
     --page-color: #fff;
 
-    --bg-primary-color: #6200ee; 
+    --bg-primary-color: #6200ee;
     --bg-accent-color: #ef64d9;
 
     --bg-overlay-color: rgba(0, 0, 0, 0.5);
@@ -60,12 +60,13 @@
     --header-height: 40px;
     --footer-height: 40px;
 
-    --min-page-width: 19rem; /*--- 320px or the width of the smallest device - a margin of safety = 304---*/
-    --max-page-width: 120rem; /*-- 1920px or the width ----*/
+    --min-page-width: 19rem;
+    /*--- 320px or the width of the smallest device - a margin of safety = 304---*/
+    --max-page-width: 120rem;
+    /*-- 1920px or the width ----*/
 
-
-    --min-post-width: var(--min-page-width) ; /*--- 288---*/
-
+    --min-post-width: var(--min-page-width);
+    /*--- 288---*/
 }
 
 /*-----Generic------*/
@@ -121,8 +122,9 @@ button {
 
 button:hover {
     cursor: pointer;
-    filter: contrast(200%);
+
 }
+
 /*-----Utility classes ------*/
 
 ._d-none {
@@ -176,8 +178,7 @@ button:hover {
 /*-----Media Queries------*/
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media all and (min-width: 600px) {
-}
+@media all and (min-width: 600px) {}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media all and (min-width: 768px) {
@@ -188,12 +189,10 @@ button:hover {
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media all and (min-width: 992px) {
-}
+@media all and (min-width: 992px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media all and (min-width: 1200px) {
-}
+@media all and (min-width: 1200px) {}
 
 
 /*-----Libraries------*/
@@ -204,12 +203,22 @@ button:hover {
     transition: opacity var(--speed) ease-in-out;
 }
 
-.ReactModal__Overlay--after-open{
+.ReactModal__Overlay--after-open {
     opacity: 1;
 }
 
-.ReactModal__Overlay--before-close{
+.ReactModal__Overlay--before-close {
     opacity: 0;
+}
+
+/*---------Debugging-----------*/
+
+img:not([alt]) {
+    border: 2px dashed red;
+}
+
+img[alt=""] {
+    border: 2px dashed red;
 }
 
 /*--------------------*/

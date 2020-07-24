@@ -48,6 +48,29 @@
 }
 /*--------Interactions-----------*/
 
+/*---Hover---*/
+
+
+.primary:hover {
+    
+    background-color: green;
+
+}
+
+
+/*---Pressed or active (background change or wave effect)---*/
+
+.primary:active {
+    
+    background-color: red;
+
+}
+
+
+/*---focus (outline change)---*/
+
+/*---Disabled (background change, border change, box shadow removed + other interactions disabled)---*/
+
 button:disabled,
 button[disabled]{
     color: rgba(0, 0, 0, 0.26);
@@ -60,6 +83,7 @@ button[disabled]:hover{
 }
 
 
+
 button.primary:disabled ,
 button.primary[disabled]{
 
@@ -68,6 +92,14 @@ button.primary[disabled]{
 
 button.secondary:disabled ,
 button.secondary[disabled]{
+
+    background-color: transparent;
+    border-color:  rgba(0, 0, 0, 0.12);
+}
+
+
+button.terinary:disabled ,
+button.terinary[disabled]{
 
     background-color: transparent;
     border-color:  rgba(0, 0, 0, 0.12);

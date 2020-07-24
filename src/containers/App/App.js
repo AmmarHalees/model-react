@@ -13,6 +13,8 @@ import { ReactComponent as HomeIcon } from '../../assets/icons/home.svg';
 import { compose } from 'redux';
 import Strings from '../../utils/constants/strings.json';
 import './App.css';
+import ButtonBasic from '../../components/ButtonBasic/ButtonBasic';
+import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
 
 
 function App(props) {
@@ -38,18 +40,23 @@ function App(props) {
   return (
     <div id="App">
 
-      {/* {user.name}
-
-      {!auth_state && <button onClick={() => signIn(Strings.fake_user, true)}> Sign in </button>}
-      {auth_state && <button onClick={() => signOut({}, false)}> Sign Out </button>}
- */}
-
-      {/* <HomeIcon/> */}
 
       <SiteHeader />
 
-      <div className="_main">
+      <div className='_layout'>
 
+
+        <h2> {user.name || 'You are logged out'}</h2>
+
+        {!auth_state && <ButtonBasic type='primary' onClick={() => signIn(Strings.fake_user, true)}> Sign in </ButtonBasic >}
+        {auth_state && <ButtonBasic type='terinary' onClick={() => signOut({}, false)}> Sign Out </ButtonBasic>}
+
+
+ 
+      </div>
+
+
+      <div className="_main">
 
         <Suspense fallback={<SkeletonBasic />}>
 
@@ -114,14 +121,4 @@ export default compose(
     actionCreators
 
   )
-)(App)
-
-
-
-
-// export default connect(
-//   mapStateToProps
-//   ,
-//   actionCreators
-
-// )(App);
+)(App);

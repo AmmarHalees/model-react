@@ -6,11 +6,6 @@
     bottom: 0px;
     background-color: var(--bg-overlay-color);
     backdrop-filter: saturate(180%) blur(20px);
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 755536ef9081787fa38abdcd0be7ff2ca1ebbcac
 }
 
 .content {
@@ -35,10 +30,4 @@
     position: absolute;
     top: 50%;
     left: 50%;
-<<<<<<< HEAD
-
-
 }
-=======
-}
->>>>>>> 755536ef9081787fa38abdcd0be7ff2ca1ebbcac

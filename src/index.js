@@ -7,7 +7,6 @@ import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
-// import { store } from './redux/store';
 import configureStore from './redux/store';
 
 const store = configureStore({});
@@ -22,7 +21,6 @@ ReactDOM.render(
         <HashRouter>
 
           <App />
-
 
         </HashRouter>
 
