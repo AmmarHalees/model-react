@@ -15,7 +15,8 @@ import Strings from '../../utils/constants/strings.json';
 import './App.css';
 import ButtonBasic from '../../components/ButtonBasic/ButtonBasic';
 import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
-
+import TestPractices from '../../comp-custom/TestPractices/TestPractices';
+import {isDevelopment} from '../../utils/helpers';
 
 function App(props) {
 
@@ -83,6 +84,9 @@ function App(props) {
 
 
       <SiteFooter />
+
+
+      {isDevelopment() && <TestPractices/>}
 
     </div>
   );

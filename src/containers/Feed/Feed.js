@@ -14,6 +14,9 @@ import { doSomethingAsync } from '../../utils/helpers';
 
 const Feed = () => {
 
+
+console.log(process.env)
+
     const [modalIsOpen, setIsOpen] = useState(false);
     const [isLoading, setLoading] = useState(false);
 
@@ -42,12 +45,15 @@ const Feed = () => {
 
             <main className="_layout">
 
+                <img src=''/>
+
+
 
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", width: "100%", gap: "10px" }}>
 
                     {/* <ButtonBasic type="secondary" loading={true}>Cancel</ButtonBasic> */}
-                    <ButtonBasic loading type="primary" onClick={openModal}>Sign in</ButtonBasic>
-                    <ButtonWithIcon onClick={()=>doSomethingAsync(setLoading, true, false,3000)} icon={<CloseIcon />} loading={true} type="terinary">Sign in</ButtonWithIcon>
+                    <ButtonBasic loading={isLoading} type="primary" onClick={openModal}>Sign in</ButtonBasic>
+                    <ButtonWithIcon onClick={()=>doSomethingAsync(setLoading, true, false,3000)} icon={<CloseIcon />} loading={isLoading} type="terinary">Sign in</ButtonWithIcon>
 
                 </div>
 
