@@ -46,8 +46,8 @@ const Feed = () => {
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", width: "100%", gap: "10px" }}>
 
                     {/* <ButtonBasic type="secondary" loading={true}>Cancel</ButtonBasic> */}
-                    <ButtonBasic type="primary" onClick={openModal}>Sign in</ButtonBasic>
-                    <ButtonWithIcon onClick={()=>doSomethingAsync(setLoading, true, false,3000)} icon={<CloseIcon />} loading={isLoading} type="terinary">Sign in</ButtonWithIcon>
+                    <ButtonBasic loading type="primary" onClick={openModal}>Sign in</ButtonBasic>
+                    <ButtonWithIcon onClick={()=>doSomethingAsync(setLoading, true, false,3000)} icon={<CloseIcon />} loading={true} type="terinary">Sign in</ButtonWithIcon>
 
                 </div>
 

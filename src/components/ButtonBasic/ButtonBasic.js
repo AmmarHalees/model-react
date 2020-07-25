@@ -2,17 +2,21 @@ import React, { memo } from 'react';
 import style from './ButtonBasic.module.css';
 import PropTypes from 'prop-types'; // ES6
 import { mapTypeToClass } from '../../utils/helpers';
+import Spinner from '../Loading/Spinner/Spinner';
 
-const ButtonBasic = ({ children, onClick, type, disabled, rounded, loading =false, icon}) => {
+const ButtonBasic = ({ children, onClick, type, disabled, rounded, loading }) => {
 
+    console.log( loading)
 
     return (
 
-        <button onClick={onClick} className={`${style.button} ${style[mapTypeToClass[type]]} ${rounded && style.rounded}`} disabled={disabled}  >
+        <button onClick={onClick} className={`${style.button} ${style[mapTypeToClass[type]]} ${rounded && style.rounded}`} disabled={disabled || loading}  >
 
-          
+            {loading ? <Spinner style={{ width: '24px', height: '24px' }} /> : children}
 
-                {children}
+            {/* You could actually just do this. Becaue ButtonIcon's icon prop isnt passed here to 
+                ButtonBasic anyways.  */}
+
 
         </button>
 
@@ -22,7 +26,7 @@ const ButtonBasic = ({ children, onClick, type, disabled, rounded, loading =fals
 ButtonBasic.defaultProps = {
 
     type: 'primary',
-    disabled:false ,
+    disabled: false,
     rounded: false,
 
 }
@@ -30,7 +34,7 @@ ButtonBasic.defaultProps = {
 
 ButtonBasic.propTypes = {
 
-    type: PropTypes.oneOf(['primary','secondary','terinary']).isRequired,
+    type: PropTypes.oneOf(['primary', 'secondary', 'terinary']).isRequired,
     disabled: PropTypes.bool,
     loading: PropTypes.bool,
     rounded: PropTypes.bool,
@@ -38,8 +42,8 @@ ButtonBasic.propTypes = {
         PropTypes.string,
         PropTypes.element,
         PropTypes.number
-      ]),
-    onClick:PropTypes.func.isRequired
+    ]),
+    onClick: PropTypes.func.isRequired
 
 }
 

@@ -1,18 +1,18 @@
 import React, { memo } from 'react';
 import ButtonBasic from '../ButtonBasic/ButtonBasic';
 import styles from './ButtonWithIcon.module.css';
-import { ReactComponent as HomeIcon } from '../../assets/icons/home.svg';
-import { ReactComponent as LoadingSvg } from '../../assets/svg-loaders/rings.svg';
+import Spinner from '../Loading/Spinner/Spinner';
+import PropTypes from 'prop-types'; // ES6
 
-const ButtonWithIcon = ({ children, onClick, type, icon = <HomeIcon/>, disabled, size ,loading}) => {
+const ButtonWithIcon = ({ children, onClick, type, icon, disabled, size, loading }) => {
 
 
-    icon = ( loading ===true ? <LoadingSvg style={{stroke:'red'}}/> : icon)
+    icon = (loading === true ? <Spinner /> : icon);
 
 
     return (
 
-        <ButtonBasic type={type} onClick={onClick} disabled={disabled}>
+        <ButtonBasic type={type} onClick={onClick} disabled={disabled || loading}>
 
             <div className={styles.buttonWithIcon}>
 
@@ -34,6 +34,12 @@ const ButtonWithIcon = ({ children, onClick, type, icon = <HomeIcon/>, disabled,
         </ButtonBasic>
 
     );
+}
+
+ButtonWithIcon.propTypes = {
+
+    icon: PropTypes.element.isRequired,
+
 }
 
 export default memo(ButtonWithIcon);

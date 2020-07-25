@@ -5,6 +5,8 @@
     right: 0px;
     bottom: 0px;
     background-color: var(--bg-overlay-color);
+
+    -moz-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
 }
 

@@ -1,12 +1,11 @@
 .button{
 
     /* width: 100%; */
-    min-width: 50px;
+    min-width: 100px;
     padding: var(--padding);
     border-radius: var(--border-radius);
     font-size: 1rem;
     text-align: center;
-    height: var(--button-height);
 }
 
 
@@ -76,6 +75,7 @@ button:disabled,
 button[disabled]{
     color: rgba(0, 0, 0, 0.26);
     box-shadow: none;
+    opacity: 0.8;
 }
 button:disabled:hover,
 button[disabled]:hover{
@@ -88,7 +88,7 @@ button[disabled]:hover{
 button.primary:disabled ,
 button.primary[disabled]{
 
-    background-color: rgba(0, 0, 0, 0.12);
+    background-color: rgb(149 149 149 / 12%);
 }
 
 button.secondary:disabled ,
