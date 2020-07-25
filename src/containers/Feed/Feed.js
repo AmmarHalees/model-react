@@ -1,25 +1,24 @@
-import React from 'react';
+import React , {useState} from 'react';
 
 import ButtonWithIcon from '../../components/ButtonWithIcon/ButtonWithIcon';
-import { ReactComponent as CloseIcon } from '../../assets/icons/x.svg'
+import { ReactComponent as CloseIcon } from '../../assets/icons/x.svg';
+import { ReactComponent as LoadingBars } from '../../assets/svg-loaders/ball-triangle.svg';
+
 import ButtonBasic from '../../components/ButtonBasic/ButtonBasic';
-import Chip from '../../components/Chip/Chip';
-import TooltipBasic from '../../components/TooltipBasic/TooltipBasic';
 import ModalBasic from '../../components/ModalBasic/ModalBasic';
-import InfoCard from '../../comp-custom/InfoCard/InfoCard';
-import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
 import data from '../../utils/constants/strings.json';
 import PostCard from '../../comp-custom/PostCard/PostCard';
 import ResponsiveList from '../../components/Lists/ResponsiveList/ResponsiveList';
 import ImageBasic from '../../components/ImageBasic/ImageBasic';
-
-
+import { doSomethingAsync } from '../../utils/helpers';
 
 const Feed = () => {
 
+    const [modalIsOpen, setIsOpen] = useState(false);
+    const [isLoading, setLoading] = useState(false);
 
 
-    const [modalIsOpen, setIsOpen] = React.useState(false);
+
     function openModal() {
         setIsOpen(true);
     }
@@ -38,35 +37,20 @@ const Feed = () => {
 
         <div>
 
+
             <section style={{ minWidth: "100%", background: "green" }}>Slider</section>
 
             <main className="_layout">
 
+
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", width: "100%", gap: "10px" }}>
 
-                    <ButtonBasic type="secondary" >Cancel</ButtonBasic>
+                    {/* <ButtonBasic type="secondary" loading={true}>Cancel</ButtonBasic> */}
                     <ButtonBasic type="primary" onClick={openModal}>Sign in</ButtonBasic>
-                    <ButtonWithIcon icon={<CloseIcon />} type="terinary">Sign in</ButtonWithIcon>
+                    <ButtonWithIcon onClick={()=>doSomethingAsync(setLoading, true, false,3000)} icon={<CloseIcon />} loading={isLoading} type="terinary">Sign in</ButtonWithIcon>
 
                 </div>
 
-
-                <div>
-
-                    <Chip text="hi" />
-                    <Chip text="my name is ammar" />
-                    <Chip text="where are you" />
-
-
-                </div>
-
-
-                <TooltipBasic >
-
-                    <span style={{ width: "fitContent" }}>hi</span>
-
-
-                </TooltipBasic>
 
 
                 <ModalBasic
@@ -81,7 +65,7 @@ const Feed = () => {
                 >
 
 
-                    <ImageBasic 
+                    <ImageBasic
                         alt="hi"
 
                         src={data['fake normal sized image']} />

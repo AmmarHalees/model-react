@@ -67,6 +67,8 @@
 
     --min-post-width: var(--min-page-width);
     /*--- 288---*/
+
+    --button-height: 3rem 
 }
 
 /*-----Generic------*/
