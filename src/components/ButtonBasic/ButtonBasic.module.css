@@ -4,6 +4,7 @@
     min-width: 100px;
     padding: var(--padding);
     border-radius: var(--border-radius);
+    height: var(--button-height);
     font-size: 1rem;
     text-align: center;
 }
@@ -79,7 +80,7 @@ button[disabled]{
 }
 button:disabled:hover,
 button[disabled]:hover{
- cursor: default;
+ cursor: not-allowed;
  pointer-events: none;
 }
 
