@@ -29,3 +29,12 @@
     border: 1px solid var(--error-accent-color);
 
 }
+
+
+/*---info---*/
+
+.info{
+    background-color: var(--info-bg-color);
+    border: 1px solid var(--info-accent-color);
+
+}

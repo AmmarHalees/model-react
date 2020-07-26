@@ -12,19 +12,21 @@
 /*-----Variables------*/
 
 :root {
-
     --page-color: #fff;
+
+    /*--Background colors--*/
 
     --bg-primary-color: #6200ee;
     --bg-accent-color: #ef64d9;
-
     --bg-overlay-color: rgba(0, 0, 0, 0.5);
 
+    /*--Title colors--*/
 
     --title-color: rgba(0, 0, 0, 0.9);
     --paragraph-color: rgba(0, 0, 0, 0.7);
     --overlay-or-button-text-color: rgb(255, 255, 255);
 
+    /*-- Result colors--*/
     --success-bg-color: #f6ffed;
     --success-accent-color: #b7eb8f;
 
@@ -34,41 +36,65 @@
     --error-bg-color: #fff2f0;
     --error-accent-color: #ffccc7;
 
+    --info-bg-color: #e6f7ff;
+    --info-accent-color: #91d5ff;
+
+
+
+    
+    /*-- State colors--*/
     --bg-disabled-color: rgba(0, 0, 0, 0.12);
-    --titel-disabled-color: rgba(0, 0, 0, 0.12);
-    --highlight-color: yellow;
+
+    --title-disabled-color: rgba(0, 0, 0, 0.12);
+
+    /*-- Font sizes--*/
 
     --font-size: 1rem;
     --font-size-x2: 2em;
 
+    /*-- Box shadows--*/
+
     --box-shadow: rgb(235, 235, 235) -1px 1px 13px 0px;
+
+    /*-- Filter --*/
+
     --backdrop-filter: saturate(180%) blur(20px);
+
+    /*-- Borders --*/
 
     --border: 1px solid var(--bg-primary-color, #6200ee);
     --border-radius: 10px;
     --border-radius-x2: 20px;
 
+    /*-- Padding and Margin --*/
+
     --padding: 1rem;
     --margin: 1rem;
 
+    /*-- Font family --*/
+
     --font-family: sans-serif, Arial, Helvetica;
+
+    /*-- Speed --*/
+
     --speed: 300ms;
+
+    /*-- Gap layout and elements --*/
 
     --app-gap: 1rem;
     --layout-gap: 2rem;
 
+    /*-- Heights --*/
+
     --header-height: 40px;
     --footer-height: 40px;
-
-    --min-page-width: 19rem;
-    /*--- 320px or the width of the smallest device - a margin of safety = 304---*/
-    --max-page-width: 120rem;
-    /*-- 1920px or the width ----*/
-
-    --min-post-width: var(--min-page-width);
-    /*--- 288---*/
-
     --button-height: 55px;
+
+    /*-- Limits (for breakpoints and more) --*/
+
+    --min-page-width: 19rem; /*--- 320px or the width of the smallest device - a margin of safety = 304---*/
+    --max-page-width: 120rem; /*-- 1920px or the width ----*/
+    --min-post-width: var(--min-page-width); /*--- 288---*/
 }
 
 /*-----Generic------*/
@@ -124,7 +150,6 @@ button {
 
 button:hover {
     cursor: pointer;
-
 }
 
 /*-----Utility classes ------*/
@@ -180,7 +205,8 @@ button:hover {
 /*-----Media Queries------*/
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media all and (min-width: 600px) {}
+@media all and (min-width: 600px) {
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media all and (min-width: 768px) {
@@ -191,14 +217,16 @@ button:hover {
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media all and (min-width: 992px) {}
+@media all and (min-width: 992px) {
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media all and (min-width: 1200px) {}
+@media all and (min-width: 1200px) {
+}
 
+/*----------Libraries-----------*/
 
-/*-----Libraries------*/
-
+/*--React Overlay--*/
 
 .ReactModal__Overlay {
     opacity: 0;
@@ -213,3 +241,29 @@ button:hover {
     opacity: 0;
 }
 
+/*--React Toastify--*/
+
+.Toastify__toast {
+    color: black;
+}
+
+.Toastify__toast--default {
+    color: var(--bg-primary-color);
+}
+.Toastify__toast--info {
+    background-color: white;
+}
+.Toastify__toast--success {
+    background-color: var(--success-bg-color) !important;
+}
+
+.Toastify__toast--warning {
+    background-color: var(--warning-bg-color);
+}
+.Toastify__toast--error {
+    background-color: var(--error-bg-color);
+}
+.Toastify__toast-body {
+}
+
+/*------------------------------*/

@@ -1,16 +1,20 @@
 import React from 'react';
 import styles from './AlertBasic.module.css';
+import PaperBasic from '../../PaperBasic/PaperBasic';
 
-const AlertBasic = ({ type }) => {
+const AlertBasic = ({ type, children }) => {
     return (
-        
-        <div className={`${styles.alert} ${styles[type]}`}>
 
-            <h3>This is successful</h3>
+        <PaperBasic>
 
-            <p>this is a success message</p>
+            <div className={`${styles.alert} ${styles[type]}`}>
 
-        </div>
+                {children}
+
+            </div>
+
+        </PaperBasic>
+
 
     );
 }

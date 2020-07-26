@@ -5,5 +5,4 @@ export const doSomethingAsync =(yourCallbackFcn, before, after , duration) =>{ c
 
 export const isDevelopment =() => process.env.NODE_ENV === 'development';
 
-
 export const getCSSvariableValue = (variableName) => getComputedStyle(document.documentElement).getPropertyValue('--bg-accent-color');
