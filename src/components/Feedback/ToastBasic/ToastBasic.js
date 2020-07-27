@@ -1,6 +1,7 @@
 import React from 'react';
 import { ToastContainer } from 'react-toastify';
 import PaperBasic from '../../PaperBasic/PaperBasic';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ToastBasic = () => {
     return (
@@ -8,16 +9,11 @@ const ToastBasic = () => {
         <PaperBasic>
 
             <ToastContainer
-                position="top-right"
-                autoClose={false}
-
                 hideProgressBar={false}
-                newestOnTop
-                closeOnClick={false}
+                newestOnTop={true}
                 rtl={false}
                 pauseOnFocusLoss
-                draggable
-                pauseOnHover
+         
             />
 
         </PaperBasic>

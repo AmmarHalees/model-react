@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import ButtonWithIcon from '../../components/ButtonWithIcon/ButtonWithIcon';
 import { ReactComponent as CloseIcon } from '../../assets/icons/x.svg';
-import { ReactComponent as LoadingBars } from '../../assets/svg-loaders/ball-triangle.svg';
 
 import ButtonBasic from '../../components/ButtonBasic/ButtonBasic';
 import ModalBasic from '../../components/ModalBasic/ModalBasic';
@@ -11,9 +10,8 @@ import data from '../../utils/constants/strings.json';
 import PostCard from '../../comp-custom/PostCard/PostCard';
 import ResponsiveList from '../../components/Lists/ResponsiveList/ResponsiveList';
 import ImageBasic from '../../components/ImageBasic/ImageBasic';
-import { doSomethingAsync } from '../../utils/helpers';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { doSomethingAsync, toastConfig } from '../../utils/helpers';
+import { toast } from 'react-toastify';
 import ToastBasic from '../../components/Feedback/ToastBasic/ToastBasic';
 
 const Feed = () => {
@@ -25,19 +23,7 @@ const Feed = () => {
     const [isLoading, setLoading] = useState(false);
 
 
-    function openToast() {
-
-        toast.success('🦄 Wow so easy!', {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: false,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-        });
-
-    }
+    function openToast() { toast.success('🦄 Wow so easy!', toastConfig); }
 
 
     function openModal() {
@@ -53,7 +39,7 @@ const Feed = () => {
         setIsOpen(false);
     }
 
-
+    console.log(toastConfig)
     return (
 
         <div>
@@ -62,11 +48,6 @@ const Feed = () => {
             <section style={{ minWidth: "100%", background: "green" }}>Slider</section>
 
             <main className="_layout">
-
-                <img src='' />
-
-
-
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", width: "100%", gap: "10px" }}>
 
                     {/* <ButtonBasic type="secondary" loading={true}>Cancel</ButtonBasic> */}
@@ -111,29 +92,15 @@ const Feed = () => {
 
                 <AlertBasic type="info">
 
-<h3>This is successful</h3>
+                    <h3>This is successful</h3>
 
-<p>this is a success message</p>
+                    <p>this is a success message</p>
 
-</AlertBasic>
+                </AlertBasic>
 
             </main>
 
             <ToastBasic />
-
-            {/* <ToastContainer
-                position="top-right"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop
-                closeOnClick={false}
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-            /> */}
-
-   
         </div>
 
 

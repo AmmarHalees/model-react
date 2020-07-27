@@ -248,13 +248,13 @@ button:hover {
 }
 
 .Toastify__toast--default {
-    color: var(--bg-primary-color);
+    /* color: var(--bg-primary-color); */
 }
 .Toastify__toast--info {
     background-color: white;
 }
 .Toastify__toast--success {
-    background-color: var(--success-bg-color) !important;
+    background-color: #caffcc !important;
 }
 
 .Toastify__toast--warning {
