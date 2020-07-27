@@ -13,6 +13,8 @@ import ImageBasic from '../../components/ImageBasic/ImageBasic';
 import { doSomethingAsync, toastConfig } from '../../utils/helpers';
 import { toast } from 'react-toastify';
 import ToastBasic from '../../components/Feedback/ToastBasic/ToastBasic';
+import ResultBase from '../../components/Result/ResultBase/ResultBase';
+import ModalPost from '../../comp-custom/ModalPost/ModalPost';
 
 const Feed = () => {
 
@@ -69,11 +71,7 @@ const Feed = () => {
 
                 >
 
-
-                    <ImageBasic
-                        alt="hi"
-
-                        src={data['fake normal sized image']} />
+                        <ModalPost/>
 
 
                 </ModalBasic>
@@ -101,7 +99,24 @@ const Feed = () => {
             </main>
 
             <ToastBasic />
+
+            {/* <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop
+                closeOnClick={false}
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            /> */}
+
+
+            <ResultBase type='empty'/>
+
         </div>
+
 
 
     );

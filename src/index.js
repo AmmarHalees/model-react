@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import * as serviceWorker from './serviceWorker';
 import App from './containers/App/App';
+
 import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 

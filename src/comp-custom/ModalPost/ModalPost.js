@@ -1,36 +1,28 @@
 import React from 'react';
 import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
-import styles from './ModalPost.module.css';
+// import styles from './ModalPost.module.css';
+import data from '../../utils/constants/strings.json';
 
 
-const ModalPost = ({ closeModal, CloseIcon, data }) => {
+const ModalPost = ({ closeModal, CloseIcon }) => {
     return (
 
-        <div className={styles.container}>
+        <div >
 
-            <div className={styles.close}>
+            {/* <div className={styles.close}>
 
                 <ButtonIcon onClick={closeModal} icon={<CloseIcon />} type="terinary" />
 
-            </div>
+            </div> */}
 
             <img style={{
 
                 width: "auto",
                 maxHeight: "80vh",
                 maxWidth: '100%',
+                display:'block'
 
 
-
-
-
-
-
-
-                transform: 'translate(-50%, -50%)',
-                position: 'absolute',
-                top: '50%',
-                left: '50%'
 
             }}
                 alt="hi"

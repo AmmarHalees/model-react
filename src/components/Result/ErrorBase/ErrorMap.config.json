@@ -1,0 +1,25 @@
+{
+    "server": {
+        "className": "serverError",
+        "src": "",
+        "title": "Server Error",
+        "description": "Something has gone wrong. Please try again later"
+    }
+    ,
+
+    "Not found": {
+        "className": "notFoundError",
+        "src": "",
+        "title": "Not Found",
+        "description": "Page you're looking for cannot be found"
+    }
+
+    ,
+
+    "runtime": {
+        "className": "runtimeError",
+        "src": "",
+        "title": "Runtime Error",
+        "description": "There's an internal crash in the app"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "empty": {
+        "className": "empty",
+        "src": "",
+        "title": "Nothing found",
+        "description": "Something has gone wrong. Please try again later"
+    }
+    ,
+
+    "success": {
+        "className": "success",
+        "src": "",
+        "title": "Success!",
+        "description": "The thing you were trying to do was successful"
+    }
+
+    ,
+
+    "error": {
+        "className": "error",
+        "src": "",
+        "title": "Not Successful",
+        "description": "The thing you were trying to do was not successful"
+    }
+}

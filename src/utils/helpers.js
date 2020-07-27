@@ -1,4 +1,4 @@
-export const mapTypeToClass = JSON.parse('{"primary":"primary", "secondary":"secondary",  "terinary":"terinary",  "link":"link"}')
+export const mapTypeToButtonClass = JSON.parse('{"primary":"primary", "secondary":"secondary",  "terinary":"terinary",  "link":"link"}')
 
 export const toastConfig = JSON.parse('{ "position": "top-right",  "autoClose": 5000, "hideProgressBar": false, "closeOnClick": false, "pauseOnHover": true,"draggable": true }')
 

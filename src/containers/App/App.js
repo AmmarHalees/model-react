@@ -1,11 +1,10 @@
 import React, { Suspense, memo } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import SiteHeader from '../../components/Headers/SiteHeader/SiteHeader';
 import SiteFooter from '../../components/Footers/SiteFooter/SiteFooter';
 import GuestOnlyRoute from '../../comp-router/GuestOnlyRoute';
 import AuthOnlyRoute from '../../comp-router/AuthOnlyRoute';
 import SkeletonBasic from '../../components/Loading/Skeleton/SkeletonBasic';
-import PageNotFound from '../../components/Result/PageNotFound/PageNotFound'
 import { Signin, Register, List, Feed, Settings } from '../../utils/routes';
 import { connect } from 'react-redux';
 import { handleUser, handleAuth } from '../../redux/actioncreators/actioncreators';
@@ -17,6 +16,8 @@ import ButtonBasic from '../../components/ButtonBasic/ButtonBasic';
 import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
 import TestPractices from '../../comp-custom/TestPractices/TestPractices';
 import {isDevelopment} from '../../utils/helpers';
+import ErrorBase from '../../components/Result/ErrorBase/ErrorBase';
+import AppConfig  from "../../utils/constants/app.cofig.json";
 
 function App(props) {
 
@@ -40,6 +41,7 @@ function App(props) {
 
   return (
     <div id="App">
+
 
 
       <SiteHeader />
@@ -71,7 +73,7 @@ function App(props) {
             <Route path="/list" component={List} />
             <Route exact path="/" component={Feed} />
 
-            <Route render={() => <PageNotFound />} />
+            <Route render={({history}) => <ErrorBase type="Not found" callToAction={ ()=> history.push(AppConfig['root']) }/>} />
 
 
           </Switch>
