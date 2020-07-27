@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import ButtonWithIcon from '../../components/ButtonWithIcon/ButtonWithIcon';
 import { ReactComponent as CloseIcon } from '../../assets/icons/x.svg';
-import { ReactComponent as LoadingBars } from '../../assets/svg-loaders/ball-triangle.svg';
 
 import ButtonBasic from '../../components/ButtonBasic/ButtonBasic';
 import ModalBasic from '../../components/ModalBasic/ModalBasic';
@@ -15,6 +14,7 @@ import { doSomethingAsync } from '../../utils/helpers';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ToastBasic from '../../components/Feedback/ToastBasic/ToastBasic';
+import ResultBase from '../../components/Result/ResultBase/ResultBase';
 
 const Feed = () => {
 
@@ -111,11 +111,11 @@ const Feed = () => {
 
                 <AlertBasic type="info">
 
-<h3>This is successful</h3>
+                    <h3>This is successful</h3>
 
-<p>this is a success message</p>
+                    <p>this is a success message</p>
 
-</AlertBasic>
+                </AlertBasic>
 
             </main>
 
@@ -133,8 +133,11 @@ const Feed = () => {
                 pauseOnHover
             /> */}
 
-   
+
+            <ResultBase type='empty'/>
+
         </div>
+
 
 
     );

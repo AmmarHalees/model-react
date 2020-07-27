@@ -1,0 +1,11 @@
+.errorBase{
+
+    padding: var(--padding);
+
+}
+
+.notFoundError{
+
+    background-color: thistle;
+
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RuntimeError from '../Result/RuntimeError/RuntimeError';
+import ErrorBase from '../Result/ErrorBase/ErrorBase';
 
 class ErrorBoundary extends Component {
     constructor(props) {
@@ -32,7 +32,7 @@ class ErrorBoundary extends Component {
             // window.location.href = '/home/login';
             // return 'Something went wrong, redirecting to login page';
 
-            return <RuntimeError/>
+            return <ErrorBase type='runtime'/>
         }
 
         return this.props.children;
