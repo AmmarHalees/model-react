@@ -8,23 +8,11 @@
 
     -moz-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
+
+    /* overflow-y: scroll; */
 }
 
 .content {
-    /* position: absolute;
-    top: 40px;
-    left: 40px;
-    right: 40px;
-    bottom: 40px;
-
-     */
-
-    /* overflow: auto; */
-    /*
-
-    width: fit-content;
-    margin: auto; */
-
     outline: none;
     background: var(--page-color);
     -webkit-transform: translate(-50%, -50%);

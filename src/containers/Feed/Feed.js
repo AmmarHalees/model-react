@@ -15,6 +15,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ToastBasic from '../../components/Feedback/ToastBasic/ToastBasic';
 import ResultBase from '../../components/Result/ResultBase/ResultBase';
+import ModalPost from '../../comp-custom/ModalPost/ModalPost';
 
 const Feed = () => {
 
@@ -88,11 +89,7 @@ const Feed = () => {
 
                 >
 
-
-                    <ImageBasic
-                        alt="hi"
-
-                        src={data['fake normal sized image']} />
+                        <ModalPost/>
 
 
                 </ModalBasic>
