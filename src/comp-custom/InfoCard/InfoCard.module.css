@@ -1,17 +1,22 @@
 .card{
 
 
-    width: fit-content;
-    min-width: 300px;
-    min-height: 100px;
+    width: 300px;
+    height: 300px;
+
+    background-color: yellow;
+    display: grid;
+    grid-template-rows: 100px 200px;
+    overflow: hidden;
 
 }
 
 .cardImage{
 
-    max-width: 300px;
+    max-width: 100%;
     height: auto;
     border-radius: var(--border-radius)  var(--border-radius) 0px 0px;
+    height: 100px;
 
 }
 
@@ -20,5 +25,19 @@
     padding: var(--padding);
     display: grid;
     gap: var(--app-gap);
+    background-color: green;
 
+
+
+}
+
+
+.cardBody p{
+
+    overflow: auto;
+
+        max-height: 100%;
+        height: 50px;
+
+        background-color: red;
 }

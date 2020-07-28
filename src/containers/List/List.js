@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { getTodos } from '../../services/posts';
-import './List.css';
+import ResponsiveList from '../../components/Lists/ResponsiveList/ResponsiveList';
+import InfoCard from '../../comp-custom/InfoCard/InfoCard';
 
 class List extends PureComponent {
     constructor(props) {
@@ -16,28 +17,31 @@ class List extends PureComponent {
                 data: response
             })
 
-        })
+        }
+
+
+        )
 
 
     }
     render() {
 
-        const {data} = this.state;
-
-        console.log(data);
+        const { data } = this.state;
 
         return (
 
-            <div className="list-container"> 
-                {this.state.data.map(x => (
+            <div className="_layout ">
 
-                    <div key={x.id}>
+                <ResponsiveList>
 
-                       <img src={x.largeImageURL} alt="something hapenning" />
+                    {data.map(({id, title, body})=> (
 
-                    </div>
+                        <InfoCard key={id} title={title} paragraph={body}/>
 
-                ))}
+                    ))}
+
+                </ResponsiveList>
+
             </div>
         );
     }

@@ -5,7 +5,7 @@ import SiteFooter from '../../components/Footers/SiteFooter/SiteFooter';
 import GuestOnlyRoute from '../../comp-router/GuestOnlyRoute';
 import AuthOnlyRoute from '../../comp-router/AuthOnlyRoute';
 import SkeletonBasic from '../../components/Loading/Skeleton/SkeletonBasic';
-import { Signin, Register, List, Feed, Settings } from '../../utils/routes';
+import { Signin, Register, List, Feed, Settings,Test } from '../../utils/routes';
 import { connect } from 'react-redux';
 import { handleUser, handleAuth } from '../../redux/actioncreators/actioncreators';
 import { ReactComponent as HomeIcon } from '../../assets/icons/home.svg';
@@ -64,6 +64,10 @@ function App(props) {
         <Suspense fallback={<SkeletonBasic />}>
 
           <Switch>
+
+          <Route path="/test" component={Test} />
+
+
 
             <AuthOnlyRoute path="/settings" component={Settings} />
 

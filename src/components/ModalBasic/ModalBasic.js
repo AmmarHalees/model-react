@@ -5,18 +5,18 @@ import { getCSSvariableValue } from '../../utils/helpers';
 
 Modal.setAppElement('#root');
 
-
 const ModalBasic = ({ children, isOpen, onAfterOpen, onRequestClose, contentLabel }) => {
 
   return (
 
     <Modal
+    
       isOpen={isOpen}
       onAfterOpen={() => { document.body.style.overflow = "hidden"; onAfterOpen(); }}
       onRequestClose={() => {  document.body.style.overflow = "";  onRequestClose();  }}
 
       contentLabel={contentLabel}
-      closeTimeoutMS={getCSSvariableValue('--speed')}
+      closeTimeoutMS = {parseFloat(getCSSvariableValue('--speed'))}
       overlayClassName={styles.overlay}
       className={styles.content}
 

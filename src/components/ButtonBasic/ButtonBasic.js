@@ -6,7 +6,6 @@ import Spinner from '../Loading/Spinner/Spinner';
 
 const ButtonBasic = ({ children, onClick, type, disabled, rounded, loading }) => {
 
-    console.log( loading)
 
     return (
 
