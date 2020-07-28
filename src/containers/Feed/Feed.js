@@ -20,8 +20,6 @@ import ModalPost from '../../comp-custom/ModalPost/ModalPost';
 const Feed = () => {
 
 
-    console.log(process.env)
-
     const [modalIsOpen, setIsOpen] = useState(false);
     const [isLoading, setLoading] = useState(false);
 

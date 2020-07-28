@@ -5,8 +5,6 @@ import ImageBasic from '../../components/ImageBasic/ImageBasic';
 import data from '../../utils/constants/strings.json';
 
 
-console.log(data['fake normal sized image'])
-
 
 const InfoCard = ({ title = data['default title'], paragraph = data["default paragraph"], src = data['fake normal sized image'] }) => {
     return (
