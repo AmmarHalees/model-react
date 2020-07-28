@@ -6,3 +6,9 @@
     display: block;
     /* vertical-align: middle; */
 }
+
+.modalImage{
+
+    max-height: 80vh
+
+}
