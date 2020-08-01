@@ -10,7 +10,7 @@ import data from '../../utils/constants/strings.json';
 import PostCard from '../../comp-custom/PostCard/PostCard';
 import ResponsiveList from '../../components/Lists/ResponsiveList/ResponsiveList';
 import ImageBasic from '../../components/ImageBasic/ImageBasic';
-import { doSomethingAsync, toastConfig } from '../../utils/helpers';
+import { fakeAsyncFunction, toastConfig } from '../../utils/helpers';
 import { toast } from 'react-toastify';
 import ToastBasic from '../../components/Feedback/ToastBasic/ToastBasic';
 import ResultBase from '../../components/Result/ResultBase/ResultBase';
@@ -52,7 +52,7 @@ const Feed = () => {
 
                     {/* <ButtonBasic type="secondary" loading={true}>Cancel</ButtonBasic> */}
                     <ButtonBasic loading={isLoading} type="primary" onClick={openModal}>Sign in</ButtonBasic>
-                    <ButtonWithIcon onClick={() => doSomethingAsync(setLoading, true, false, 3000)} icon={<CloseIcon />} loading={isLoading} type="terinary">Sign in</ButtonWithIcon>
+                    <ButtonWithIcon onClick={() => fakeAsyncFunction(setLoading, true, false, 3000)} icon={<CloseIcon />} loading={isLoading} type="terinary">Sign in</ButtonWithIcon>
                     <ButtonBasic onClick={openToast}></ButtonBasic>
                 </div>
 

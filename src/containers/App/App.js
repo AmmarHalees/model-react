@@ -15,9 +15,10 @@ import './App.css';
 import ButtonBasic from '../../components/ButtonBasic/ButtonBasic';
 import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
 import TestPractices from '../../comp-custom/TestPractices/TestPractices';
-import {isDevelopment} from '../../utils/helpers';
+import {isDevelopment, isProduction} from '../../utils/helpers';
 import ErrorBase from '../../components/Result/ErrorBase/ErrorBase';
 import AppConfig  from "../../utils/constants/app.cofig.json";
+import CleanUp from '../../comp-custom/CleanUp/CleanUp';
 
 function App(props) {
 
@@ -93,6 +94,7 @@ function App(props) {
 
 
       {isDevelopment() && <TestPractices/>}
+      {/* {isProduction() && <CleanUp/> } */}
 
     </div>
   );
