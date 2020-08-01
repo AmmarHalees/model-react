@@ -8,8 +8,8 @@
 
 .iconContainer{
 
- width: 30px;
- height: 30px;
+ /* width: 30px;
+ height: 30px; */
 
 }
 
@@ -23,3 +23,38 @@
     height: inherit;
     width: inherit;
 }
+
+
+
+/*------Variants----*/
+
+
+.small{
+
+    padding: var(--padding-sm);
+
+    width: 20px;
+    height: 20px;
+
+}
+
+
+.medium{
+
+    padding: var(--padding-md);
+
+    width: 24px;
+    height: 24px;
+
+}
+
+
+.large{
+
+    padding: var(--padding);
+
+    width: 30px;
+    height: 30px;
+
+}
+

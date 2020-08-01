@@ -15,6 +15,8 @@ import { toast } from 'react-toastify';
 import ToastBasic from '../../components/Feedback/ToastBasic/ToastBasic';
 import ResultBase from '../../components/Result/ResultBase/ResultBase';
 import ModalPost from '../../comp-custom/ModalPost/ModalPost';
+import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
+import ButtonPlain from '../../components/ButtonPlain/ButtonPlain';
 
 const Feed = () => {
 
@@ -51,7 +53,7 @@ const Feed = () => {
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", width: "100%", gap: "10px" }}>
 
                     {/* <ButtonBasic type="secondary" loading={true}>Cancel</ButtonBasic> */}
-                    <ButtonWithIcon loading={isLoading} type="primary" onClick={openModal}>Sign in</ButtonWithIcon>
+                    <ButtonPlain type="primary" onClick={openModal}>Sign in</ButtonPlain>
                     <ButtonWithIcon onClick={() => fakeAsyncFunction(setLoading, true, false, 3000)} icon={<CloseIcon />} loading={isLoading} type="terinary">Sign in</ButtonWithIcon>
                     <ButtonBasic onClick={openToast}></ButtonBasic>
                 </div>
@@ -69,7 +71,7 @@ const Feed = () => {
 
                 >
 
-                        <ModalPost/>
+                    <ModalPost />
 
 
                 </ModalBasic>
@@ -93,8 +95,15 @@ const Feed = () => {
                     <p>this is a success message</p>
 
                 </AlertBasic>
+                <ButtonIcon icon={<CloseIcon />} size='medium' />
 
+<ResultBase type='empty' />
             </main>
+
+            <ButtonPlain>
+
+                hi my name is ammar
+                    </ButtonPlain>
 
             <ToastBasic />
 
@@ -111,7 +120,7 @@ const Feed = () => {
             /> */}
 
 
-            <ResultBase type='empty'/>
+
 
         </div>
 

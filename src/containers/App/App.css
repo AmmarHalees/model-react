@@ -71,6 +71,9 @@
     --padding: 1rem;
     --margin: 1rem;
 
+    --padding-sm: 0.5rem;
+    --padding-md: 0.75rem;
+
     /*-- Font family --*/
 
     --font-family: sans-serif, Arial, Helvetica;
@@ -95,6 +98,9 @@
     --min-page-width: 19rem; /*--- 320px or the width of the smallest device - a margin of safety = 304---*/
     --max-page-width: 120rem; /*-- 1920px or the width ----*/
     --min-post-width: var(--min-page-width); /*--- 288---*/
+
+    --max-post-height: 100vh;
+    
 }
 
 /*-----Generic------*/

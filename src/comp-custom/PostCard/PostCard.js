@@ -28,9 +28,9 @@ const PostCard = ({ title = data['default title'], paragraph = data["default par
 
                         <div className={styles.postControlButtons}>
 
-                            <ButtonIcon icon={<CloseIcon />} type='secondary' onClick={() => alert('hi')} />
-                            <ButtonIcon icon={<CloseIcon />} type='secondary' onClick={() => alert('hi')} />
-                            <ButtonIcon icon={<CloseIcon />} type='secondary' onClick={() => alert('hi')} />
+                            <ButtonIcon icon={<CloseIcon />} size='small' type='primary' onClick={() => alert('hi')} />
+                            <ButtonIcon icon={<CloseIcon />} size='small' type='primary' onClick={() => alert('hi')} />
+                            <ButtonIcon icon={<CloseIcon />} size='small' type='primary' onClick={() => alert('hi')} />
 
 
                         </div>
