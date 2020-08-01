@@ -9,6 +9,8 @@
     -moz-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
 
+    z-index: var(--modal);
+
     /* overflow-y: scroll; */
 }
 

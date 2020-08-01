@@ -100,6 +100,13 @@
     --min-post-width: var(--min-page-width); /*--- 288---*/
 
     --max-post-height: 100vh;
+
+    /*------Z -index ------*/
+
+    --header : 2;
+    --tool-tip: 4;
+
+    --modal:10;
     
 }
 
@@ -241,6 +248,7 @@ button:hover {
 .ReactModal__Overlay {
     opacity: 0;
     transition: opacity var(--speed) ease-in-out;
+    
 }
 
 .ReactModal__Overlay--after-open {

@@ -5,17 +5,16 @@ import ImageBasic from '../../components/ImageBasic/ImageBasic';
 import data from '../../utils/constants/strings.json';
 import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
 import { ReactComponent as CloseIcon } from '../../assets/icons/x.svg';
-import { Link } from 'react-router-dom';
 
 
 
-const PostCard = ({ title = data['default title'], paragraph = data["default paragraph"], src = data['fake tall image'] }) => {
+const PostCard = ({ title = data['default title'], onClick ,paragraph = data["default paragraph"], src = data['fake tall image'] }) => {
     return (
 
 
         <PaperBasic>
 
-            <div className={styles.postCard}>
+            <div className={styles.postCard} onClick={onClick}>
 
                 <div className={styles.postOverlay}></div>
 
