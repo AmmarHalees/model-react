@@ -51,7 +51,7 @@ const Feed = () => {
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", width: "100%", gap: "10px" }}>
 
                     {/* <ButtonBasic type="secondary" loading={true}>Cancel</ButtonBasic> */}
-                    <ButtonBasic loading={isLoading} type="primary" onClick={openModal}>Sign in</ButtonBasic>
+                    <ButtonWithIcon loading={isLoading} type="primary" onClick={openModal}>Sign in</ButtonWithIcon>
                     <ButtonWithIcon onClick={() => fakeAsyncFunction(setLoading, true, false, 3000)} icon={<CloseIcon />} loading={isLoading} type="terinary">Sign in</ButtonWithIcon>
                     <ButtonBasic onClick={openToast}></ButtonBasic>
                 </div>

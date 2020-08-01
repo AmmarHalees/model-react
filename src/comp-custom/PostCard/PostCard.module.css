@@ -1,23 +1,86 @@
 .postCard{
 
+    width: fit-content;
+    height: fit-content;
 
-    width: 100%;
     border-radius: var(--border-radius);
     position: relative;
+
+    max-height: 100vh;
+
 }
 
 .postControls{
 
     position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    padding: 1rem;
-    background: black;
-    max-width: 100%;
 
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    z-index: 2;
+
+    padding: 1rem;
+
+    background: black;
+
+    display: grid;
+    gap: var(--app-gap);
+
+    opacity: 0;
+    transition: opacity var(--speed) cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+}
+
+.postOverlay{
+
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    background: transparent;
+    height: 100%;
+    width: 100%;
+
+
+    z-index: 1;
 }
 
 .title{
 
+    text-overflow: ellipsis;
+    overflow: hidden; 
+
+    white-space: nowrap;
+
     color: white;
+}
+
+
+.postControlButtons{
+
+    justify-self: end;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap : var(--app-gap)
+
+}
+
+
+/*---------Interactions-------*/
+
+.postCard:hover{
+
+    cursor: pointer;
+
+}
+
+
+.postCard:hover >.postControls{
+
+    opacity: 1;
+
+    /* cursor: default; */
+
 }

@@ -1,10 +1,10 @@
 .button{
 
     /* width: 100%; */
-    min-width: 100px;
+    /* min-width: 100px; */
     padding: var(--padding);
     border-radius: var(--border-radius);
-    height: var(--button-height);
+    /* height: var(--button-height); */
     font-size: 1rem;
     text-align: center;
 }
