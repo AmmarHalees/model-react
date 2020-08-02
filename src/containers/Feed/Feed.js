@@ -9,16 +9,16 @@ const Feed = () => {
 
     return (
 
-        <div>
+        <div className='_layout'>
+
+            <section style={{ minWidth: "100%", background: "green" }}>Slider</section>
+
+
+            <main className="_container _layout">
 
 
 
-            <main className="_layout">
-
-                <section style={{ minWidth: "100%", background: "green" }}>Slider</section>
-
-
-                <SectionHeader/>
+                <SectionHeader />
 
                 <ResponsiveList>
 

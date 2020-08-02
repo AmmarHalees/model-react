@@ -5,7 +5,7 @@ const SiteFooter = () => {
     return (
         <footer className={FooterStyles.footer} >
 
-            <div className="_layout">
+            <div className="_container">
 
                 footer
 

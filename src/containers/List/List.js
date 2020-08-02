@@ -30,7 +30,7 @@ class List extends PureComponent {
 
         return (
 
-            <div className="_layout ">
+            <div className="_container">
 
                 <ResponsiveList>
 

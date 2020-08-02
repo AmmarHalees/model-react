@@ -41,7 +41,7 @@
 
 
 
-    
+
     /*-- State colors--*/
     --bg-disabled-color: rgba(0, 0, 0, 0.12);
 
@@ -95,22 +95,25 @@
 
     /*-- Limits (for breakpoints and more) --*/
 
-    --min-page-width: 19rem; /*--- 320px or the width of the smallest device - a margin of safety = 304---*/
-    --max-page-width: 120rem; /*-- 1920px or the width ----*/
-    --min-post-width: var(--min-page-width); /*--- 288---*/
+    --min-page-width: 19rem;
+    /*--- 320px or the width of the smallest device - a margin of safety = 304---*/
+    --max-page-width: 120rem;
+    /*-- 1920px or the width ----*/
+    --min-post-width: var(--min-page-width);
+    /*--- 288---*/
 
-    --desktop : 992px;
+    --desktop: 992px;
 
 
     --max-post-height: 100vh;
 
     /*------Z -index ------*/
 
-    --header : 2;
+    --header: 2;
     --tool-tip: 4;
 
-    --modal:10;
-    
+    --modal: 10;
+
 }
 
 /*-----Generic------*/
@@ -192,9 +195,10 @@ button:hover {
 }
 
 
-._center{
+._center {
     text-align: center;
 }
+
 /*-----Custom classes------*/
 
 #App {
@@ -208,14 +212,23 @@ button:hover {
     display: grid;
     gap: var(--layout-gap);
     /* justify-content: center; */
-
+    /* 
     width: 98%;
 
     min-width: var(--min-page-width);
-    max-width: var(--max-page-width);
+    max-width: var(--max-page-width); */
+
+    /* min-height: calc(100vh - (var(--footer-height) + var(--header-height))); */
+}
+
+._container {
+
+    width: 98%;
 
     margin: auto;
-    /* min-height: calc(100vh - (var(--footer-height) + var(--header-height))); */
+
+    min-width: var(--min-page-width);
+    max-width: var(--max-page-width);
 }
 
 #_main {
@@ -227,24 +240,21 @@ button:hover {
 /*-----Media Queries------*/
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media all and (min-width: 600px) {
-}
+@media all and (min-width: 600px) {}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media all and (min-width: 768px) {
-    ._layout {
+    ._container {
         width: 80%;
         /* justify-content: start; */
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media all and (min-width: var(--desktop)) {
-}
+@media all and (min-width: var(--desktop)) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media all and (min-width: 1200px) {
-}
+@media all and (min-width: 1200px) {}
 
 /*----------Libraries-----------*/
 
@@ -253,7 +263,7 @@ button:hover {
 .ReactModal__Overlay {
     opacity: 0;
     transition: opacity var(--speed) ease-in-out;
-    
+
 }
 
 .ReactModal__Overlay--after-open {
@@ -273,9 +283,11 @@ button:hover {
 .Toastify__toast--default {
     /* color: var(--bg-primary-color); */
 }
+
 .Toastify__toast--info {
     background-color: white;
 }
+
 .Toastify__toast--success {
     background-color: #caffcc !important;
 }
@@ -283,11 +295,12 @@ button:hover {
 .Toastify__toast--warning {
     background-color: var(--warning-bg-color);
 }
+
 .Toastify__toast--error {
     background-color: var(--error-bg-color);
 }
-.Toastify__toast-body {
-}
+
+.Toastify__toast-body {}
 
 
 
@@ -299,21 +312,25 @@ button:hover {
     left: 0;
     right: 0;
     zIndex: 1;
-  }
-  .headroom--unfixed {
+}
+
+.headroom--unfixed {
     position: relative;
     transform: translateY(0);
-  }
-  .headroom--scrolled {
+}
+
+.headroom--scrolled {
     transition: transform 200ms ease-in-out;
-  }
-  .headroom--unpinned {
+}
+
+.headroom--unpinned {
     position: fixed;
     transform: translateY(-100%);
-  }
-  .headroom--pinned {
+}
+
+.headroom--pinned {
     position: fixed;
     transform: translateY(0%);
-  }
+}
 
 /*------------------------------*/
