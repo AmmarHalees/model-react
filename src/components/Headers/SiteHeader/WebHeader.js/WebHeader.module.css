@@ -1,0 +1,37 @@
+
+.innerHeader{
+
+    display: grid;
+  
+    grid-template-columns: 1fr 1fr 1fr;
+  
+    align-items: center;
+  
+  }
+
+
+  
+.announcement{
+
+    justify-self: center;
+  }
+
+  .header{
+
+
+    min-width: 100%;
+    height: var(--header-height);
+  
+    z-index: var(--header); 
+    transform: translate3d(0px, 0px, 0px);
+  
+  
+    background: hsla(0,0%,100%,.45);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+  
+    display: grid;
+    align-items: center;
+  }
+  
+  

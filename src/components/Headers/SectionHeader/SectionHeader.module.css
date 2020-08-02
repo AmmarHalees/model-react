@@ -1,0 +1,9 @@
+.sectionHeader {
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--app-gap);
+    align-items: center;
+    
+}
+

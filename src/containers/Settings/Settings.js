@@ -3,10 +3,10 @@ import React , {memo} from 'react';
 const Settings = () => {
     return (
 
-        <div>
+        <h1>
 
             Settings
-        </div>
+        </h1>
       );
 }
  

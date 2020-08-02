@@ -89,8 +89,8 @@
 
     /*-- Heights --*/
 
-    --header-height: 40px;
-    --footer-height: 40px;
+    --header-height: 4rem;
+    --footer-height: 4rem;
     --button-height: 55px;
 
     /*-- Limits (for breakpoints and more) --*/
@@ -98,6 +98,9 @@
     --min-page-width: 19rem; /*--- 320px or the width of the smallest device - a margin of safety = 304---*/
     --max-page-width: 120rem; /*-- 1920px or the width ----*/
     --min-post-width: var(--min-page-width); /*--- 288---*/
+
+    --desktop : 992px;
+
 
     --max-post-height: 100vh;
 
@@ -215,8 +218,10 @@ button:hover {
     /* min-height: calc(100vh - (var(--footer-height) + var(--header-height))); */
 }
 
-._main {
+#_main {
     min-height: calc(100vh - 80px);
+    margin-top: var(--header-height);
+    margin-bottom: 1rem;
 }
 
 /*-----Media Queries------*/
@@ -234,7 +239,7 @@ button:hover {
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media all and (min-width: 992px) {
+@media all and (min-width: var(--desktop)) {
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -283,5 +288,32 @@ button:hover {
 }
 .Toastify__toast-body {
 }
+
+
+
+
+
+
+.headroom {
+    top: 0;
+    left: 0;
+    right: 0;
+    zIndex: 1;
+  }
+  .headroom--unfixed {
+    position: relative;
+    transform: translateY(0);
+  }
+  .headroom--scrolled {
+    transition: transform 200ms ease-in-out;
+  }
+  .headroom--unpinned {
+    position: fixed;
+    transform: translateY(-100%);
+  }
+  .headroom--pinned {
+    position: fixed;
+    transform: translateY(0%);
+  }
 
 /*------------------------------*/

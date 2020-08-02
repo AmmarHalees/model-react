@@ -5,24 +5,29 @@ import SiteFooter from '../../components/Footers/SiteFooter/SiteFooter';
 import GuestOnlyRoute from '../../comp-router/GuestOnlyRoute';
 import AuthOnlyRoute from '../../comp-router/AuthOnlyRoute';
 import SkeletonBasic from '../../components/Loading/Skeleton/SkeletonBasic';
-import { Signin, Register, List, Feed, Settings,Test } from '../../utils/routes';
+import { Signin, Register, List, Feed, Settings, Test } from '../../utils/routes';
 import { connect } from 'react-redux';
 import { handleUser, handleAuth } from '../../redux/actioncreators/actioncreators';
-import { ReactComponent as HomeIcon } from '../../assets/icons/home.svg';
 import { compose } from 'redux';
-import Strings from '../../utils/constants/strings.json';
 import './App.css';
-import ButtonBasic from '../../components/ButtonBasic/ButtonBasic';
-import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
 import TestPractices from '../../comp-custom/TestPractices/TestPractices';
-import {isDevelopment, isProduction} from '../../utils/helpers';
+import { isDevelopment, getCSSvariableValue } from '../../utils/helpers';
 import ErrorBase from '../../components/Result/ErrorBase/ErrorBase';
-import AppConfig  from "../../utils/constants/app.cofig.json";
-import CleanUp from '../../comp-custom/CleanUp/CleanUp';
+import AppConfig from "../../utils/constants/app.cofig.json";
+
+import { useMediaQuery } from 'react-responsive';
+
+
+
+
+
 
 function App(props) {
 
   const { handleAuth, handleUser, user, auth_state } = props;
+  const isDesktop = useMediaQuery({ query: `(min-width: ${getCSSvariableValue('--desktop')})` });
+
+  console.warn({ isDesktop }, 'the media query is causing app to re render')
 
   const signIn = (user) => {
 
@@ -45,28 +50,28 @@ function App(props) {
 
 
 
-      <SiteHeader />
+      <SiteHeader isDesktop={isDesktop} auth_state={auth_state}/>
 
-      <div className='_layout'>
+      {/* <div className='_layout'> */}
 
 
-        {/* <h2> {user.name || 'You are logged out'}</h2> */}
+      {/* <h2> {user.name || 'You are logged out'}</h2> */}
 
-        {/* {!auth_state && <ButtonBasic type='primary' onClick={() => signIn(Strings.fake_user, true)}> Sign in </ButtonBasic >}
+      {/* {!auth_state && <ButtonBasic type='primary' onClick={() => signIn(Strings.fake_user, true)}> Sign in </ButtonBasic >}
         {auth_state && <ButtonBasic type='terinary' onClick={() => signOut({}, false)}> Sign Out </ButtonBasic>} */}
 
 
- 
-      </div>
+
+      {/* </div> */}
 
 
-      <div className="_main">
+      <div id="_main">
 
         <Suspense fallback={<SkeletonBasic />}>
 
           <Switch>
 
-          <Route path="/test" component={Test} />
+            <Route path="/test" component={Test} />
 
 
 
@@ -78,7 +83,7 @@ function App(props) {
             <Route path="/list" component={List} />
             <Route exact path="/" component={Feed} />
 
-            <Route render={({history}) => <ErrorBase type="Not found" callToAction={ ()=> history.push(AppConfig['root']) }/>} />
+            <Route render={({ history }) => <ErrorBase type="Not found" callToAction={() => history.push(AppConfig['root'])} />} />
 
 
           </Switch>
@@ -93,7 +98,7 @@ function App(props) {
       <SiteFooter />
 
 
-      {isDevelopment() && <TestPractices/>}
+      {isDevelopment() && <TestPractices />}
       {/* {isProduction() && <CleanUp/> } */}
 
     </div>

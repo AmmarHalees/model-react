@@ -1,20 +1,32 @@
-import React from 'react';
-import HeaderStyles from './SiteHeader.module.css';
+import React, { memo } from 'react';
+import Headroom from 'react-headroom';
+import WebHeader from './WebHeader.js/WebHeader';
+import MobileHeader from './MobileHeader/MobileHeader';
 
-const SiteHeader = () => {
+
+const SiteHeader = ({ auth_state, isDesktop ,signIn}) => {
     return (
-    
-    <header className={HeaderStyles.header}>
 
-        <div className="_layout">
 
-            Header
+        <Headroom
+        //  wrapperStyle={{ height: "50px", zIndex: "2" }} 
+        >
 
-        </div>
+            {isDesktop ?
 
-    </header>
-    
+                <WebHeader auth_state={auth_state}/>
+
+                :
+
+                <MobileHeader auth_state={auth_state} />
+            }
+
+
+
+        </Headroom>
+
     );
 }
 
-export default SiteHeader;
+
+export default memo(SiteHeader);

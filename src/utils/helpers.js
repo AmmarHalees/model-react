@@ -1,4 +1,3 @@
-export const mapTypeToButtonClass = JSON.parse('{"primary":"primary", "secondary":"secondary",  "terinary":"terinary",  "link":"link"}')
 
 export const mapImageTypeToClass = JSON.parse('{"modal image":"modalImage"}')
 
