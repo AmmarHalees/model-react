@@ -4,6 +4,8 @@
     /* min-width: 100px; */
     /* padding: var(--padding); */
     border-radius: var(--border-radius);
+    width: fit-content;
+
     /* height: var(--button-height); */
     font-size: 1rem;
     text-align: center;
@@ -129,7 +131,7 @@ button.terinary[disabled]{
 
 
 /*--------Media Queries-----------*/
-
+/* 
 @media all and (min-width: 768px) {
 
     .button{
@@ -137,4 +139,4 @@ button.terinary[disabled]{
     }
 }
 
-
+ */

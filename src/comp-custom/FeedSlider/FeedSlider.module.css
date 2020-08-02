@@ -1,0 +1,8 @@
+.slider{
+
+    height: 10rem;
+    padding: var(--padding);
+    overflow: auto;
+    white-space: nowrap;
+}
+

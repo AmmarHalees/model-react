@@ -1,21 +1,16 @@
 import React from 'react';
 import styles from './SectionHeader.module.css';
-import ButtonPlain from '../../ButtonPlain/ButtonPlain';
 
-const SectionHeader = () => {
+const SectionHeader = ({ title, button, link }) => {
     return (
 
-        <header className={styles.sectionHeader}>
+        <header id={link} className={styles.sectionHeader}>
 
-            <h2>
+            <h2 className={styles.title}>  {title}   </h2>
 
-                    Popular
 
-            </h2>
+            {button}
 
-            <ButtonPlain  type='link'>
-                View all
-            </ButtonPlain>
 
         </header>
 
