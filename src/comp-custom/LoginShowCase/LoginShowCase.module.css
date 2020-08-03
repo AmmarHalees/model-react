@@ -1,0 +1,80 @@
+.loginShowCase {
+
+
+
+    width: 100%;
+
+    height: 100%;
+
+    background-image: url('https://u01.appmifile.com/images/2018/12/15/06c85491-11d8-47e1-be00-2a4c0b504bb0.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    box-shadow: 0 1em 5em rgba(0, 0, 0, 0.35);
+    position: relative;
+
+
+}
+
+
+.loginShowCaseTextOverlay {
+
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: white;
+
+    z-index: 2;
+
+}
+
+#login_showcase_fader {
+
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+    /* Standard syntax (must be last) */
+    width: 100%;
+    height: 70px;
+
+    opacity: 1;
+
+    z-index: 1;
+
+}
+
+
+.feedBannerFader {
+
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+    background: rgb(2, 0, 36);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 121, 83, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.6;
+
+    z-index: 1;
+
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+
+    .loginShowCase {
+
+        display: none;
+    }
+
+
+
+
+}
