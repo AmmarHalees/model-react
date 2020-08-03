@@ -9,6 +9,7 @@ import { Provider } from 'react-redux';
 
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 import configureStore from './redux/store';
+import ScrollToTop from './comp-router/ScrollToTop';
 
 const store = configureStore({});
 
@@ -20,8 +21,11 @@ ReactDOM.render(
       <Provider store={store}>
 
         <HashRouter>
+          
+          <ScrollToTop />
 
           <App />
+
 
         </HashRouter>
 
