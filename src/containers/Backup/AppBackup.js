@@ -68,6 +68,7 @@ function App(props) {
 
         <Switch>
 
+
           <GuestOnlyRoute path="/signin" component={Signin} />
           <GuestOnlyRoute path="/register" component={Register} />
 
