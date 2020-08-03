@@ -6,6 +6,10 @@ import { lazy } from 'react';
  const Signin = lazy(() => import('../containers/Signin/Signin'));
  const Register = lazy(() => import('../containers/Register/Register'));
  const Settings = lazy(() => import('../containers/Settings/Settings'));
+ const Profile = lazy(() => import('../containers/Profile/Profile'));
+ const Requests = lazy(() => import('../containers/Requests/Requests'));
+ const RDP = lazy(() => import('../containers/RDP/RDP'));
+
  const Test = lazy(() => import('../containers/Test/Test'));
 
 export {
@@ -15,6 +19,9 @@ export {
     Signin,
     Register,
     Settings,
-    Test
+    Test,
+    Profile,
+    Requests,
+    RDP
 
 }

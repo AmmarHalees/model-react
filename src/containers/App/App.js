@@ -5,7 +5,7 @@ import SiteFooter from '../../components/Footers/SiteFooter/SiteFooter';
 import GuestOnlyRoute from '../../comp-router/GuestOnlyRoute';
 import AuthOnlyRoute from '../../comp-router/AuthOnlyRoute';
 import SkeletonBasic from '../../components/Loading/Skeleton/SkeletonBasic';
-import { Signin, Register, List, Feed, Settings, Test } from '../../utils/routes';
+import { Signin, Register, List, Feed, Settings, Test ,Profile , Requests , RDP} from '../../utils/routes';
 import { connect } from 'react-redux';
 import { handleUser, handleAuth } from '../../redux/actioncreators/actioncreators';
 import { compose } from 'redux';
@@ -76,11 +76,15 @@ function App(props) {
 
 
             <AuthOnlyRoute path="/settings" component={Settings} />
+            <AuthOnlyRoute path="/Requests" component={Requests} />
+            <AuthOnlyRoute path="/Request/:id" component={RDP} />
 
             <GuestOnlyRoute path="/signin" component={Signin} />
             <GuestOnlyRoute path="/register" component={Register} />
 
             <Route path="/list" component={List} />
+            <Route path="/profile/:id" component={Profile} />
+
             <Route exact path="/" component={Feed} />
 
             <Route render={({ history }) => <ErrorBase type="Not found" callToAction={() => history.push(AppConfig['root'])} />} />
