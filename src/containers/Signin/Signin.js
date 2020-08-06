@@ -1,6 +1,6 @@
 import React from 'react';
 import LoginShowCase from '../../comp-custom/LoginShowCase/LoginShowCase';
-import LoginForm from '../../comp-custom/Forms/LoginForm';
+import LoginForm from '../../comp-custom/Forms/LoginForm/LoginForm';
 import SignRegContainer from '../../comp-custom/SignRegContainer/SignRegContainer';
 
 const Signin = () => {

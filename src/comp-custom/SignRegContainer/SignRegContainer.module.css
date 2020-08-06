@@ -1,26 +1,43 @@
-.signRegContainer{
+.signRegContainer {
 
 
 
         margin: auto;
-      
+
         display: grid;
-      
+
         text-align: center;
-    
+
         justify-items: center;
-      
+
         align-items: center;
-      
-      
-        grid-template-columns: 1fr 1.5fr;
-      
-        width: 100%;
-      
+
+        grid-template-columns: 1fr;
+
+        width: 90%;
+
+
         height: 100vh;
-      
-      
+
+
         background: white;
 
 
 }
+
+
+
+
+
+@media only screen and (min-width: 992px) {
+
+        .signRegContainer {
+
+                grid-template-columns: 1fr 1.5fr;
+
+                width: 100%;
+
+        
+        }
+    
+    }

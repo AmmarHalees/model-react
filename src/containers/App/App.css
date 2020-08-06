@@ -251,7 +251,7 @@ button:hover {
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media all and (min-width: var(--desktop)) {}
+@media all and (min-width: var(992px)) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media all and (min-width: 1200px) {}
