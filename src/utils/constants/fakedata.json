@@ -1,0 +1,153 @@
+{
+    "fake_post_data": [
+        {
+            "likes": 30,
+            "categories": [
+                "nature"
+            ],
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "owner": "1",
+            "id": "1",
+            "title": "Beautiful scenary"
+        },
+        {
+            "likes": 30,
+            "categories": [
+                "portrait"
+            ],
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "owner": "2",
+            "id": "2",
+            "title": "Silence"
+        },
+        {
+            "likes": 30,
+            "categories": [
+                "fashion"
+            ],
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "owner": "1",
+            "id": "3",
+            "title": "On the Carpet"
+        },
+        {
+            "likes": 30,
+            "categories": [
+                "nature",
+                "abstract"
+            ],
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "owner": "2",
+            "id": "4",
+            "title": "Roses are Red"
+        },
+        {
+            "likes": 30,
+            "categories": [
+                "street"
+            ],
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "owner": "1",
+            "id": "5",
+            "title": "Emotions.."
+        },
+        {
+            "likes": 30,
+            "categories": [
+                "travel"
+            ],
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "owner": "3",
+            "id": "6",
+            "title": "On the Road"
+        },
+        {
+            "likes": 30,
+            "categories": [
+                "street",
+                "travel"
+            ],
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "owner": "1",
+            "id": "7",
+            "title": "Hapily ever after"
+        },
+        {
+            "likes": 30,
+            "categories": [
+                "street"
+            ],
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "owner": "3",
+            "id": "8",
+            "title": "The city that never sleeps"
+        },
+        {
+            "likes": 30,
+            "categories": [
+                "animals"
+            ],
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "owner": "3",
+            "id": "9",
+            "title": "Hapily ever after"
+        }
+    ],
+    "fake_categories_data": [
+        {
+            "id": "1",
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "title": "Nature"
+        },
+        {
+            "id": "2",
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "title": "Portrait"
+        },
+        {
+            "id": "3",
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "title": "Fashion"
+        },
+        {
+            "id": "4",
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "title": "Marketing"
+        },
+        {
+            "id": "5",
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "title": "Street"
+        },
+        {
+            "id": "6",
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "title": "Travel"
+        },
+        {
+            "id": "7",
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "title": "Wedding"
+        },
+        {
+            "id": "8",
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "title": "Art"
+        },
+        {
+            "id": "9",
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "title": "Abstract"
+        },
+        {
+            "id": "9",
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "title": "Food"
+        },
+        {
+            "id": "9",
+            "background": "https://wildearthguardians.org/wp-content/uploads/2019/04/gray-wolf-tim-springer-wildearth-guardians.jpg",
+            "title": "Journalism"
+        }
+    ]
+}

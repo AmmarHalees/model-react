@@ -109,8 +109,13 @@
 
     /*------Z -index ------*/
 
-    --header: 2;
+    --overlay-z: 2;
+
+
     --tool-tip: 4;
+
+    --header: 6;
+
 
     --modal: 10;
 

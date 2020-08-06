@@ -4,10 +4,11 @@ import React, { useState } from 'react';
 import PostCard from '../../comp-custom/PostCard/PostCard';
 import ResponsiveList from '../../components/Lists/ResponsiveList/ResponsiveList';
 import SectionHeader from '../../components/Headers/SectionHeader/SectionHeader';
-import FeedSlider from '../../comp-custom/FeedSlider/FeedSlider';
 import ButtonPlain from '../../components/ButtonPlain/ButtonPlain';
 import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
 import { ReactComponent as CloseIcon } from '../../assets/icons/x.svg';
+import HorizontalSlider from '../../comp-custom/HorizontalSlider/HorizontalSlider';
+import fake_data from '../../utils/constants/fakedata.json';
 
 
 const Feed = () => {
@@ -17,7 +18,7 @@ const Feed = () => {
 
         <div className='_layout'>
 
-            <FeedSlider />
+            <HorizontalSlider data={fake_data['fake_categories_data']}/>
 
             <main className="_container _layout">
 

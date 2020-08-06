@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './SliderCard.module.css';
+import Overlay from '../../components/Overlay/Overlay';
 
-const SliderCard = () => {
+const SliderCard = ({title,background}) => {
     return (
 
 
@@ -11,7 +12,7 @@ const SliderCard = () => {
 
             style={{
 
-                background: `url(${'https://besthqwallpapers.com/Uploads/9-10-2017/23332/thumb2-hyundai-accent-2018-rear-view-sedan-red-accent.jpg'})`,
+                background: `url(${background})`,
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
@@ -20,7 +21,11 @@ const SliderCard = () => {
 
         >
 
-            hi
+            <h3>{title}</h3>
+
+            <Overlay/>
+
+        
         </div>
 
 

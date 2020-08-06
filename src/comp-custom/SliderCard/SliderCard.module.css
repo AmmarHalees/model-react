@@ -1,16 +1,32 @@
-.card{
+.card {
+
+    box-sizing: border-box;
 
     background: url(https://besthqwallpapers.com/Uploads/9-10-2017/23332/thumb2-hyundai-accent-2018-rear-view-sedan-red-accent.jpg) center center / cover no-repeat;
     width: 300px;
     height: 100%;
+
     border-radius: var(--border-radius);
     padding: var(--padding);
-    box-sizing: border-box;
-    display: inline-block;
     margin-right: var(--margin);
+
+    display: -ms-inline-grid;
+    display: inline-grid;
+    align-items: end;
+    justify-content: left;
+
+    position: relative;
+
 }
 
-.card:last-child{
+.card h3{
+    color: var(--overlay-or-button-text-color);
+    background-color:  var(--title-color);
+    padding: var(--padding);
+
+}
+
+.card:last-child {
 
     margin: 0px;
 }
