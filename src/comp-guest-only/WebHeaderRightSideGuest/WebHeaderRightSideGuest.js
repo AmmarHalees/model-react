@@ -11,12 +11,12 @@ const WebHeaderRightSideGuest = ({handleAuth}) => {
 
         <div className={styles.WebHeaderRightSideGuest}>
 
-            <ButtonPlain type='link' onClick={handleAuth}>
+            <ButtonPlain type='link' onClick={handleAuth} title='Sign in'>
                 Sign in
             </ButtonPlain>
         
 
-            <ButtonPlain type='terinary'>
+            <ButtonPlain type='terinary' title='Register'>
                 Register
             </ButtonPlain>
         </div>

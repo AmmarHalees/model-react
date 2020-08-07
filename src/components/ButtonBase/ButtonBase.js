@@ -8,7 +8,7 @@ const ButtonBase = ({ children, onClick, type, disabled, rounded, loading , titl
 
     return (
 
-        <button onClick={onClick} className={`${style.button} ${style[type]} ${rounded && style.rounded}`} disabled={disabled || loading} aria-label={title}  >
+        <button onClick={onClick} className={`${style.button} ${style[type]} ${rounded && style.rounded}`} disabled={disabled || loading} aria-label={title} title={title}  >
 
             {loading ? <Spinner style={{ width: '24px', height: '24px' }} /> : children}
 

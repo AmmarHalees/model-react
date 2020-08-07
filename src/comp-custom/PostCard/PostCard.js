@@ -5,6 +5,8 @@ import ImageBasic from '../../components/ImageBasic/ImageBasic';
 import data from '../../utils/constants/strings.json';
 import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
 import { ReactComponent as CloseIcon } from '../../assets/icons/x.svg';
+import { ReactComponent as HeartIcon } from '../../assets/icons/heart.svg';
+import { ReactComponent as TagIcon } from '../../assets/icons/share.svg';
 
 
 
@@ -27,9 +29,9 @@ const PostCard = ({ title = data['default title'], onClick ,paragraph = data["de
 
                         <div className={styles.postControlButtons}>
 
-                            <ButtonIcon icon={<CloseIcon />} size='small' type='primary' onClick={() => alert('hi')} />
-                            <ButtonIcon icon={<CloseIcon />} size='small' type='primary' onClick={() => alert('hi')} />
-                            <ButtonIcon icon={<CloseIcon />} size='small' type='primary' onClick={() => alert('hi')} />
+                            <ButtonIcon icon={<CloseIcon />} size='small' title='Close' type='link' onClick={() => alert('hi')} />
+                            <ButtonIcon icon={<HeartIcon />} size='small' title='Like' type='link' onClick={() => alert('hi')} />
+                            <ButtonIcon icon={<TagIcon />} size='small' title='Svae' type='link' onClick={() => alert('hi')} />
 
 
                         </div>

@@ -109,15 +109,22 @@
 
     /*------Z -index ------*/
 
+    --lowest-z:0;
+
+    --below-overlay-z:1;
+
     --overlay-z: 2;
 
+    --non-overlapping-z:3;
 
     --tool-tip: 4;
 
     --header: 6;
 
+    --modal: 8;
 
-    --modal: 10;
+    --notif-msg-toast: 10;
+
 
 }
 

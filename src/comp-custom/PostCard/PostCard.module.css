@@ -22,7 +22,7 @@
 
     padding: 1rem;
 
-    background: black;
+    background: #ffffffe3;
 
     display: grid;
     gap: var(--app-gap);
@@ -52,7 +52,7 @@
 
     white-space: nowrap;
 
-    color: white;
+    color: black;
 }
 
 
