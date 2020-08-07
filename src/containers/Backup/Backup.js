@@ -41,7 +41,6 @@ const Feed = () => {
         setIsOpen(false);
     }
 
-    console.log(toastConfig)
     return (
 
         <div>

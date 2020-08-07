@@ -1,50 +1,36 @@
-import React, { PureComponent } from 'react';
-import { getTodos } from '../../services/posts';
+import React, { useState, useEffect ,memo } from 'react';
 import ResponsiveList from '../../components/Lists/ResponsiveList/ResponsiveList';
+import { getTodos } from '../../services/posts';
 import InfoCard from '../../comp-custom/InfoCard/InfoCard';
 
-class List extends PureComponent {
-    constructor(props) {
-        super(props);
-        this.state = { data: [] }
-    }
+const List = () => {
 
-    componentDidMount() {
+    const [data , setData] = useState([]);
+    useEffect(()=>{
 
-        getTodos().then(response => {
+        getTodos().then((response)=>{
+            setData(response);
 
-            this.setState({
-                data: response
-            })
+        })
 
-        }
+    } , []);
 
+    return (
+        <div className="_container">
 
-        )
+                         <ResponsiveList>
+        
+                           {data.map(({id, title, body})=> (
+        
+                                 <InfoCard key={id} title={title} paragraph={body}/>
+        
+                             ))}
+        
+                         </ResponsiveList>
+        
+                     </div>
 
-
-    }
-    render() {
-
-        const { data } = this.state;
-
-        return (
-
-            <div className="_container">
-
-                <ResponsiveList>
-
-                    {data.map(({id, title, body})=> (
-
-                        <InfoCard key={id} title={title} paragraph={body}/>
-
-                    ))}
-
-                </ResponsiveList>
-
-            </div>
-        );
-    }
+      );
 }
-
-export default List;
+ 
+export default memo(List);

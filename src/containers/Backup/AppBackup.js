@@ -76,7 +76,6 @@ function App(props) {
 
           <Route path="/" component={({ match: { url } }) => {
 
-            console.log(url)
 
             return (
 
