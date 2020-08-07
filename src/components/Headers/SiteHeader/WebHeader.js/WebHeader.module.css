@@ -22,7 +22,6 @@
     min-width: 100%;
     height: var(--header-height);
   
-    z-index: var(--header); 
     transform: translate3d(0px, 0px, 0px);
   
   

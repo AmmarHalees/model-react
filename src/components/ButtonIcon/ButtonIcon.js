@@ -1,11 +1,11 @@
 import React, { memo } from 'react';
-import ButtonBasic from '../ButtonBasic/ButtonBasic';
+import ButtonBase from '../ButtonBase/ButtonBase';
 import styles from './ButtonIcon.module.css';
 
-const ButtonIcon = ({ onClick, type, icon, disabled, rounded, size ='medium' }) => {
+const ButtonIcon = ({ onClick, type, icon, disabled, rounded, size ='medium', title }) => {
     return (
 
-        <ButtonBasic type={type} onClick={onClick} disabled={disabled} rounded>
+        <ButtonBase type={type} onClick={onClick} disabled={disabled} rounded title={title}>
 
             <div className={styles.ButtonIcon}>
 
@@ -17,7 +17,7 @@ const ButtonIcon = ({ onClick, type, icon, disabled, rounded, size ='medium' }) 
 
             </div>
 
-        </ButtonBasic>
+        </ButtonBase>
 
     );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ErrorBase.module.css';
 import data from './ErrorMap.config.json';
-import ButtonBasic from '../../ButtonBasic/ButtonBasic';
+import ButtonBase from '../../ButtonBase/ButtonBase';
 import { useHistory } from "react-router-dom";
 
 const ErrorBase = ({ type , callToAction ,props }) => {
@@ -23,11 +23,11 @@ const ErrorBase = ({ type , callToAction ,props }) => {
 
             <p>{description}</p>
 
-            <ButtonBasic type='primary' onClick={callToAction}>
+            <ButtonBase type='primary' onClick={callToAction}>
 
                 Go back home
 
-            </ButtonBasic>
+            </ButtonBase>
 
 
         </div>

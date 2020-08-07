@@ -5,7 +5,6 @@ import ImageBasic from '../../components/ImageBasic/ImageBasic';
 import data from '../../utils/constants/strings.json';
 import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
 import { ReactComponent as CloseIcon } from '../../assets/icons/x.svg';
-import Overlay from '../../components/Overlay/Overlay';
 
 
 
@@ -16,8 +15,6 @@ const PostCard = ({ title = data['default title'], onClick ,paragraph = data["de
         <PaperBasic>
 
             <div className={styles.postCard} onClick={onClick}>
-
-                <Overlay/>
 
                 <div className={styles.postOverlay}></div>
 

@@ -35,7 +35,7 @@ const Feed = () => {
 
                 </ResponsiveList>
 
-                <SectionHeader link='awards' title='Awards' button={<ButtonIcon size='small' type='link' icon={<CloseIcon/>}/>} />
+                <SectionHeader link='awards' title='Awards' button={<ButtonIcon size='small' type='link' title="close" icon={<CloseIcon/>}/>} />
 
                 <ResponsiveList>
 

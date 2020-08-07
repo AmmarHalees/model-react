@@ -57,8 +57,8 @@ function App(props) {
 
       {/* <h2> {user.name || 'You are logged out'}</h2> */}
 
-      {/* {!auth_state && <ButtonBasic type='primary' onClick={() => signIn(Strings.fake_user, true)}> Sign in </ButtonBasic >}
-        {auth_state && <ButtonBasic type='terinary' onClick={() => signOut({}, false)}> Sign Out </ButtonBasic>} */}
+      {/* {!auth_state && <ButtonBase type='primary' onClick={() => signIn(Strings.fake_user, true)}> Sign in </ButtonBase >}
+        {auth_state && <ButtonBase type='terinary' onClick={() => signOut({}, false)}> Sign Out </ButtonBase>} */}
 
 
 

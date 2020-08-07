@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import ButtonBasic from '../ButtonBasic/ButtonBasic';
+import ButtonBase from '../ButtonBase/ButtonBase';
 import styles from './ButtonPlain.module.css';
 import PropTypes from 'prop-types'; // ES6
 
@@ -8,7 +8,7 @@ const ButtonPlain = ({ children, onClick, type, icon, disabled, loading }) => {
 
     return (
 
-        <ButtonBasic type={type} onClick={onClick} disabled={disabled}>
+        <ButtonBase type={type} onClick={onClick} disabled={disabled}>
 
             <div className={styles.ButtonPlain}>
 
@@ -20,7 +20,7 @@ const ButtonPlain = ({ children, onClick, type, icon, disabled, loading }) => {
             </div>
 
 
-        </ButtonBasic>
+        </ButtonBase>
 
     );
 }

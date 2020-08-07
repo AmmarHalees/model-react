@@ -1,19 +1,19 @@
 import React, { memo } from 'react';
-import style from './ButtonBasic.module.css';
+import style from './ButtonBase.module.css';
 import PropTypes from 'prop-types'; // ES6
 import Spinner from '../Loading/Spinner/Spinner';
 
-const ButtonBasic = ({ children, onClick, type, disabled, rounded, loading }) => {
+const ButtonBase = ({ children, onClick, type, disabled, rounded, loading , title }) => {
 
 
     return (
 
-        <button onClick={onClick} className={`${style.button} ${style[type]} ${rounded && style.rounded}`} disabled={disabled || loading}  >
+        <button onClick={onClick} className={`${style.button} ${style[type]} ${rounded && style.rounded}`} disabled={disabled || loading} aria-label={title}  >
 
             {loading ? <Spinner style={{ width: '24px', height: '24px' }} /> : children}
 
             {/* You could actually just do this. Becaue ButtonIcon's icon prop isnt passed here to 
-                ButtonBasic anyways.  */}
+                ButtonBase anyways.  */}
 
 
         </button>
@@ -21,7 +21,7 @@ const ButtonBasic = ({ children, onClick, type, disabled, rounded, loading }) =>
     );
 }
 
-ButtonBasic.defaultProps = {
+ButtonBase.defaultProps = {
 
     type: 'primary',
     disabled: false,
@@ -30,7 +30,7 @@ ButtonBasic.defaultProps = {
 }
 
 
-ButtonBasic.propTypes = {
+ButtonBase.propTypes = {
 
     type: PropTypes.oneOf(['primary', 'secondary', 'terinary','link']).isRequired,
     disabled: PropTypes.bool,
@@ -45,4 +45,4 @@ ButtonBasic.propTypes = {
 
 }
 
-export default memo(ButtonBasic);
+export default memo(ButtonBase);

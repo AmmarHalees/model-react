@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import ButtonBasic from '../ButtonBasic/ButtonBasic';
+import ButtonBase from '../ButtonBase/ButtonBase';
 import styles from './ButtonWithIcon.module.css';
 import Spinner from '../Loading/Spinner/Spinner';
 import PropTypes from 'prop-types'; // ES6
@@ -12,7 +12,7 @@ const ButtonWithIcon = ({ children, onClick, type, icon, disabled, size, loading
 
     return (
 
-        <ButtonBasic type={type} onClick={onClick} disabled={disabled || loading}>
+        <ButtonBase type={type} onClick={onClick} disabled={disabled || loading}>
 
             <div className={styles.buttonWithIcon}>
 
@@ -31,7 +31,7 @@ const ButtonWithIcon = ({ children, onClick, type, icon, disabled, size, loading
 
             </div>
 
-        </ButtonBasic>
+        </ButtonBase>
 
     );
 }

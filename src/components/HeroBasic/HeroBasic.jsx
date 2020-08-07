@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonBasic from '../ButtonBasic/ButtonBasic';
+import ButtonBase from '../ButtonBase/ButtonBase';
 
 const HeroBasic = ({ title, description, cta }) => {
     return (
@@ -8,7 +8,7 @@ const HeroBasic = ({ title, description, cta }) => {
 
             <h1>{title}</h1>
             <h3>{description}</h3>
-            <ButtonBasic type="primary">{cta}</ButtonBasic>
+            <ButtonBase type="primary">{cta}</ButtonBase>
 
         </section>
 

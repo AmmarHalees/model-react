@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import ButtonWithIcon from '../../components/ButtonWithIcon/ButtonWithIcon';
 import { ReactComponent as CloseIcon } from '../../assets/icons/x.svg';
 
-import ButtonBasic from '../../components/ButtonBasic/ButtonBasic';
+import ButtonBase from '../../components/ButtonBase/ButtonBase';
 import ModalBasic from '../../components/ModalBasic/ModalBasic';
 import AlertBasic from '../../components/Feedback/AlertBasic/AlertBasic';
 import data from '../../utils/constants/strings.json';
@@ -52,7 +52,7 @@ const Feed = () => {
 
                 {/* <ButtonPlain type="secondary" onClick={openModal}>Sign in</ButtonPlain>
                     <ButtonWithIcon onClick={() => fakeAsyncFunction(setLoading, true, false, 3000)} icon={<CloseIcon />} loading={isLoading} type="terinary">Sign in</ButtonWithIcon>
-                    <ButtonBasic onClick={openToast}></ButtonBasic> */}
+                    <ButtonBase onClick={openToast}></ButtonBase> */}
 
 
 

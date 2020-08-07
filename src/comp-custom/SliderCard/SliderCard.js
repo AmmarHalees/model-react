@@ -23,7 +23,7 @@ const SliderCard = ({title,background}) => {
 
             <h3>{title}</h3>
 
-            <Overlay/>
+            {/* <Overlay/> */}
 
         
         </div>
