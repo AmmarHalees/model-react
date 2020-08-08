@@ -13,7 +13,9 @@ import useFeedData from './FeedCustomHooks/useFeedData';
 
 const Feed = () => {
 
-    const posts =  useFeedData();
+    const [album_id, setAlbumId] = useState(2);
+
+    const posts =  useFeedData(album_id);
 
     return (
 
@@ -22,6 +24,15 @@ const Feed = () => {
             <HorizontalSlider data={fake_data['fake_categories_data']} />
 
             <main className="_container _layout">
+
+
+                <button onClick={()=> setAlbumId(2)}>2</button>
+                <button onClick={()=> setAlbumId(3)}>3</button>
+                <button onClick={()=> setAlbumId(4)}>4</button>
+                <button onClick={()=> setAlbumId(5)}>5</button>
+
+
+    
 
                 <SectionHeader link='google' title='Popular' button={<ButtonPlain type='link'> View all  </ButtonPlain>} />
 

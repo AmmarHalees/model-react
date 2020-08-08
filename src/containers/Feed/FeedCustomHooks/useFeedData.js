@@ -13,7 +13,7 @@ export default function useFeedData(albumId) {
 
         });
 
-    }, [albumId]);
+    }, [albumId]); //Album id is the dependancy which change in value determines whether or not useeffect should re-run
 
     // return [posts, setPosts]
 
