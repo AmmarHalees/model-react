@@ -8,24 +8,12 @@ import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
 import { ReactComponent as CloseIcon } from '../../assets/icons/x.svg';
 import HorizontalSlider from '../../comp-custom/HorizontalSlider/HorizontalSlider';
 import fake_data from '../../utils/constants/fakedata.json';
-import { getPosts } from '../../services/posts';
+import useFeedData from './FeedCustomHooks/useFeedData';
 
 
 const Feed = () => {
 
-
-    const [posts, setPosts] = useState([]);
-
-    useEffect(() => {
-
-        getPosts(2).then((response) => { //2 is the albumId
-            setPosts(response);
-
-        })
-
-    }, []);
-
-
+    const posts =  useFeedData();
 
     return (
 
@@ -58,7 +46,6 @@ const Feed = () => {
                     <PostCard />
                     <PostCard />
                     <PostCard />
-
 
                 </ResponsiveList>
 

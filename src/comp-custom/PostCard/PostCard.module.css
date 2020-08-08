@@ -6,6 +6,8 @@
     border-radius: var(--border-radius);
     position: relative;
 
+
+    /*---Causes really odd bug for small vheight" ---*/
     max-height: 100vh;
 
 }

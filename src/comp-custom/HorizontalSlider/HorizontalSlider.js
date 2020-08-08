@@ -8,7 +8,7 @@ const HorizontalSlider = ({ data }) => {
         <section className={styles.slider}>
 
 
-            {data.map(({title, background}) =>   <SliderCard title ={title}  background={background}/>    )}
+            {data.map(({title, background ,id}) =>   <SliderCard key={id} title ={title}  background={background}/>    )}
 
         </section>
 

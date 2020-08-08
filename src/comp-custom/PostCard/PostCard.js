@@ -12,7 +12,6 @@ import { ReactComponent as TagIcon } from '../../assets/icons/share.svg';
 
 const PostCard = ({ title =data["default title"], onClick, paragraph = data["default paragraph"], url = data['fake tall image'] }) => {
 
-    console.log(title)
 
     return (
 
