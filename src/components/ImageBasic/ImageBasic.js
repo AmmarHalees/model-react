@@ -21,11 +21,9 @@ const ImageBasic = ({src = data.defaultsrc, alt="",type}) => {
   
     }
     
-    console.log({has_loaded} , {has_errored})
 
     const image_used = has_errored? {src: data["fallback"]["src"] , alt: data["fallback"]["src"] } :  {src, alt};
   
-
 
 
     return (<img 

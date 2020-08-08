@@ -18,11 +18,8 @@ import AppConfig from "../../utils/constants/app.cofig.json";
 import { useMediaQuery } from 'react-responsive';
 
 
-
-
-
-
 function App(props) {
+  
 
   const { handleAuth, handleUser, user, auth_state } = props;
   const isDesktop = useMediaQuery({ query: `(min-width: ${getCSSvariableValue('--desktop')})` });

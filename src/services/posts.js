@@ -8,3 +8,11 @@ export function getTodos() {
     })
         .then((response) => response.data);
 }
+
+
+export function getPosts(albumId) {
+    return axios.get(`${process.env.REACT_APP_API_BASE_URL}/photos?key=${process.env.REACT_APP_IMAGE_API_KEY}&albumId=${albumId}`, {
+
+    })
+        .then((response) => response.data);
+}
