@@ -1,5 +1,4 @@
 
-export const mapImageTypeToClass = JSON.parse('{"modal image":"modalImage"}')
 
 export const toastConfig = JSON.parse('{ "position": "top-right",  "autoClose": 5000, "hideProgressBar": false, "closeOnClick": false, "pauseOnHover": true,"draggable": true }')
 

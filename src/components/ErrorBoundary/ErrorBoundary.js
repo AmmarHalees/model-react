@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ErrorBase from '../Result/ErrorBase/ErrorBase';
+import { Redirect } from 'react-router-dom';
+
 
 class ErrorBoundary extends Component {
     constructor(props) {
@@ -32,7 +34,7 @@ class ErrorBoundary extends Component {
             // window.location.href = '/home/login';
             // return 'Something went wrong, redirecting to login page';
 
-            return <ErrorBase type='runtime'/>
+            return <ErrorBase type='runtime' callToAction={()=><Redirect to='/list'/>}/>
         }
 
         return this.props.children;

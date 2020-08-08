@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Profile = () => {
-    return (
+  return ( <div className='_container _layout'>
 
-        <h1>Profile</h1>
-      );
+    Profile
+
+  </div> );
 }
  
 export default Profile;

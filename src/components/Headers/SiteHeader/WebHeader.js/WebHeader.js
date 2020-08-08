@@ -17,14 +17,14 @@ const WebHeader = ({auth_state}) => {
 
             <div className={`${webHeaderStyles.innerHeader} _container`}>
 
-                <Link to='/' style={{ width: 'fit-content', height: 'fit-content' }} >
+                <Link to='/' style={{ width: 'fit-content', height: 'fit-content' }}  title="Go to website">
 
                     <SiteLogo style={{ width: '50px', height: '50px' }} />
 
 
                 </Link>
 
-                <Link to='/list' className={webHeaderStyles.announcement}> Announcment!</Link >
+                <Link to='/list' className={webHeaderStyles.announcement} title="Go to announcment"> Announcment!</Link >
 
 
                 {

@@ -23,6 +23,14 @@
     "default title":"title",    
     "default paragraph": "paragraph",
 
-    "tooltip initial position":"top"
+    "tooltip initial position":"top",
+
+    "fallback":{
+
+        "src":"https://image.flaticon.com/icons/png/512/94/94733.png",
+        "alt":"Default image"
+
+
+    }
 
 }
