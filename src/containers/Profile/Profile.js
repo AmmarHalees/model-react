@@ -1,4 +1,4 @@
-import React, { memo, Fragment } from 'react';
+import React, { memo } from 'react';
 import useUserData from './FeedCustomHooks/useUserData';
 import Spinner from '../../components/Loading/Spinner/Spinner';
 import SectionHeader from '../../components/Headers/SectionHeader/SectionHeader';
@@ -16,7 +16,7 @@ const Profile = ({ match: { params: { id: UserId } } }) => {
     <main className='_container _layout'>
 
 
-<SectionHeader iconPosition='left' link='awards' title={name} button={<ButtonIcon size='small' type='link' title="close" icon={<CloseIcon />}  loading={loading}/>} />
+      <SectionHeader iconPosition='left' link='awards' title={name} button={<ButtonIcon size='small' type='link' title="close" icon={<CloseIcon />} loading={loading} />} />
 
       <section>
 
