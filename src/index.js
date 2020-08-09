@@ -15,6 +15,7 @@ const store = configureStore({});
 
 ReactDOM.render(
 
+  <React.StrictMode>
 
     <ErrorBoundary>
 
@@ -32,6 +33,8 @@ ReactDOM.render(
       </Provider>
 
     </ErrorBoundary>
+
+  </React.StrictMode>
 
   ,
   document.getElementById('root')
