@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import style from './ImageBasic.module.css';
 import data from '../../utils/constants/strings.json';
-import { mapImageTypeToClass } from '../../utils/helpers';
 
-const ImageBasic = ({src = data.defaultsrc, alt="",type}) => {
-
+const ImageBasic = ({src = data["fallback"]["src"], alt=data["fallback"]["alt"],type}) => {
 
 
     const [has_loaded,setImageLoaded] = useState(false);
@@ -22,7 +20,7 @@ const ImageBasic = ({src = data.defaultsrc, alt="",type}) => {
     }
     
 
-    const image_used = has_errored? {src: data["fallback"]["src"] , alt: data["fallback"]["src"] } :  {src, alt};
+    const image_used = has_errored? {src: data["fallback"]["src"] , alt: data["fallback"]["alt"] } :  {src, alt};
   
 
 

@@ -1,5 +1,5 @@
 import React, { Suspense, memo } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import SiteHeader from '../../components/Headers/SiteHeader/SiteHeader';
 import SiteFooter from '../../components/Footers/SiteFooter/SiteFooter';
 import GuestOnlyRoute from '../../comp-router/GuestOnlyRoute';
@@ -9,13 +9,12 @@ import { Signin, Register, List, Feed, Settings, Test ,Profile , Requests , RDP}
 import { connect } from 'react-redux';
 import { handleUser, handleAuth } from '../../redux/actioncreators/actioncreators';
 import { compose } from 'redux';
-import './App.css';
 import TestPractices from '../../comp-custom/TestPractices/TestPractices';
 import { isDevelopment, getCSSvariableValue } from '../../utils/helpers';
 import ErrorBase from '../../components/Result/ErrorBase/ErrorBase';
 import AppConfig from "../../utils/constants/app.cofig.json";
-
 import { useMediaQuery } from 'react-responsive';
+import './App.css';
 
 
 function App(props) {
@@ -54,7 +53,7 @@ function App(props) {
 
       {/* <h2> {user.name || 'You are logged out'}</h2> */}
 
-      {/* {!auth_state && <ButtonBase type='primary' onClick={() => signIn(Strings.fake_user, true)}> Sign in </ButtonBase >}
+      {/* {!auth_state && <ButtonBase type='primary' onClick={() => signIn(fakedata.fake_user, true)}> Sign in </ButtonBase >}
         {auth_state && <ButtonBase type='terinary' onClick={() => signOut({}, false)}> Sign Out </ButtonBase>} */}
 
 
@@ -101,7 +100,6 @@ function App(props) {
 
 
       {isDevelopment() && <TestPractices />}
-      {/* {isProduction() && <CleanUp/> } */}
 
     </div>
   );

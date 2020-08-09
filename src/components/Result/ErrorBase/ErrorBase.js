@@ -6,7 +6,6 @@ import ButtonPlain from '../../ButtonPlain/ButtonPlain';
 
 const ErrorBase = ({ type , callToAction }) => {
 
-    console.log(type,callToAction)
 
     const error_object = data[type];
 
