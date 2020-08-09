@@ -41,6 +41,9 @@ function App(props) {
 
   }
 
+
+
+
   return (
     <div id="App">
 
@@ -80,6 +83,9 @@ function App(props) {
             <GuestOnlyRoute path="/register" component={Register} />
 
             <Route path="/profile/:id" component={Profile} />
+
+            <Route path="/image/:id" component={Profile} />
+
 
             <Route exact path="/" component={Feed} />
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import { Thumbnail } from '../Components/Thumbnail';
 
 const IMAGES = [
     { id: 0, title: "Dark Orchid", color: "DarkOrchid" },
@@ -26,7 +25,6 @@ export default function Gallery() {
               state: { background: location }
             }}
           >
-            <Thumbnail color={i.color} />
             <p>{i.title}</p>
           </Link>
         ))}

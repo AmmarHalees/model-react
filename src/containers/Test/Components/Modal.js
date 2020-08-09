@@ -1,15 +1,14 @@
 import React from 'react';
 import { useHistory, useParams } from 'react-router-dom';
-import Image from './Image';
+
 
 const IMAGES = [
-    { id: 0, title: "Dark Orchid", color: "DarkOrchid" },
-    { id: 1, title: "Lime Green", color: "LimeGreen" },
-    { id: 2, title: "Tomato", color: "Tomato" },
-    { id: 3, title: "Seven Ate Nine", color: "#789" },
-    { id: 4, title: "Crimson", color: "Crimson" }
-  ];
-
+  { id: 0, title: "Dark Orchid", src: "https://besthqwallpapers.com/Uploads/9-10-2017/23332/thumb2-hyundai-accent-2018-rear-view-sedan-red-accent.jpg" },
+  { id: 1, title: "Lime Green", src: "https://besthqwallpapers.com/Uploads/9-10-2017/23332/thumb2-hyundai-accent-2018-rear-view-sedan-red-accent.jpg" },
+  { id: 2, title: "Tomato", src: "https://besthqwallpapers.com/Uploads/9-10-2017/23332/thumb2-hyundai-accent-2018-rear-view-sedan-red-accent.jpg" },
+  { id: 3, title: "Seven Ate Nine", src: "https://besthqwallpapers.com/Uploads/9-10-2017/23332/thumb2-hyundai-accent-2018-rear-view-sedan-red-accent.jpg789" },
+  { id: 4, title: "Crimson", src: "https://besthqwallpapers.com/Uploads/9-10-2017/23332/thumb2-hyundai-accent-2018-rear-view-sedan-red-accent.jpg" }
+];
 
 
 export default function Modal() {
@@ -49,7 +48,7 @@ export default function Modal() {
           }}
         >
           <h1>{image.title}</h1>
-          <Image color={image.color} />
+          <img src={image.src} />
           <button type="button" onClick={back}>
             Close
           </button>
