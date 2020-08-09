@@ -14,7 +14,7 @@ import ScrollToTop from './comp-router/ScrollToTop';
 const store = configureStore({});
 
 ReactDOM.render(
-  <React.StrictMode>
+
 
     <ErrorBoundary>
 
@@ -33,7 +33,7 @@ ReactDOM.render(
 
     </ErrorBoundary>
 
-  </React.StrictMode>,
+  ,
   document.getElementById('root')
 );
 

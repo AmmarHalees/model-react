@@ -3,8 +3,10 @@ import React from 'react';
 const SkeletonBasic = () => {
     return (
 
-        <div>
-            SkeletonBasic
+        <div className='_container'>
+            
+
+            Skeleton
 
         </div>
     );

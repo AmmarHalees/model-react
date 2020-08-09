@@ -15,6 +15,8 @@ const List = () => {
 
     } , []);
 
+    console.log(data)
+
     return (
         <div className="_container">
 

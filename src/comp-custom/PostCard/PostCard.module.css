@@ -7,7 +7,7 @@
     position: relative;
 
 
-    /*---Causes really odd bug for small vheight" ---*/
+    /*---Causes really odd bug for small vheight" ---*/ /*---((NOTE))----*/
     max-height: 100vh;
 
 }
