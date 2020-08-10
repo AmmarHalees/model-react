@@ -22,9 +22,9 @@ function App(props) {
   
 
   const { handleAuth, handleUser, user, auth_state } = props;
-  const isDesktop = useMediaQuery({ query: `(min-width: ${getCSSvariableValue('--desktop')})` });
+  const isDesktop = useMediaQuery({ query: `(min-width: ${getCSSvariableValue('--desktop')})` }); {/*Causing too many renders?  */}
 
-  console.warn({ isDesktop }, 'the media query is causing app to re render')
+
 
   const signIn = (user) => {
 

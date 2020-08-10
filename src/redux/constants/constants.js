@@ -1,4 +1,7 @@
 export const CHANGE_AUTH_STATE = 'CHANGE_AUTH_STATE';
 export const CHANGE_AUTH_USER = 'CHANGE_AUTH_USER';
+export const SET_IS_DESKTOP = 'SET_IS_DESKTOP';
+
+
 
 

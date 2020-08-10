@@ -18,30 +18,22 @@ const Profile = ({ match: { params: { id: UserId } } }) => {
     <p>{suite}</p>
   </Fragment>
 
-  console.log(name)
-
   return (
 
-    <main className='_container _layout'> {/* ((NOTE)) Semantic issue */}
+    <InnerPage name={name} loading={loading}>
 
+      {loading ?
 
+        <Spinner />
 
-      <InnerPage name ={name} loading={loading}>
+        :
 
-        {loading ?
+        content
+      }
 
-          <Spinner />
+    </InnerPage>
 
-          :
-
-          content
-        }
-
-      </InnerPage>
-
-
-
-    </main>);
+  );
 }
 
 export default memo(Profile);
