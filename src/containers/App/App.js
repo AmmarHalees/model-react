@@ -14,6 +14,7 @@ import { isDevelopment, getCSSvariableValue } from '../../utils/helpers';
 import ErrorBase from '../../components/Result/ErrorBase/ErrorBase';
 import AppConfig from "../../utils/constants/app.cofig.json";
 import { useMediaQuery } from 'react-responsive';
+import './Variables.css'
 import './App.css';
 
 

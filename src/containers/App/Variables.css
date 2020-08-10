@@ -1,0 +1,119 @@
+/*-----Variables------*/
+
+
+:root {
+    --page-color: #fff;
+
+    /*--Background colors--*/
+
+    --bg-primary-color: #6200ee;
+    --bg-accent-color: #ef64d9;
+    --bg-overlay-color: rgb(0 0 0 / 88%);
+
+    /*--Title colors--*/
+
+    --title-color: rgba(0, 0, 0, 0.9);
+    --paragraph-color: rgba(0, 0, 0, 0.7);
+    --overlay-or-button-text-color: rgb(255, 255, 255);
+
+    /*-- Result colors--*/
+    --success-bg-color: #f6ffed;
+    --success-accent-color: #b7eb8f;
+
+    --warning-bg-color: #fffbe6;
+    --warning-accent-color: #ffe58f;
+
+    --error-bg-color: #fff2f0;
+    --error-accent-color: #ffccc7;
+
+    --info-bg-color: #e6f7ff;
+    --info-accent-color: #91d5ff;
+
+
+
+
+    /*-- State colors--*/
+    --bg-disabled-color: rgba(0, 0, 0, 0.12);
+
+    --title-disabled-color: rgba(0, 0, 0, 0.12);
+
+    /*-- Font sizes--*/
+
+    --font-size: 1rem;
+    --font-size-x2: 2em;
+
+    /*-- Box shadows--*/
+
+    --box-shadow: rgb(235, 235, 235) -1px 1px 13px 0px;
+
+    /*-- Filter --*/
+
+    --backdrop-filter: saturate(180%) blur(20px);
+
+    /*-- Borders --*/
+
+    --border: 1px solid var(--bg-primary-color, #6200ee);
+    --border-radius: 10px;
+    --border-radius-x2: 20px;
+
+    /*-- Padding and Margin --*/
+
+    --padding: 1rem;
+    --margin: 1rem;
+
+    --padding-sm: 0.5rem;
+    --padding-md: 0.75rem;
+
+    /*-- Font family --*/
+
+    --font-family: sans-serif, Arial, Helvetica;
+
+    /*-- Speed --*/
+
+    --speed: 300ms;
+
+    /*-- Gap layout and elements --*/
+
+    --app-gap: 1rem;
+    --layout-gap: 2rem;
+
+    /*-- Heights --*/
+
+    --header-height: 4rem;
+    --footer-height: 4rem;
+    --button-height: 55px;
+
+    /*-- Limits (for breakpoints and more) --*/
+
+    --min-page-width: 19rem;
+    /*--- 320px or the width of the smallest device - a margin of safety = 304---*/
+    --max-page-width: 120rem;
+    /*-- 1920px or the width ----*/
+    --min-post-width: var(--min-page-width);
+    /*--- 288---*/
+
+    --desktop: 992px;
+
+
+    --max-post-height: 100vh;
+
+    /*------Z -index ------*/
+
+    --lowest-z:0;
+
+    --below-overlay-z:1;
+
+    --overlay-z: 2;
+
+    --non-overlapping-z:3;
+
+    --tool-tip: 4;
+
+    --header: 6;
+
+    --modal: 8;
+
+    --notif-msg-toast: 10;
+
+
+}
