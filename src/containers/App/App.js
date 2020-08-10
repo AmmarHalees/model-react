@@ -83,7 +83,7 @@ function App(props) {
             <GuestOnlyRoute path="/signin" component={Signin} />
             <GuestOnlyRoute path="/register" component={Register} />
 
-            <Route path="/profile/:id" component={Profile} />
+            <Route path="/@:id" component={Profile} />
 
             <Route path="/image/:id" component={Profile} />
 
