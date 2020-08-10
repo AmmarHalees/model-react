@@ -4,13 +4,13 @@ import styles from './PaperBasic.module.css'
 const PaperBasic = ({children}) => {
     return ( 
 
-        <div className={styles.paper} >
+        <section className={styles.paper} > {/* ((NOTE)) Semantic issue */}
 
             
             {children}
 
 
-        </div>
+        </section>
 
      );
 }

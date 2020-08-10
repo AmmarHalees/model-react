@@ -1,9 +1,7 @@
 import React, { memo, Fragment } from 'react';
 import useUserData from './FeedCustomHooks/useUserData';
 import Spinner from '../../components/Loading/Spinner/Spinner';
-import SectionHeader from '../../components/Headers/SectionHeader/SectionHeader';
-import { ReactComponent as CloseIcon } from '../../assets/icons/arrow-left.svg';
-import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
+import InnerPage from '../../comp-custom/InnerPage/InnerPage';
 
 const Profile = ({ match: { params: { id: UserId } } }) => {
 
@@ -24,29 +22,23 @@ const Profile = ({ match: { params: { id: UserId } } }) => {
 
   return (
 
-    <main className='_container _layout'>
+    <main className='_container _layout'> {/* ((NOTE)) Semantic issue */}
 
 
-      <SectionHeader iconPosition='left' link='awards' title={name} button={<ButtonIcon size='small' type='link' title="close" icon={<CloseIcon />} loading={loading} />} />
 
-      <section>
+      <InnerPage name ={name} loading={loading}>
 
         {loading ?
-
 
           <Spinner />
 
           :
 
-          <section className=' _layout'>
-
-            {content}
-
-          </section>
-
+          content
         }
 
-      </section>
+      </InnerPage>
+
 
 
     </main>);

@@ -1,10 +1,18 @@
 .paper {
-    box-shadow: var(--box-shadow);
+    box-shadow: none;
     border-radius: var(--border-radius);
 
-    width: fit-content;
+    /* width: fit-content; */ /*---((NOTE)) Change in paper api may cause damage---*/
 
     overflow: hidden;
 
     height: fit-content;
+}
+
+
+@media all and (min-width: 992px) {
+
+    .paper {
+        box-shadow: var(--box-shadow);}
+
 }

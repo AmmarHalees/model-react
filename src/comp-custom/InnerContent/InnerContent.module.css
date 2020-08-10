@@ -1,0 +1,10 @@
+.innerContent{
+
+
+    width: 100%;
+    height: fit-content;
+    min-height: 200px;
+    max-height: 600px;
+
+    padding: var(--padding);
+}
