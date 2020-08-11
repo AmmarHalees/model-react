@@ -52,21 +52,7 @@ function App(props) {
 
       <SiteHeader isDesktop={isDesktop} auth_state={auth_state} />
 
-      {/* <div className='_layout'> */}
-
-
-      {/* <h2> {user.name || 'You are logged out'}</h2> */}
-
-      {/* {!auth_state && <ButtonBase type='primary' onClick={() => signIn(fakedata.fake_user, true)}> Sign in </ButtonBase >}
-        {auth_state && <ButtonBase type='terinary' onClick={() => signOut({}, false)}> Sign Out </ButtonBase>} */}
-
-
-
-      {/* </div> */}
-
-
       <div id='_main'>
-
 
         <Suspense fallback={<SkeletonBasic />}>
 
