@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import style from './ImageBasic.module.css';
 import data from '../../utils/constants/strings.json';
 
-const ImageBasic = ({src = data["fallback"]["src"], alt=data["fallback"]["alt"],type}) => {
+const ImageBasic = ({src = data['fallback']['src'], alt=data['fallback']['alt'],type}) => {
 
 
     const [has_loaded,setImageLoaded] = useState(false);
@@ -20,7 +20,7 @@ const ImageBasic = ({src = data["fallback"]["src"], alt=data["fallback"]["alt"],
     }
     
 
-    const image_used = has_errored? {src: data["fallback"]["src"] , alt: data["fallback"]["alt"] } :  {src, alt};
+    const image_used = has_errored? {src: data['fallback']['src'] , alt: data['fallback']['alt'] } :  {src, alt};
   
 
 

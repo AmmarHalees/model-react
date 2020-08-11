@@ -1,6 +1,6 @@
 
 
-export const theme = (state = "light", action) => {
+export const theme = (state = 'light', action) => {
 
     if (action.type === 'SET_USER') {
 

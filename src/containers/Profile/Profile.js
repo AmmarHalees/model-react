@@ -7,7 +7,7 @@ const Profile = ({ match: { params: { id: UserId } } }) => {
 
   const [{ address = {}, company, email, id, name, phone, username, website }, loading, error] = useUserData(UserId); //Extracting level one. Fall back to {} passed to useState in useUserdata
 
-  const { city = "", street = "", suite = "", zipcode = "", geo = "" } = address;  //Extracting level 2. Fallback to {} 
+  const { city = '', street = '', suite = '', zipcode = '', geo = '' } = address;  //Extracting level 2. Fallback to {} 
 
   // const city = address?.address.city; You can use the recently added optional chaining.
 
