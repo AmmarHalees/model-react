@@ -100,6 +100,8 @@ button:hover {
     display: grid;
     gap: var(--app-gap); */
     /* min-height: ; */
+
+    min-width: 300px;
 }
 
 ._layout {
@@ -145,7 +147,7 @@ button:hover {
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media all and (min-width: var(992px)) {}
+@media all and (min-width: 992px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media all and (min-width: 1200px) {}

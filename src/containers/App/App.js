@@ -5,21 +5,21 @@ import SiteFooter from '../../components/Footers/SiteFooter/SiteFooter';
 import GuestOnlyRoute from '../../comp-router/GuestOnlyRoute';
 import AuthOnlyRoute from '../../comp-router/AuthOnlyRoute';
 import SkeletonBasic from '../../components/Loading/Skeleton/SkeletonBasic';
-import { Signin, Register, Feed, Settings, Test ,Profile , Requests , RDP} from '../../utils/routes';
+import { Signin, Register, Feed, Settings, Test, Profile, Requests, RDP } from '../../utils/routes';
 import { connect } from 'react-redux';
 import { handleUser, handleAuth } from '../../redux/actioncreators/actioncreators';
 import { compose } from 'redux';
 import TestPractices from '../../comp-custom/TestPractices/TestPractices';
 import { isDevelopment, getCSSvariableValue } from '../../utils/helpers';
 import ErrorBase from '../../components/Result/ErrorBase/ErrorBase';
-import AppConfig from "../../utils/constants/app.cofig.json";
+import AppConfig from '../../utils/constants/app.cofig.json';
 import { useMediaQuery } from 'react-responsive';
-import './Variables.css'
+import './Variables.css';
 import './App.css';
 
 
 function App(props) {
-  
+
 
   const { handleAuth, handleUser, user, auth_state } = props;
   const isDesktop = useMediaQuery({ query: `(min-width: ${getCSSvariableValue('--desktop')})` }); {/*Causing too many renders?  */}
@@ -46,11 +46,11 @@ function App(props) {
 
 
   return (
-    <div id="App">
+    <div id='App'>
 
 
 
-      <SiteHeader isDesktop={isDesktop} auth_state={auth_state}/>
+      <SiteHeader isDesktop={isDesktop} auth_state={auth_state} />
 
       {/* <div className='_layout'> */}
 
@@ -65,32 +65,32 @@ function App(props) {
       {/* </div> */}
 
 
-      <div id="_main">
+      <div id='_main'>
 
 
         <Suspense fallback={<SkeletonBasic />}>
 
           <Switch>
 
-            <Route path="/test" component={Test} />
+            <Route path='/test' component={Test} />
 
 
 
-            <AuthOnlyRoute path="/settings" component={Settings} />
-            <AuthOnlyRoute path="/Requests" component={Requests} />
-            <AuthOnlyRoute path="/Request/:id" component={RDP} />
+            <AuthOnlyRoute path='/settings' component={Settings} />
+            <AuthOnlyRoute path='/Requests' component={Requests} />
+            <AuthOnlyRoute path='/Request/:id' component={RDP} />
 
-            <GuestOnlyRoute path="/signin" component={Signin} />
-            <GuestOnlyRoute path="/register" component={Register} />
+            <GuestOnlyRoute path='/signin' component={Signin} />
+            <GuestOnlyRoute path='/register' component={Register} />
 
-            <Route path="/@:id" component={Profile} />
+            <Route path='/@:id' component={Profile} />
 
-            <Route path="/image/:id" component={Profile} />
+            <Route path='/image/:id' component={Profile} />
 
 
-            <Route exact path="/" component={Feed} />
+            <Route exact path='/' component={Feed} />
 
-            <Route render={({ history }) => <ErrorBase type="Not found" callToAction={() => history.push(AppConfig['root'])} />} />
+            <Route render={({ history }) => <ErrorBase type='Not found' callToAction={() => history.push(AppConfig['root'])} />} />
 
 
           </Switch>
@@ -101,8 +101,8 @@ function App(props) {
 
       </div>
 
+        <SiteFooter />
 
-      <SiteFooter />
 
 
       {isDevelopment() && <TestPractices />}
