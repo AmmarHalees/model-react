@@ -1,16 +1,17 @@
 import React from 'react';
-import ButtonBase from '../ButtonBase/ButtonBase';
+import styles from './HeroBasic.module.css';
+import ButtonPlain from '../ButtonPlain/ButtonPlain';
 
-const HeroBasic = ({ title, description, cta }) => {
+const HeroBasic = ({ title, description, cta ='Hire now' , bordered = false }) => {
     return (
 
-        <section>
+        <div className={`${styles.hero} ${bordered && '_bordered' } _layout`} aria-label>
 
             <h1>{title}</h1>
             <h3>{description}</h3>
-            <ButtonBase type="primary">{cta}</ButtonBase>
+            <ButtonPlain type="primary">{cta}</ButtonPlain>
 
-        </section>
+        </div>
 
     );
 }

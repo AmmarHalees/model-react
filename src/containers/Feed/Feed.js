@@ -9,6 +9,7 @@ import { ReactComponent as CloseIcon } from '../../assets/icons/x.svg';
 import HorizontalSlider from '../../comp-custom/HorizontalSlider/HorizontalSlider';
 import fake_data from '../../utils/constants/fakedata.json';
 import useFeedData from './FeedCustomHooks/useFeedData';
+import HeroBasic from '../../components/HeroBasic/HeroBasic';
 
 
 const Feed = () => {
@@ -31,7 +32,7 @@ const Feed = () => {
                 <button onClick={()=> setAlbumId(4)}>4</button>
                 <button onClick={()=> setAlbumId(5)}>5</button>
 
-
+                <HeroBasic bordered title='Live your life' description='loremdddddddddddddddddddddddd'/>
     
 
                 <SectionHeader link='google' title='Popular' button={<ButtonPlain type='link'> View all  </ButtonPlain>} />

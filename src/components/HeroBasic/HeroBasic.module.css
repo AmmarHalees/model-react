@@ -1,0 +1,13 @@
+.hero{
+
+    padding: var(--padding);
+
+    border-radius: var(--border-radius);
+
+}
+
+.hero h3 , h1{
+
+    word-break: break-word;
+
+}

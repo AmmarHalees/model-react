@@ -93,6 +93,13 @@ button:hover {
     text-align: center;
 }
 
+._bordered{
+
+    border: 1px solid var(--border-color);
+
+}
+
+
 /*-----Custom classes------*/
 
 #App {
