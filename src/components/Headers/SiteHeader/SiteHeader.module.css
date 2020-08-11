@@ -1,0 +1,18 @@
+.header{
+
+
+    min-width: 100%;
+    height: var(--header-height);
+  
+    transform: translate3d(0px, 0px, 0px);
+  
+  
+    background: hsla(0,0%,100%,.45);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+  
+    display: grid;
+    align-items: center;
+  }
+  
+  

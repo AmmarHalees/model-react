@@ -12,9 +12,6 @@ const WebHeader = ({auth_state}) => {
     return (
 
 
-
-        <header className={webHeaderStyles.header}>
-
             <div className={`${webHeaderStyles.innerHeader} _container`}>
 
                 <Link to='/' style={{ width: 'fit-content', height: 'fit-content' }}  title='Go to website'>
@@ -36,8 +33,6 @@ const WebHeader = ({auth_state}) => {
 
 
             </div>
-
-        </header>
 
     );
 }

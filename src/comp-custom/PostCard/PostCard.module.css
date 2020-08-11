@@ -1,7 +1,7 @@
 .postCard{
 
-    width: fit-content;
-    height: fit-content;
+    /* width: fit-content; */
+    height: fit-content;  /*---((NOTE)) change in api might break other places----*/
 
     border-radius: var(--border-radius);
     position: relative;
@@ -9,6 +9,10 @@
 
     /*---Causes really odd bug for small vheight" ---*/ /*---((NOTE))----*/
     max-height: 100vh;
+
+    display: grid;
+
+    justify-content: center;
 
 }
 
