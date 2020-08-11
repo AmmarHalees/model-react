@@ -15,13 +15,14 @@ const store = configureStore({});
 
 ReactDOM.render(
 
+  <React.StrictMode>
 
     <ErrorBoundary>
 
       <Provider store={store}>
 
         <HashRouter>
-          
+
           <ScrollToTop />
 
           <App />
@@ -32,6 +33,9 @@ ReactDOM.render(
       </Provider>
 
     </ErrorBoundary>
+
+
+  </React.StrictMode>
 
 
   ,
