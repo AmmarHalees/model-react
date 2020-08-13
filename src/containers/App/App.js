@@ -16,7 +16,8 @@ import AppConfig from '../../utils/constants/app.cofig.json';
 import { useMediaQuery } from 'react-responsive';
 import './Variables.css';
 import './App.css';
-
+import SigninRegShowcase from '../../comp-custom/SigninRegShowcase/SigninRegShowcase';
+import SignRegContainer from '../../comp-custom/SignRegContainer/SignRegContainer';
 
 function App(props) {
 
@@ -55,20 +56,29 @@ function App(props) {
 
           <Route path='/out' render={(props) => {
 
+
+
             return (
 
-              <Switch>
+              <SignRegContainer>
 
-                <GuestOnlyRoute path='/out/register' component={Register} />
+                <SigninRegShowcase />
 
-                <GuestOnlyRoute path='/out/signin' component={Signin} />
+                <Switch>
 
-                <GuestOnlyRoute exact path='/out' component={Signin} /> {/* Needs exact so that not every single /out/eljfle matches */}
+                  <GuestOnlyRoute path='/out/register' component={Register} />
+
+                  <GuestOnlyRoute path='/out/signin' component={Signin} />
+
+                  <GuestOnlyRoute exact path='/out' component={Signin} /> {/* Needs exact so that not every single /out/eljfle matches */}
 
 
-                <Route render={({ history }) => <ErrorBase type='Not found' callToAction={() => history.push(AppConfig['root'])} />} />
+                  <Route render={({ history }) => <ErrorBase type='Not found' callToAction={() => history.push(AppConfig['root'])} />} />
 
-              </Switch>
+                </Switch>
+
+              </SignRegContainer>
+
 
             )
 

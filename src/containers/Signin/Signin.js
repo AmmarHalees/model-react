@@ -1,19 +1,7 @@
 import React from 'react';
-import LoginShowCase from '../../comp-custom/LoginShowCase/LoginShowCase';
-import LoginForm from '../../comp-custom/Forms/LoginForm/LoginForm';
-import SignRegContainer from '../../comp-custom/SignRegContainer/SignRegContainer';
+import LoginForm from '../../comp-custom/Forms/SigninForm/SigninForm';
 
 const Signin = () => {
-    return (
-    
-    <SignRegContainer>
-
-        <LoginShowCase/>
-
-        <LoginForm/>
-
-
-    </SignRegContainer>
-    )}
+    return (  <LoginForm/> )}
 
 export default Signin;

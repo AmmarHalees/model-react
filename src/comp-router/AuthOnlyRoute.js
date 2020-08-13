@@ -17,7 +17,7 @@ const AuthOnlyRoute = ({ component: Component,auth_state, isMobile, ...rest }) =
 
             <Redirect
             to={{
-              pathname: "/signin",
+              pathname: "/out/signin",
               state: { from: props.location }
             }}
           />
