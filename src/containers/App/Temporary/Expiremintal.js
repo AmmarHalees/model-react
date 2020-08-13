@@ -53,7 +53,7 @@ function App(props) {
 
         <Switch>
 
-          <Route path='/out' render={(props) => {
+          <Route path='/out' render={() => {
 
             return (
 
@@ -62,9 +62,6 @@ function App(props) {
                 <GuestOnlyRoute path='/out/register' component={Register} />
 
                 <GuestOnlyRoute path='/out/signin' component={Signin} />
-
-                <GuestOnlyRoute exact path='/out' component={Signin} /> {/* Needs exact so that not every single /out/eljfle matches */}
-
 
                 <Route render={({ history }) => <ErrorBase type='Not found' callToAction={() => history.push(AppConfig['root'])} />} />
 
@@ -98,7 +95,7 @@ function App(props) {
 
                     <Route path='/test' component={Test} />
 
-                    <Route exact path='/' component={Feed} /> {/* Needs exact so that not every single /eljfle matches */}
+                    <Route exact path='/' component={Feed} />
 
                     <Route render={({ history }) => <ErrorBase type='Not found' callToAction={() => history.push(AppConfig['root'])} />} />
 
