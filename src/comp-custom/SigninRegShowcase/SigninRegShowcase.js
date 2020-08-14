@@ -5,7 +5,7 @@ const SigninRegShowcase = () => {
     return (
 
 
-        <div className={styles.signinRegShowCase}>
+        <div className={`${styles.signinRegShowCase} leftSide`}>
 
             <div className={styles.feedBannerFader}></div>
 

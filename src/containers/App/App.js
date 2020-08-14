@@ -64,18 +64,23 @@ function App(props) {
 
                 <SigninRegShowcase />
 
-                <Switch>
+                <div className='rightSide'>
 
-                  <GuestOnlyRoute path='/out/register' component={Register} />
+                  <Switch>
 
-                  <GuestOnlyRoute path='/out/signin' component={Signin} />
+                    <GuestOnlyRoute path='/out/register' component={Register} />
 
-                  <GuestOnlyRoute exact path='/out' component={Signin} /> {/* Needs exact so that not every single /out/eljfle matches */}
+                    <GuestOnlyRoute path='/out/signin' component={Signin} />
+
+                    <GuestOnlyRoute exact path='/out' component={Signin} /> {/* Needs exact so that not every single /out/eljfle matches */}
 
 
-                  <Route render={({ history }) => <ErrorBase type='Not found' callToAction={() => history.push(AppConfig['root'])} />} />
+                    <Route render={({ history }) => <ErrorBase type='Not found' callToAction={() => history.push(AppConfig['root'])} />} />
 
-                </Switch>
+                  </Switch>
+
+                </div>
+
 
               </SignRegContainer>
 

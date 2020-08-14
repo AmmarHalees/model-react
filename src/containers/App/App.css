@@ -140,6 +140,12 @@ button:hover {
     margin-bottom: 1rem;
 }
 
+
+.leftSide{   grid-area: a; width: 100%; } /* ((NOTE)) Remove from here*/
+
+
+.rightSide{  grid-area: b;  width: 100%; } /* ((NOTE)) Remove from here*/
+
 /*-----Media Queries------*/
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

@@ -2,8 +2,6 @@
 
 
 
-        margin: auto;
-
         display: grid;
 
         text-align: center;
@@ -12,9 +10,13 @@
 
         align-items: center;
 
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr; */
 
-        width: 90%;
+
+                grid-template-areas:
+                "b b b b b"
+                "a a a a a";
+
 
 
         height: 100vh;
@@ -33,7 +35,10 @@
 
         .signRegContainer {
 
-                grid-template-columns: 1fr 1.5fr;
+
+                grid-template-areas:
+                "a a b b b"
+                "a a b b b";
 
                 width: 100%;
 

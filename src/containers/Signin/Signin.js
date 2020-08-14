@@ -1,7 +1,7 @@
 import React from 'react';
-import LoginForm from '../../comp-custom/Forms/SigninForm/SigninForm';
+import SigninForm from '../../comp-custom/Forms/SigninForm/SigninForm';
 
 const Signin = () => {
-    return (  <LoginForm/> )}
+    return (  <SigninForm/> )}
 
 export default Signin;
