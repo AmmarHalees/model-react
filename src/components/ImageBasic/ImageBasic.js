@@ -25,6 +25,7 @@ const ImageBasic = ({src = data['fallback']['src'], alt=data['fallback']['alt'],
 
 
     return (<img 
+      loading='lazy'
         className={`${style.image}
          ${style[type]}`} 
          src ={image_used.src} 

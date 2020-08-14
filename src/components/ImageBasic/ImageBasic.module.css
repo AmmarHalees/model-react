@@ -4,6 +4,11 @@
     border-radius: inherit ;
     height: auto;
     display: block;
+
+
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
     /* vertical-align: middle; */
 }
 
