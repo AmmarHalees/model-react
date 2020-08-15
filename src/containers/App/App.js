@@ -7,7 +7,6 @@ import AuthOnlyRoute from '../../comp-router/AuthOnlyRoute';
 import SkeletonBasic from '../../components/Loading/Skeleton/SkeletonBasic';
 import { Feed, Settings, Test, Profile, Requests, RDP, Out } from '../../utils/routes';
 import { connect } from 'react-redux';
-import { handleUser, handleAuth } from '../../redux/actioncreators/actioncreators';
 import { compose } from 'redux';
 import TestPractices from '../../comp-custom/TestPractices/TestPractices';
 import { isDevelopment, getCSSvariableValue } from '../../utils/helpers';
@@ -18,28 +17,9 @@ import './Variables.css';
 import './App.css';
 
 
-function App({ handleAuth, handleUser, user, auth_state }) {
+function App({ auth_state }) {
 
   const isDesktop = useMediaQuery({ query: `(min-width: ${getCSSvariableValue('--desktop')})` }); 
-
-
-
-  const signIn = (user) => {
-
-    handleUser(user);
-    handleAuth(true);
-
-
-  }
-
-  const signOut = (user) => {
-
-    handleUser(user);
-    handleAuth(false);
-
-
-  }
-
 
 
   return (
@@ -141,12 +121,6 @@ const mapStateToProps = (state) => {
 
 }
 
-const actionCreators = {
-
-  handleUser,
-  handleAuth
-
-}
 
 
 export default compose(
@@ -154,7 +128,6 @@ export default compose(
   connect(
     mapStateToProps
     ,
-    actionCreators
-
+    null
   )
 )(App);
