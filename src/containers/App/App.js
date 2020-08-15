@@ -1,11 +1,11 @@
 import React, { Suspense, memo } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import SiteHeader from '../../components/Headers/SiteHeader/SiteHeader';
 import SiteFooter from '../../components/Footers/SiteFooter/SiteFooter';
 import GuestOnlyRoute from '../../comp-router/GuestOnlyRoute';
 import AuthOnlyRoute from '../../comp-router/AuthOnlyRoute';
 import SkeletonBasic from '../../components/Loading/Skeleton/SkeletonBasic';
-import { Signin, Register, Feed, Settings, Test, Profile, Requests, RDP } from '../../utils/routes';
+import { Feed, Settings, Test, Profile, Requests, RDP, Out } from '../../utils/routes';
 import { connect } from 'react-redux';
 import { handleUser, handleAuth } from '../../redux/actioncreators/actioncreators';
 import { compose } from 'redux';
@@ -16,14 +16,11 @@ import AppConfig from '../../utils/constants/app.cofig.json';
 import { useMediaQuery } from 'react-responsive';
 import './Variables.css';
 import './App.css';
-import SigninRegShowcase from '../../comp-custom/SigninRegShowcase/SigninRegShowcase';
-import SignRegContainer from '../../comp-custom/SignRegContainer/SignRegContainer';
-
-function App(props) {
 
 
-  const { handleAuth, handleUser, user, auth_state } = props;
-  const isDesktop = useMediaQuery({ query: `(min-width: ${getCSSvariableValue('--desktop')})` }); {/*Causing too many renders?  */ }
+function App({ handleAuth, handleUser, user, auth_state }) {
+
+  const isDesktop = useMediaQuery({ query: `(min-width: ${getCSSvariableValue('--desktop')})` }); 
 
 
 
@@ -54,40 +51,7 @@ function App(props) {
 
         <Switch>
 
-          <Route path='/out' render={(props) => {
-
-
-
-            return (
-
-              <SignRegContainer>
-
-                <SigninRegShowcase />
-
-                <div className='rightSide'>
-
-                  <Switch>
-
-                    <GuestOnlyRoute path='/out/register' component={Register} />
-
-                    <GuestOnlyRoute path='/out/signin' component={Signin} />
-
-                    <GuestOnlyRoute exact path='/out' component={Signin} /> {/* Needs exact so that not every single /out/eljfle matches */}
-
-
-                    <Route render={({ history }) => <ErrorBase type='Not found' callToAction={() => history.push(AppConfig['root'])} />} />
-
-                  </Switch>
-
-                </div>
-
-
-              </SignRegContainer>
-
-
-            )
-
-          }} />
+          <GuestOnlyRoute path='/out' component={Out} />
 
           <Route path='/' render={() => {
 
@@ -112,6 +76,19 @@ function App(props) {
                     <Route path='/image/:id' component={Profile} />
 
                     <Route path='/test' component={Test} />
+
+                    <Route path='/signin' render={() => {
+
+                      return (<Redirect
+                        to={{
+                          pathname: "/out/signin",
+                          search: "?referrer=your+face",
+                          state: { referrer: '/' }
+                        }}
+                      />)
+
+                    }} />
+
 
                     <Route exact path='/' component={Feed} /> {/* Needs exact so that not every single /eljfle matches */}
 

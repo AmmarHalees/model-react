@@ -5,6 +5,8 @@ import InnerPage from '../../comp-custom/InnerPage/InnerPage';
 
 const Profile = ({ match: { params: { id: UserId } } }) => {
 
+  
+
   const [{ address = {}, company, email, id, name, phone, username, website }, loading, error] = useUserData(UserId); //Extracting level one. Fall back to {} passed to useState in useUserdata
 
   const { city = '', street = '', suite = '', zipcode = '', geo = '' } = address;  //Extracting level 2. Fallback to {} 
