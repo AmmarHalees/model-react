@@ -2,10 +2,12 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-const GuestOnlyRoute = ({ component: Component,auth_state, isMobile, ...rest }) => {
+const GuestOnlyRoute = ({ component: Component,auth_state, isMobile,location, ...rest }) => {
 
 
+  let { from } = location.state || { from: { pathname: '/' } }; //If im coming FROM somewhere, then the path for it would be in the attribute "from", else it's undefined , so we default to "/"
 
+  console.log({from})
     return (
 
         <Route {...rest} render={(props) =>
@@ -17,7 +19,7 @@ const GuestOnlyRoute = ({ component: Component,auth_state, isMobile, ...rest }) 
             <Redirect
             push
             to={{
-              pathname: "/",
+              pathname: from.pathname,
               state: { from: props.location }
             }}
           />

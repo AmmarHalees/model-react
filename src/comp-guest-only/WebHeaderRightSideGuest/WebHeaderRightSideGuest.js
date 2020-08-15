@@ -1,43 +1,28 @@
-import React , {memo} from 'react';
+import React, { memo } from 'react';
 import styles from './WebHeaderRightSideGuest.module.css';
 import ButtonPlain from '../../components/ButtonPlain/ButtonPlain';
-import { connect } from 'react-redux';
-import { handleUser, handleAuth } from '../../redux/actioncreators/actioncreators';
-import { compose } from 'redux';
+
+import { useHistory } from 'react-router-dom';
 
 
-const WebHeaderRightSideGuest = ({handleAuth}) => {
+const WebHeaderRightSideGuest = () => {
+
+    const history = useHistory();
+
     return (
 
         <div className={styles.WebHeaderRightSideGuest}>
 
-            <ButtonPlain type='link' onClick={handleAuth} title='Sign in'>
+            <ButtonPlain type='link' onClick={() => history.push('/out/signin')} title='Sign in'>
                 Sign in
             </ButtonPlain>
-        
 
-            <ButtonPlain type='terinary' title='Register'>
+
+            <ButtonPlain type='terinary' onClick={() => history.push('/out/register')} title='Register'>
                 Register
             </ButtonPlain>
         </div>
     );
 }
 
-const actionCreators = {
-
-    handleUser,
-    handleAuth
-  
-  }
-  
-  
-  export default compose(
-    memo,
-    connect(
-      null
-      ,
-      actionCreators
-  
-    )
-  )(WebHeaderRightSideGuest);
-  
+export default memo(WebHeaderRightSideGuest)
