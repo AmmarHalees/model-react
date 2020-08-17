@@ -72,7 +72,7 @@ function App({ auth_state, children }) {
 
                     <Route exact path='/' component={Feed} /> {/* Needs exact so that not every single /eljfle matches */}
 
-                    <Route render={({ history }) => <ErrorBase type='Not found' callToAction={() => history.push(AppConfig['root'])} />} />
+                    <Route render={({ history }) => <ErrorBase type='Not found' callToAction={() => history.replace(AppConfig['root'])} />} />
 
 
 
