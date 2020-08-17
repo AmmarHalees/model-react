@@ -91,3 +91,9 @@
 
 }
 
+
+.postCard:focus-within >.postControls{
+
+    opacity: 1;
+
+}

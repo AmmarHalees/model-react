@@ -19,18 +19,18 @@ const Feed = () => {
     const posts = useFeedData(album_id);
 
 
-    function onPostClick(e) {
+    function onPostClick(e, id) {
 
 
-        console.log('post click')
+        console.log('post click' , id)
     }
 
-    function onControlClick(e,type) {
+    function onControlClick(e, id, type) {
 
         e.stopPropagation();
 
 
-        console.log(type)
+        console.log(type, id)
     }
 
     return (
@@ -57,24 +57,14 @@ const Feed = () => {
                     {
                         posts.map(({ title, url, id }) => {
 
-                            return (<PostCard  onPostClick={onPostClick} onControlClick={onControlClick} title={title} url={url} key={id} onClick={() => alert(id)} />)
+                            return (<PostCard onPostClick={onPostClick} onControlClick={onControlClick} title={title} url={url} key={id} id={id} />)
 
                         })
                     }
 
                 </ResponsiveList>
 
-                <SectionHeader link='awards' title='Awards' button={<ButtonIcon size='small' type='link' title="close" icon={<CloseIcon />} />} />
 
-                <ResponsiveList>
-
-                    <PostCard onPostClick={onPostClick} onControlClick={onControlClick} />
-                    <PostCard onPostClick={onPostClick} onControlClick={onControlClick} />
-                    <PostCard onPostClick={onPostClick} onControlClick={onControlClick} />
-                    <PostCard onPostClick={onPostClick} onControlClick={onControlClick}  />
-                    <PostCard onPostClick={onPostClick} onControlClick={onControlClick} />
-
-                </ResponsiveList>
 
             </main>
 
