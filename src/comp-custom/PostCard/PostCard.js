@@ -10,7 +10,7 @@ import { ReactComponent as TagIcon } from '../../assets/icons/share.svg';
 
 
 
-const PostCard = ({ title =data["default title"], onClick, paragraph = data["default paragraph"], url = data['fake tall image'] }) => {
+const PostCard = ({ title =data["default title"],onControlClick, onPostClick, paragraph = data["default paragraph"], url = data['fake tall image'] }) => {
 
 
     return (
@@ -18,7 +18,7 @@ const PostCard = ({ title =data["default title"], onClick, paragraph = data["def
 
         <PaperBasic>
 
-            <div className={styles.postCard} onClick={onClick}>
+            <div className={styles.postCard} onClick={onPostClick}>
 
                 <div className={styles.postOverlay}></div>
 
@@ -31,9 +31,9 @@ const PostCard = ({ title =data["default title"], onClick, paragraph = data["def
 
                     <div className={styles.postControlButtons}>
 
-                        <ButtonIcon icon={<CloseIcon />} size='small' title='Close' type='link' onClick={() => alert('hi')} />
-                        <ButtonIcon icon={<HeartIcon />} size='small' title='Like' type='link' onClick={() => alert('hi')} />
-                        <ButtonIcon icon={<TagIcon />} size='small' title='Svae' type='link' onClick={() => alert('hi')} />
+                        <ButtonIcon icon={<CloseIcon />} size='small' title='Close' type='link' onClick={(e) => onControlClick(e,'close')} />
+                        <ButtonIcon icon={<HeartIcon />} size='small' title='Like' type='link' onClick={(e) => onControlClick(e,'heart')} />
+                        <ButtonIcon icon={<TagIcon />} size='small' title='Svae' type='link' onClick={(e) => onControlClick(e,'tag')} />
 
 
                     </div>
@@ -42,15 +42,10 @@ const PostCard = ({ title =data["default title"], onClick, paragraph = data["def
                 </div>
 
 
-
-
             </div>
 
 
-
         </PaperBasic>
-
-
 
     );
 }

@@ -16,7 +16,22 @@ const Feed = () => {
 
     const [album_id, setAlbumId] = useState(2);
 
-    const posts =  useFeedData(album_id);
+    const posts = useFeedData(album_id);
+
+
+    function onPostClick(e) {
+
+
+        console.log('post click')
+    }
+
+    function onControlClick(e,type) {
+
+        e.stopPropagation();
+
+
+        console.log(type)
+    }
 
     return (
 
@@ -27,22 +42,22 @@ const Feed = () => {
             <main className="_container _layout">
 
 
-                <button onClick={()=> setAlbumId(2)}>2</button>
-                <button onClick={()=> setAlbumId(3)}>3</button>
-                <button onClick={()=> setAlbumId(4)}>4</button>
-                <button onClick={()=> setAlbumId(5)}>5</button>
+                <button onClick={() => setAlbumId(2)}>2</button>
+                <button onClick={() => setAlbumId(3)}>3</button>
+                <button onClick={() => setAlbumId(4)}>4</button>
+                <button onClick={() => setAlbumId(5)}>5</button>
 
-                <HeroBasic bordered title='Live your life' description='loremdddddddddddddddddddddddd'/>
-    
+                <HeroBasic bordered title='Live your life' description='loremdddddddddddddddddddddddd' />
+
 
                 <SectionHeader link='google' title='Popular' button={<ButtonPlain type='link'> View all  </ButtonPlain>} />
 
                 <ResponsiveList>
 
                     {
-                        posts.map(({title, url, id}) => {
+                        posts.map(({ title, url, id }) => {
 
-                            return (<PostCard title={title} url={url}  key={id} onClick={()=>alert(id)}/>)
+                            return (<PostCard  onPostClick={onPostClick} onControlClick={onControlClick} title={title} url={url} key={id} onClick={() => alert(id)} />)
 
                         })
                     }
@@ -53,11 +68,11 @@ const Feed = () => {
 
                 <ResponsiveList>
 
-                    <PostCard />
-                    <PostCard />
-                    <PostCard />
-                    <PostCard />
-                    <PostCard />
+                    <PostCard onPostClick={onPostClick} onControlClick={onControlClick} />
+                    <PostCard onPostClick={onPostClick} onControlClick={onControlClick} />
+                    <PostCard onPostClick={onPostClick} onControlClick={onControlClick} />
+                    <PostCard onPostClick={onPostClick} onControlClick={onControlClick}  />
+                    <PostCard onPostClick={onPostClick} onControlClick={onControlClick} />
 
                 </ResponsiveList>
 
