@@ -1,4 +1,6 @@
 {
 
-    "root" : "/"
+    "root" : "/",
+    "redirectsToSignin": ["/signin","/sign", "/login","/enter","/signi","/log","/logi"],
+    "redirectsToHome": ["/","/feed", "/home"]
 }

@@ -17,10 +17,9 @@ import './Variables.css';
 import './App.css';
 
 
-function App({ auth_state }) {
+function App({ auth_state, children }) {
 
-  const isDesktop = useMediaQuery({ query: `(min-width: ${getCSSvariableValue('--desktop')})` }); 
-
+  const isDesktop = useMediaQuery({ query: `(min-width: ${getCSSvariableValue('--desktop')})` });
 
   return (
     <div id='App'>
@@ -42,6 +41,7 @@ function App({ auth_state }) {
 
                 <SiteHeader isDesktop={isDesktop} auth_state={auth_state} />
 
+
                 <div id='_main'>
 
                   <Switch>
@@ -57,13 +57,13 @@ function App({ auth_state }) {
 
                     <Route path='/test' component={Test} />
 
-                    <Route path='/signin' render={() => {
+                    <Route path={AppConfig['redirectsToSignin']} render={() => {
 
                       return (<Redirect
                         to={{
-                          pathname: "/out/signin",
+                          pathname: "/out",
                           search: "?referrer=your+face",
-                          state: { referrer: '/' }
+                          // state: { referrer: '/' }
                         }}
                       />)
 
