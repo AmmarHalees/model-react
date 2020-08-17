@@ -2,6 +2,8 @@
 
     padding: var(--padding);
 
+    justify-content: center;
+
 }
 
 .notFoundError{

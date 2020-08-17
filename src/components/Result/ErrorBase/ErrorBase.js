@@ -4,7 +4,7 @@ import data from './ErrorMap.config.json';
 
 import ButtonPlain from '../../ButtonPlain/ButtonPlain';
 
-const ErrorBase = ({ type , callToAction }) => {
+const ErrorBase = ({ type, callToAction }) => {
 
 
     const error_object = data[type];
@@ -14,7 +14,7 @@ const ErrorBase = ({ type , callToAction }) => {
     return (
 
 
-        <div className={`${styles[className]} ${styles.errorBase} _layout _center`}  >
+        <div className={`${styles[className]} ${styles.errorBase} _layout _center _container`}  >
 
             <img src={src} alt={title} />
 
@@ -24,11 +24,17 @@ const ErrorBase = ({ type , callToAction }) => {
 
             <p>{description}</p>
 
-            <ButtonPlain type='primary' onClick={callToAction}>
+            <div>
+                <ButtonPlain type='primary' onClick={callToAction}>
 
-                Go back home
+                    Go back home
 
             </ButtonPlain>
+
+
+
+            </div>
+
 
 
         </div>

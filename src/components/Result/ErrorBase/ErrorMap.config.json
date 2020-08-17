@@ -1,7 +1,7 @@
 {
     "server": {
         "className": "serverError",
-        "src": "",
+        "src": "https://image.flaticon.com/icons/svg/3176/3176047.svg",
         "title": "Server Error",
         "description": "Something has gone wrong. Please try again later"
     }
@@ -9,16 +9,16 @@
 
     "Not found": {
         "className": "notFoundError",
-        "src": "",
+        "src": "https://image.flaticon.com/icons/svg/702/702576.svg",
         "title": "Not Found",
-        "description": "Page you're looking for cannot be found"
+        "description": "The page you're looking for cannot be found"
     }
 
     ,
 
     "runtime": {
         "className": "runtimeError",
-        "src": "",
+        "src": "https://image.flaticon.com/icons/svg/159/159469.svg",
         "title": "Runtime Error",
         "description": "There's an internal crash in the app"
     }
