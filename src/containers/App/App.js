@@ -1,11 +1,11 @@
-import React, { Suspense, memo } from 'react';
+import React, { Suspense, memo, useEffect } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import SiteHeader from '../../components/Headers/SiteHeader/SiteHeader';
 import SiteFooter from '../../components/Footers/SiteFooter/SiteFooter';
 import GuestOnlyRoute from '../../comp-router/GuestOnlyRoute';
 import AuthOnlyRoute from '../../comp-router/AuthOnlyRoute';
 import SkeletonBasic from '../../components/Loading/Skeleton/SkeletonBasic';
-import { Feed, Settings, Test, Profile, Requests, RDP, Out } from '../../utils/routes';
+import { Feed, Settings, Test, Profile, Requests, RDP, Out, TestGalleries } from '../../utils/routes';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import TestPractices from '../../comp-custom/TestPractices/TestPractices';
@@ -20,6 +20,8 @@ import './App.css';
 function App({ auth_state, children }) {
 
   const isDesktop = useMediaQuery({ query: `(min-width: ${getCSSvariableValue('--desktop')})` });
+
+
 
   return (
     <div id='App'>
@@ -56,6 +58,7 @@ function App({ auth_state, children }) {
                     <Route path='/image/:id' component={Profile} />
 
                     <Route path='/test' component={Test} />
+                    <Route path='/test-gallery' component={TestGalleries} />
 
                     <Route path={AppConfig['redirectsToSignin']} render={() => {
 
