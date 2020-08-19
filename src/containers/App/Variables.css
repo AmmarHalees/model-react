@@ -49,7 +49,7 @@
 
     /*-- Box shadows--*/
 
-    --box-shadow: rgb(235, 235, 235) -1px 1px 13px 0px;
+    --box-shadow: var(--overlay-or-button-text-color) -1px 1px 13px 0px;
 
     /*-- Filter --*/
 
@@ -57,7 +57,7 @@
 
     /*-- Borders --*/
 
-    --border: 1px solid var(--bg-primary-color, #6200ee);
+    --border: 1px solid var(--bg-primary-color);
     --border-radius: 10px;
     --border-radius-x2: 20px;
 
