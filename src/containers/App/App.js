@@ -1,4 +1,4 @@
-import React, { Suspense, memo, useEffect } from 'react';
+import React, { Suspense, memo } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import SiteHeader from '../../components/Headers/SiteHeader/SiteHeader';
 import SiteFooter from '../../components/Footers/SiteFooter/SiteFooter';
@@ -15,11 +15,14 @@ import AppConfig from '../../utils/constants/app.cofig.json';
 import { useMediaQuery } from 'react-responsive';
 import './Variables.css';
 import './App.css';
+import usePolyfills from '../../utils/customhooks/usePolyfills';
 
 
 function App({ auth_state, children }) {
 
   const isDesktop = useMediaQuery({ query: `(min-width: ${getCSSvariableValue('--desktop')})` });
+
+  usePolyfills();
 
 
 
