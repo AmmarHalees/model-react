@@ -9,6 +9,9 @@ import { lazy } from 'react';
  const Requests = lazy(() => import('../containers/Requests/Requests'));
  const RDP = lazy(() => import('../containers/RDP/RDP'));
  const Out = lazy(() => import('../containers/App/Out/Out'));
+ 
+
+ const TestGalleries = lazy(() => import('../containers/TestGalleries/TestGalleries'));
 
 
  const Test = lazy(() => import('../containers/Test/Test'));
@@ -23,6 +26,7 @@ export {
     Profile,
     Requests,
     RDP,
-    Out
+    Out,
+    TestGalleries
 
 }
