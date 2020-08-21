@@ -17,6 +17,7 @@ export default function useUserData(userId) {
 
         getUser(userId).then((response) => { //2 is the userId
 
+            console.log(response)
             setError(false);
             setLoading(false)
             setUser(response);

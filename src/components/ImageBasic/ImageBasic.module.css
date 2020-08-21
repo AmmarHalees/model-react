@@ -6,8 +6,7 @@
     display: block;
 
 
-    width: 300px;
-    height: 300px;
+
     object-fit: cover;
     /* vertical-align: middle; */
 }
@@ -15,5 +14,25 @@
 .modalImage{
 
     max-height: 80vh
+
+}
+
+.feedImage{
+
+    width: 300px;
+    height: 300px;
+
+}
+
+.profile{
+
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.rounded{
+
+    border-radius: 50%;
 
 }

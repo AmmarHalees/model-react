@@ -6,5 +6,5 @@
     min-height: 200px;
     max-height: 600px;
 
-    padding: var(--padding);
+    /* padding: var(--padding); */
 }

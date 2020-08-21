@@ -110,7 +110,7 @@
 
     --overlay-z: 2;
 
-    --non-overlapping-z:3;
+    --non-overlapping-z:3; /*- free roaming-*/
 
     --tool-tip: 4;
 

@@ -243,3 +243,24 @@ button:hover {
 }
 
 /*------------------------------*/
+
+
+.profileCover{
+
+    background-position: center center;
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 1rem;
+
+}
+
+.profileInfo{
+
+    z-index: var(--non-overlapping-z);
+}

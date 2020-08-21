@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import style from './ImageBasic.module.css';
 import data from '../../utils/constants/strings.json';
 
-const ImageBasic = ({src = data['fallback']['src'], alt=data['fallback']['alt'],type}) => {
+const ImageBasic = ({src = data['fallback']['src'], alt=data['fallback']['alt'],type,rounded}) => {
 
 
     const [has_loaded,setImageLoaded] = useState(false);
@@ -26,8 +26,7 @@ const ImageBasic = ({src = data['fallback']['src'], alt=data['fallback']['alt'],
 
     return (<img 
       loading='lazy'
-        className={`${style.image}
-         ${style[type]}`} 
+        className={`${style.image} ${style[type]} ${rounded? style.rounded : ''}`} 
          src ={image_used.src} 
          alt={image_used.alt}
 
