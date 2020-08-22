@@ -18,7 +18,7 @@ const PostCard = ({ title =data["default title"],onControlClick, onPostClick, pa
 
         <PaperBasic>
 
-            <div className={styles.postCard} onClick={(e)=>onPostClick(e,id)}>
+            <button  className={styles.postCard} onClick={(e)=>onPostClick(e,id)}>
 
                 <div className={styles.postOverlay}></div>
 
@@ -42,7 +42,7 @@ const PostCard = ({ title =data["default title"],onControlClick, onPostClick, pa
                 </div>
 
 
-            </div>
+            </button>
 
 
         </PaperBasic>
