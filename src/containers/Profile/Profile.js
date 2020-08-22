@@ -9,9 +9,9 @@ const Profile = ({ match: { params: { id: UserId } } }) => {
 
 
 
-  const [{ address = {}, company, email, id, name, phone, username, website }, loading, error] = useUserData(UserId); //Extracting level one. Fall back to {} passed to useState in useUserdata
+  const [{ address = {}, name}, loading, error] = useUserData(UserId); //Extracting level one. Fall back to {} passed to useState in useUserdata
 
-  const { city = '', street = '', suite = '', zipcode = '', geo = '' } = address;  //Extracting level 2. Fallback to {} 
+  const { city = '', street = '', suite = ''} = address;  //Extracting level 2. Fallback to {} 
 
   // const city = address?.address.city; You can use the recently added optional chaining.
 
@@ -27,19 +27,17 @@ const Profile = ({ match: { params: { id: UserId } } }) => {
 
         <Overlay background='linear-gradient(0deg, rgba(245,0,162,0.5357493339132529) 0%, rgba(255,255,255,0) 100%)'/>
 
-        <div className='profileInfo'>
+        <div className='profileInfo '>
 
             <ImageBasic rounded type='profile' src='https://decider.com/wp-content/uploads/2017/09/the-office-jim-is-the-worst.jpg?quality=80&strip=all&w=646&h=431&crop=1' />
 
+            <h2>{name}</h2>
 
         </div>
 
 
       </div>
-      <h2>{name}</h2>
-      <p>{city}</p>
-      <p>{street}</p>
-      <p>{suite}</p>
+
 
     </>
 

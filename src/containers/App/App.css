@@ -249,7 +249,7 @@ button:hover {
 
     background-position: center center;
     width: 100%;
-    height: 200px;
+    height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
     display: grid;
@@ -261,6 +261,20 @@ button:hover {
 }
 
 .profileInfo{
-
+    display: grid;
+    z-index: var(--non-overlapping-z);
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    /* background: hsla(0,0%,100%,.45);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px); */
+    position: absolute;
+    left: 0;
+    right: 20%;
+    left: 20%;
+    top: 10%;
+    bottom: 10%;
+    border-radius: 1rem;
     z-index: var(--non-overlapping-z);
 }

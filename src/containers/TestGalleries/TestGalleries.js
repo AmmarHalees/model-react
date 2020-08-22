@@ -15,8 +15,6 @@ const TestGalleries = (props) => {
 
     }, []);
 
-    console.log(items)
-
 
     return (
 

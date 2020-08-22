@@ -21,16 +21,12 @@ const Feed = () => {
 
     function onPostClick(e, id) {
 
-
-        console.log('post click' , id)
     }
 
     function onControlClick(e, id, type) {
 
         e.stopPropagation();
 
-
-        console.log(type, id)
     }
 
     return (

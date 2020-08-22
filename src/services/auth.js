@@ -11,8 +11,6 @@ export function signIn(userid) {
 
     .then(res =>{
 
-        console.log(res.data)
-
         handleAuth(true);
         handleUser(res.data)
 

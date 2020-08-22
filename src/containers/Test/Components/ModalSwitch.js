@@ -18,7 +18,6 @@ function ModalSwitch() {
     // the modal.
     let background = location.state && location.state.background;
 
-    console.log(location)
 
     return (
         <div>
