@@ -1,0 +1,12 @@
+.cardContainer{
+    display: grid;
+    gap:var(--app-gap);
+}
+
+.skeletonRepeat{
+
+    display: grid;
+    grid-template-columns: auto 1fr 2fr;
+    gap: 10px;
+    align-items: center;
+}

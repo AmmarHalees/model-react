@@ -1,11 +1,9 @@
-import React, { useState, useEffect, memo } from 'react';
+import React, { useState, memo } from 'react';
 
 import PostCard from '../../comp-custom/PostCard/PostCard';
 import ResponsiveList from '../../components/Lists/ResponsiveList/ResponsiveList';
 import SectionHeader from '../../components/Headers/SectionHeader/SectionHeader';
 import ButtonPlain from '../../components/ButtonPlain/ButtonPlain';
-import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
-import { ReactComponent as CloseIcon } from '../../assets/icons/x.svg';
 import HorizontalSlider from '../../comp-custom/HorizontalSlider/HorizontalSlider';
 import fake_data from '../../utils/constants/fakedata.json';
 import useFeedData from './FeedCustomHooks/useFeedData';

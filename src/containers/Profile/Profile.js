@@ -4,6 +4,7 @@ import Spinner from '../../components/Loading/Spinner/Spinner';
 import InnerPage from '../../comp-custom/InnerPage/InnerPage';
 import ImageBasic from '../../components/ImageBasic/ImageBasic';
 import Overlay from '../../components/Overlay/Overlay';
+import CardSkeleton from '../../components/Loading/Skeleton/CardSkeleton/CardSkeleton';
 
 const Profile = ({ match: { params: { id: UserId } } }) => {
 
@@ -47,7 +48,9 @@ const Profile = ({ match: { params: { id: UserId } } }) => {
 
       {loading ?
 
-        <Spinner />
+        // <Spinner />
+
+        <CardSkeleton/>
 
         :
 
