@@ -1,14 +1,8 @@
 import React from 'react';
-import styles from './WebHeaderRightSide.module.css';
+import Navbar from '../../../../Navigation/Navbar/Navbar';
 
 const WebHeaderRightSide = () => {
-    return (
-
-        <div className={styles.webHeaderRightSide}>
-
-       
-        </div>
-    );
+    return (  <Navbar/>  );
 }
 
 export default WebHeaderRightSide;

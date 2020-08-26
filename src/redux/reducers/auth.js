@@ -1,6 +1,6 @@
 
 
-export const auth = (state=false, action)=>{
+export const auth = (state=true, action)=>{
 
     switch(action.type){
 
