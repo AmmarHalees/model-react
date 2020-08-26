@@ -5,8 +5,12 @@
     height: 100%;   
 
     height: 100%;
-    width: 200px;
+    width: 250px;
     justify-self: end;
+
+    box-shadow: #00000033 -1px 1px 13px 0px;
+    border-radius: 1rem;
+    max-width: 100%;
 }
 
 
@@ -20,7 +24,7 @@
     height: 100%;
     width: 100%;
 
-    gap: calc(0.5*var(--app-gap));
+    /* gap: calc(0.5*var(--app-gap)); */
 }
 
 

@@ -278,3 +278,8 @@ button:hover {
     border-radius: 1rem;
     z-index: var(--non-overlapping-z);
 }
+
+
+.headroom-wrapper {
+    height: 50px!important;
+}
