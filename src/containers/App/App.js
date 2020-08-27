@@ -16,6 +16,7 @@ import { useMediaQuery } from 'react-responsive';
 import './Variables.css';
 import './App.css';
 import usePolyfills from '../../utils/customhooks/usePolyfills';
+import BottomNav from '../../comp-mobile-only/BottomNav/BottomNav';
 
 
 function App({ auth_state, children }) {
@@ -84,6 +85,8 @@ function App({ auth_state, children }) {
 
 
                   </Switch>
+
+                  <BottomNav/>
 
                 </div>
 

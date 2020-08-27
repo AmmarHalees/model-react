@@ -7,12 +7,12 @@ import { ReactComponent as SettingsIcon } from '../../../assets/icons/settings.s
 import DropDownItem from '../../DropDown/DropDownItem/DropDownItem';
 import DropDownMenu from '../../DropDown/DropDownMenu/DropDownMenu';
 
-const Navbar = () => {
+const Navbar = ({bottomnav}) => {
 
 
     return (
 
-        <nav className={styles.navbar}>
+        <nav className={`${styles.navbar} ${bottomnav ? styles.bottomnav : ''}`}>
 
             <ul className={styles.navbarList}>
 

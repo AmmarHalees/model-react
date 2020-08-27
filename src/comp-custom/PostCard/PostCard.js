@@ -31,9 +31,9 @@ const PostCard = ({ title =data["default title"],onControlClick, onPostClick, pa
 
                     <div className={styles.postControlButtons}>
 
-                        <ButtonIcon icon={<CloseIcon />} size='small' title='Close' type='link' onClick={(e) => onControlClick(e,id,'close')} />
-                        <ButtonIcon icon={<HeartIcon />} size='small' title='Like' type='link' onClick={(e) => onControlClick(e,id,'heart')} />
-                        <ButtonIcon icon={<TagIcon />} size='small' title='Save' type='link' onClick={(e) => onControlClick(e,id,'tag')} />
+                        <ButtonIcon icon={<CloseIcon />} size='medium' title='Close' type='link' onClick={(e) => onControlClick(e,id,'close')} />
+                        <ButtonIcon icon={<HeartIcon />} size='medium' title='Like' type='link' onClick={(e) => onControlClick(e,id,'heart')} />
+                        <ButtonIcon icon={<TagIcon />} size='medium' title='Save' type='link' onClick={(e) => onControlClick(e,id,'tag')} />
 
 
                     </div>

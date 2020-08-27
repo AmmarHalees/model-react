@@ -20,3 +20,29 @@
 
     /* gap: calc(0.5*var(--app-gap)); */
 }
+
+.bottomnav{
+
+    background: #ffffff70;
+    position: fixed;
+    bottom: 0px;
+    height: 60px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    display: block;
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+@media all and (min-width: 992px) {
+
+    .bottomnav{
+
+        display: none;
+
+    }
+
+}
+
+
+
