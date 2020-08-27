@@ -5,7 +5,7 @@ import SiteFooter from '../../components/Footers/SiteFooter/SiteFooter';
 import GuestOnlyRoute from '../../comp-router/GuestOnlyRoute';
 import AuthOnlyRoute from '../../comp-router/AuthOnlyRoute';
 import SkeletonBasic from '../../components/Loading/Skeleton/SkeletonBasic';
-import { Feed, Settings, Test, Profile, Requests, RDP, Out, TestGalleries } from '../../utils/routes';
+import { Feed, Settings, Test, Profile, Requests, RDP, Out, TestGalleries, List } from '../../utils/routes';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import TestPractices from '../../comp-custom/TestPractices/TestPractices';
@@ -61,6 +61,7 @@ function App({ auth_state, children }) {
                     <Route path='/image/:id' component={Profile} />
 
                     <Route path='/test' component={Test} />
+                    <Route path='/list' component={List} />
                     <Route path='/test-gallery' component={TestGalleries} />
 
                     <Route path={AppConfig['redirectsToSignin']} render={() => {

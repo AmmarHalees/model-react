@@ -1,20 +1,14 @@
-
-
-.navbar{
-
-    height: 100%;   
-
+.navbar {
     height: 100%;
     width: 250px;
     justify-self: end;
-
-    box-shadow: #00000033 -1px 1px 13px 0px;
+    box-shadow: #00000014 0px 12px 13px 2px;
     border-radius: 1rem;
     max-width: 100%;
 }
 
 
-.navbarList{
+.navbarList {
 
     justify-items: center;
     align-items: center;
@@ -26,5 +20,3 @@
 
     /* gap: calc(0.5*var(--app-gap)); */
 }
-
-

@@ -5,7 +5,7 @@ import MobileHeader from './MobileHeader/MobileHeader';
 import { getCSSvariableValue } from '../../../utils/helpers';
 import styles from './SiteHeader.module.css';
 
-const SiteHeader = ({ auth_state, isDesktop, signIn }) => {
+const SiteHeader = ({ auth_state, isDesktop }) => {
     return (
 
 

@@ -9,6 +9,7 @@
     /* height: var(--button-height); */
     font-size: 1rem;
     text-align: center;
+
 }
 
 
@@ -17,7 +18,9 @@
 
     background-color: var(--bg-primary-color);
     color: var(--overlay-or-button-text-color);
-    box-shadow: var(--box-shadow);
+    /* box-shadow: var(--box-shadow); */
+    transition: box-shadow var(--speed) linear;
+
 
 }
 
@@ -42,6 +45,8 @@
     background-color: transparent;
     color: var(--title-color);
     box-shadow: none;
+    transition: box-shadow var(--speed) linear;
+
 }
 
 
@@ -85,10 +90,17 @@
 
 .primary:active {
     
-    background-color: #39008a;
+    background-color: #B180F6;
+    box-shadow: inset var(--bg-primary-color) 7px 8px 13px 0px;
+
 
 }
+/* .link:active {
+    background-color: rgb(255 255 255);
+    box-shadow: inset #00000057 7px 8px 13px 0px;
 
+
+} */
 
 /*---focus (outline change)---*/
 
