@@ -5,8 +5,8 @@
     width: 100%;
     display: grid;
     align-items: center;
-    justify-content: center;
-    border-bottom: 3px solid;
+    /* justify-content: center; */
+    border-bottom: 4px solid;
     border-bottom-color: rgba(255, 255, 255, 0);
     transition: border-bottom-color var(--speed) linear , box-shadow var(--speed) linear;
 
@@ -53,7 +53,7 @@
 
     border-bottom-color: var(--bg-accent-color);
 
-    background: var(--title-color);
+    background: var(--bg-primary-color);
 
 }
 
@@ -73,23 +73,28 @@
 
 
 .navItem:first-child:active{
-
+/* 
     box-shadow: inset #000000 7px 8px 13px 0px;
-    background: rgb(0 0 0 / 62%);
+    background: rgb(0 0 0 / 62%); */
+
+
+    box-shadow: inset #42029e 7px 8px 13px 0px;
+    background: #6200eed1;
+
 }
 
 
 .navItem:last-child:active{
 
-    box-shadow: inset #000000 -7px 8px 13px 0px;
-    background: rgb(0 0 0 / 62%);
+    box-shadow: inset #42029e -7px 8px 13px 0px;
+    background: #6200eed1;
 }
 
 
 .navItem:active{
 
-    box-shadow: inset #000000 0px 8px 13px 0px;
-    background: rgb(0 0 0 / 62%);
+    box-shadow: inset #42029e 0px 8px 13px 0px;
+    /* background: #6200eed1; */
 }
 
 
@@ -106,3 +111,8 @@
 
 
 } 
+
+.selected svg{
+
+    color: var(--bg-accent-color) ;
+}

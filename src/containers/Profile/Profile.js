@@ -45,6 +45,7 @@ const Profile = ({ match: { params: { id: UserId } } }) => {
   return (
 
     <InnerPage name={name} loading={loading}>
+          {/* <ScrollToTop /> */}
 
       {loading ?
 

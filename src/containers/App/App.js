@@ -19,7 +19,7 @@ import usePolyfills from '../../utils/customhooks/usePolyfills';
 import BottomNav from '../../comp-mobile-only/BottomNav/BottomNav';
 
 
-function App({ auth_state, children }) {
+function App({ auth_state }) {
 
   const isDesktop = useMediaQuery({ query: `(min-width: ${getCSSvariableValue('--desktop')})` });
 
@@ -29,8 +29,6 @@ function App({ auth_state, children }) {
 
   return (
     <div id='App'>
-
-
 
       <Suspense fallback={<SkeletonBasic />}>
 

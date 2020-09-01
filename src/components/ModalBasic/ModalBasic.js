@@ -10,13 +10,29 @@ const ModalBasic = ({ children, isOpen, onAfterOpen, onRequestClose, contentLabe
   return (
 
     <Modal
-    
+
       isOpen={isOpen}
-      onAfterOpen={() => { document.body.style.overflow = "hidden"; onAfterOpen(); }}
-      onRequestClose={() => {  document.body.style.overflow = "";  onRequestClose();  }}
+      onAfterOpen={() => {
+        document.body.style.overflow = "hidden";
+
+        if (onAfterOpen) {
+
+          onAfterOpen();
+
+        }
+      }}
+
+      onRequestClose={() => { document.body.style.overflow = ""; 
+    
+      if (onRequestClose) {
+
+        onRequestClose();
+
+      }
+    }}
 
       contentLabel={contentLabel}
-      closeTimeoutMS = {parseFloat(getCSSvariableValue('--speed'))}
+      closeTimeoutMS={parseFloat(getCSSvariableValue('--speed'))}
       overlayClassName={styles.overlay}
       className={styles.content}
 

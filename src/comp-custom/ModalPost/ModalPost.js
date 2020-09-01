@@ -27,7 +27,7 @@ const ModalPost = ({ closeModal, CloseIcon }) => {
             }}
                 alt="hi"
 
-                src={data['fake normal sized image']} />
+                src="https://besthqwallpapers.com/Uploads/9-10-2017/23332/thumb2-hyundai-accent-2018-rear-view-sedan-red-accent.jpg" />
 
 
 

@@ -18,7 +18,7 @@ const PostCard = ({ title =data["default title"],onControlClick, onPostClick, pa
 
         <PaperBasic>
 
-            <div  className={styles.postCard} >
+            <div  className={styles.postCard}onClick={(e)=>onPostClick(e,id)}>
 
                 {/* <button className={styles.postOverlay} onClick={(e)=>onPostClick(e,id)}></button> */}
 

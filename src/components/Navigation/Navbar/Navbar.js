@@ -17,9 +17,11 @@ const Navbar = ({bottomnav}) => {
             <ul className={styles.navbarList}>
 
 
-                <NavItem icon={<HomeIcon />} to='/' title='Home'  selected/>
-                <NavItem icon={<MessageIcon />} to='/requests' title='Requests' />
-                <NavItem icon={<SettingsIcon />} to='#' title='Settings'>
+                <NavItem icon={<HomeIcon />} to='/' title='Home' activeOnlyWhenExact />
+                <NavItem icon={<MessageIcon />} to='/requests' activeOnlyWhenExact title='Requests' />
+                <NavItem icon={<SettingsIcon />} to='/settings' activeOnlyWhenExact title='Settings'/>
+
+                {/* <NavItem icon={<SettingsIcon />} to='#' activeOnlyWhenExact title='Settings'>
 
                     <DropDownMenu>
 
@@ -28,7 +30,7 @@ const Navbar = ({bottomnav}) => {
                         <DropDownItem>Item</DropDownItem>
 
                     </DropDownMenu>
-                </NavItem>
+                </NavItem> */}
 
 
 

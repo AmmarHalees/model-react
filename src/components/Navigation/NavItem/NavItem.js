@@ -1,8 +1,18 @@
 import React, { useState } from 'react';
 import styles from './NavItem.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 
-const NavItem = ({ icon, to, title, children, selected =false }) => {
+const NavItem = ({ icon, to, title, children, activeOnlyWhenExact}) => {
+
+
+    let match = useRouteMatch({
+        path: to,
+        exact: activeOnlyWhenExact
+      });
+
+      console.log(match)
+
+
 
     const [open, setOpen] = useState(false);
 
@@ -15,7 +25,7 @@ const NavItem = ({ icon, to, title, children, selected =false }) => {
 
 
     return (
-        <li className={`${styles.navItem} ${selected? styles.selected : ''}`} onClick={handleMouseEvents} >
+        <li className={`${styles.navItem} ${match? styles.selected : ''}`} onClick={handleMouseEvents} >
 
             <Link to={to}  title={title} >
 
