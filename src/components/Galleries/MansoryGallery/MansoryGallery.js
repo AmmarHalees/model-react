@@ -28,7 +28,7 @@ const MansoryGallery = ({ data, loadMore , loading , error }) => {
                 loadItems={loadMore}
 
                 scrollContainer={() => window}
-                // virtualize
+                virtualize
 
 
             />

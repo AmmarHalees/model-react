@@ -2,7 +2,6 @@
     height: 100%;
     width: 250px;
     justify-self: end;
-    box-shadow: #00000014 0px 12px 13px 2px;
     border-radius: 1rem;
     max-width: 100%;
 }
@@ -32,6 +31,8 @@
     margin: 0 auto;
     display: block;
     backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: #00000014 0px 12px 13px 2px;
+
 }
 
 @media all and (min-width: 992px) {

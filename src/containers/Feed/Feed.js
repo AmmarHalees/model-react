@@ -1,7 +1,7 @@
 import React, { useState, memo } from 'react';
 
 import PostCard from '../../comp-custom/PostCard/PostCard';
-import ResponsiveList from '../../components/Lists/ResponsiveList/ResponsiveList';
+
 import SectionHeader from '../../components/Headers/SectionHeader/SectionHeader';
 import ButtonPlain from '../../components/ButtonPlain/ButtonPlain';
 import HorizontalSlider from '../../comp-custom/HorizontalSlider/HorizontalSlider';
