@@ -15,6 +15,8 @@ import AppConfig from '../../utils/constants/app.cofig.json';
 import { useMediaQuery } from 'react-responsive';
 import './Variables.css';
 import './App.css';
+import 'gestalt/dist/gestalt.css';
+
 import usePolyfills from '../../utils/customhooks/usePolyfills';
 import BottomNav from '../../comp-mobile-only/BottomNav/BottomNav';
 

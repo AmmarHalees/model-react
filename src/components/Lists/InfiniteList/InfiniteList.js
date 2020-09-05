@@ -39,7 +39,6 @@ const InfiniteList = () => {
     }
 
 
-    console.log(books)
 
 
     return (<div>

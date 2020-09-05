@@ -10,8 +10,6 @@ const NavItem = ({ icon, to, title, children, activeOnlyWhenExact}) => {
         exact: activeOnlyWhenExact
       });
 
-      console.log(match)
-
 
 
     const [open, setOpen] = useState(false);
