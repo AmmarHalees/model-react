@@ -15,15 +15,12 @@ import { lazy } from 'react';
  const TestGalleries = lazy(() => import('../containers/TestGalleries/TestGalleries'));
 
 
- const Test = lazy(() => import('../containers/Test/Test'));
-
 export {
 
     Feed,
     Signin,
     Register,
     Settings,
-    Test,
     Profile,
     Requests,
     RDP,

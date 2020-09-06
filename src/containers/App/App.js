@@ -61,9 +61,7 @@ function App({ auth_state }) {
 
                     <Route path='/image/:id' component={Profile} />
 
-                    <Route path='/test' component={Test} />
                     <Route path='/list' component={List} />
-                    <Route path='/test-gallery' component={TestGalleries} />
 
                     <Route path={AppConfig['redirectsToSignin']} render={() => {
 

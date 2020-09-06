@@ -18,6 +18,10 @@ html {
     font-family: var(--font-family, sans-serif, Arial, Helvetica);
     height: 100vh;
 }
+*{
+
+    box-sizing: border-box;
+}
 
 body,
 ul,
@@ -188,22 +192,6 @@ button:hover {
 @media all and (min-width: 1200px) {}
 
 /*----------Libraries-----------*/
-
-/*--React Overlay--*/
-
-.ReactModal__Overlay {
-    opacity: 0;
-    transition: opacity var(--speed) ease-in-out;
-
-}
-
-.ReactModal__Overlay--after-open {
-    opacity: 1;
-}
-
-.ReactModal__Overlay--before-close {
-    opacity: 0;
-}
 
 /*--React Toastify--*/
 
