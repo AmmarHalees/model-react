@@ -1,0 +1,37 @@
+.overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: var(--bg-overlay-color);
+
+    -moz-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+
+    z-index: var(--modal);
+
+    overflow-y: scroll;
+    /* overflow-y: scroll; */
+}
+
+.content {
+    outline: none;
+    background: var(--page-color);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+
+
+}
+.content img{
+
+
+    width: 400px;
+    height: 100%;
+
+    object-fit: contain;
+    text-align: center;}

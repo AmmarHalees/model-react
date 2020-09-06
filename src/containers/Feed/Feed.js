@@ -6,6 +6,7 @@ import useFeedData from '../../utils/customhooks/useFeedData';
 import MasonryGallery from '../../components/Galleries/MansoryGallery/MansoryGallery'
 import CategoriesList from '../../comp-custom/CategoriesList/CategoriesList';
 import SearchResOrSelectedHero from '../../comp-custom/SearchResOrSelectedHero/SearchResOrSelectedHero';
+
 /*---------CONSIDER CHANGING FEED TO DISCOVER ----------*/
 const Feed = () => {
 
@@ -17,8 +18,10 @@ const Feed = () => {
 
     const [feedArray, feedDataLoading, errorGalleryData] = useFeedData(pageNumber, 10);
 
+
     return (
 
+        <>
             <div className='_layout'>
 
                 <CategoriesList categoriesArray={fake_data.fake_categories_data} />
@@ -37,6 +40,10 @@ const Feed = () => {
                 </main>
 
             </div>
+
+
+
+        </>
 
     );
 }

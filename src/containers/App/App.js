@@ -1,11 +1,11 @@
-import React, { Suspense, memo } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import React, { Suspense, memo, useState } from 'react';
+import { Route, Switch, Redirect, useLocation, useHistory } from 'react-router-dom';
 import SiteHeader from '../../components/Headers/SiteHeader/SiteHeader';
 import SiteFooter from '../../components/Footers/SiteFooter/SiteFooter';
 import GuestOnlyRoute from '../../comp-router/GuestOnlyRoute';
 import AuthOnlyRoute from '../../comp-router/AuthOnlyRoute';
 import SkeletonBasic from '../../components/Loading/Skeleton/SkeletonBasic';
-import { Feed, Settings, Profile, Requests, RDP, Out , PDP } from '../../utils/routes';
+import { Feed, Settings, Profile, Requests, RDP, Out, PDP } from '../../utils/routes';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import TestPractices from '../../comp-custom/TestPractices/TestPractices';
@@ -13,12 +13,13 @@ import { isDevelopment, getCSSvariableValue } from '../../utils/helpers';
 import ErrorBase from '../../components/Result/ErrorBase/ErrorBase';
 import AppConfig from '../../utils/constants/app.cofig.json';
 import { useMediaQuery } from 'react-responsive';
+import usePolyfills from '../../utils/customhooks/usePolyfills';
+import BottomNav from '../../comp-mobile-only/BottomNav/BottomNav';
+
 import './Variables.css';
 import './App.css';
 import 'gestalt/dist/gestalt.css';
-
-import usePolyfills from '../../utils/customhooks/usePolyfills';
-import BottomNav from '../../comp-mobile-only/BottomNav/BottomNav';
+import ModalBasic from '../Feed/ModalBasic/ModalBasic';
 
 
 function App({ auth_state }) {
@@ -28,6 +29,15 @@ function App({ auth_state }) {
   usePolyfills();
 
 
+  let location = useLocation();
+  let history = useHistory();
+
+  let background = location.state && location.state.background;
+
+  const [open, setOpen] = useState(background ? true : false);
+
+
+console.log(background)
 
   return (
     <div id='App'>
@@ -50,7 +60,7 @@ function App({ auth_state }) {
 
                 <div id='_main'>
 
-                  <Switch>
+                <Switch location={background || location}>
 
 
                     <AuthOnlyRoute path='/settings' component={Settings} />
@@ -68,7 +78,6 @@ function App({ auth_state }) {
                         to={{
                           pathname: "/out",
                           search: "?referrer=your+face",
-                          // state: { referrer: '/' }
                         }}
                       />)
 
@@ -83,7 +92,36 @@ function App({ auth_state }) {
 
                   </Switch>
 
-                  <BottomNav/>
+
+
+                  {background && <Route path="/photo/:id" children={
+
+
+
+                    <ModalBasic isOpen={true}
+
+                      onRequestClose={() => {
+
+                        setOpen(false);
+                        history.replace('/')
+
+                      }}
+
+                    >
+
+                      <PDP />
+
+
+                    </ModalBasic>
+
+                  }
+
+                  />
+
+
+                  }
+
+                  <BottomNav />
 
                 </div>
 

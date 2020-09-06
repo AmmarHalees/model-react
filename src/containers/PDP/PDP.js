@@ -1,13 +1,27 @@
 import React from 'react';
 
+import { useRouteMatch } from 'react-router-dom';
+import usePhotobyID from '../../utils/customhooks/usePhotobyID';
 
-const PDP = ({match : {params :{id}}}) => {
 
-    return (<div>
+const PDP = () => {
 
-        {id}
+    const { params } = useRouteMatch();
 
-    </div>  );
+    const [imageObject, loading] = usePhotobyID(params.id);
+    const { urls: { regular } = {}, alt_description, id } = imageObject;
+
+
+    return (
+        <>
+
+            <h1>{alt_description}</h1>
+
+            <img src={regular} alt={alt_description} />
+
+
+        </>
+    );
 }
- 
+
 export default PDP;

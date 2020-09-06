@@ -1,8 +1,13 @@
 import React from 'react';
 import { Masonry, Image } from 'gestalt';
 import Spinner from '../../Loading/Spinner/Spinner';
+import { Link, useLocation } from 'react-router-dom';
 
 const MansoryGallery = ({ data, loadMore , loading , error }) => {
+
+
+    let location = useLocation();
+
     return (
 
 
@@ -10,8 +15,14 @@ const MansoryGallery = ({ data, loadMore , loading , error }) => {
             <Masonry
                 flexible
                 comp={({ data }) => (
-                    <div >
-                        <Image
+                    <Link
+                    push
+                      key={data.id}
+                      to={{
+                          pathname: `/photo/${data.id}`,
+                          state: { background: location }
+                      }}
+                    >                        <Image
                             alt={data.alt_description}
                             color={data.color}
                             naturalHeight={data.height}
@@ -22,7 +33,7 @@ const MansoryGallery = ({ data, loadMore , loading , error }) => {
                             loading='lazy'
                         />
                         <p>{data.name}</p>
-                    </div>
+                    </Link>
                 )}
                 gutterWidth={5}
                 columnWidth = {300}
