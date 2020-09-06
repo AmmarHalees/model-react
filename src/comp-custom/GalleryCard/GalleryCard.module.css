@@ -1,0 +1,136 @@
+.postCard{
+
+
+    position: relative;
+
+    box-sizing: border-box;
+}
+
+
+.postCard div  img, .postCard div{
+
+
+border-radius: 1rem;
+
+}
+
+
+
+.postControls{
+
+    position: absolute;
+
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    z-index: 2;
+
+    padding: 1rem;
+
+    background: #00000099;
+    backdrop-filter: saturate(180%) blur(5px);
+
+    color: white;
+    display: grid;
+    gap: var(--app-gap);
+
+        opacity: 0;
+    transition: opacity var(--speed) cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    background: linear-gradient(0deg, rgba(168,0,245,0.5357493339132529) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+
+
+}
+
+.postCard div.postControls{
+
+    border-radius: 0px 0px 1rem 1rem;
+
+}
+
+.postCard div.postControls img{
+
+    border-radius: 50%;
+
+    /* border: 2px solid white; */
+    /* box-shadow: var(--box-shadow); */
+
+    background: linear-gradient(to right, var(--bg-primary-color), var(--bg-accent-color));
+    /* padding: 6px; */
+    padding: 4px;
+}
+
+
+
+.postCard svg{
+
+    color: white;
+}
+
+
+
+.postOverlay{
+
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    background: transparent;
+    height: 100%;
+    width: 100%;
+
+
+    z-index: 1;
+}
+
+.title{
+
+    text-overflow: ellipsis;
+    overflow: hidden; 
+
+    white-space: nowrap;
+
+    color: white;
+}
+
+
+.postControlButtons{
+
+    justify-self: end;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap : var(--app-gap)
+
+}
+
+
+/*---------Interactions-------*/
+
+.postCard:hover{
+
+    cursor: pointer;
+
+}
+
+
+.postCard:hover >.postControls{
+
+    opacity: 1;
+
+    /* cursor: default; */
+
+}
+
+/*
+
+when an element within postCard (the parent) is focused: 
+Make opacity = 1 for .postControls
+
+*/
+
+.postCard:focus-within  >.postControls{ 
+
+    opacity: 1;
+
+}

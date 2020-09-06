@@ -18,10 +18,10 @@ html {
     font-family: var(--font-family, sans-serif, Arial, Helvetica);
     height: 100vh;
 }
-*{
+/* *{
 
     box-sizing: border-box;
-}
+} */
 
 body,
 ul,
