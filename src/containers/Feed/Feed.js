@@ -9,6 +9,7 @@ import ModalBasic from '../../components/ModalBasic/ModalBasic';
 import ModalPost from '../../comp-custom/ModalPost/ModalPost';
 import MasonryGallery from '../../components/Galleries/MansoryGallery/MansoryGallery'
 import CategoriesList from '../../comp-custom/CategoriesList/CategoriesList';
+import SearchResOrSelectedHero from '../../comp-custom/SearchResOrSelectedHero/SearchResOrSelectedHero';
 
 
 /*---------CONSIDER CHANGING FEED TO DISCOVER ----------*/
@@ -56,23 +57,14 @@ const Feed = () => {
 
                 <CategoriesList categoriesArray={fake_data.fake_categories_data} />
 
-
-                <div className="_container _layout " style={{ textAlign: 'center' }}>
-
-
-                    <h1>Portrait</h1>
-
-
-                </div>
-
-
+                <SearchResOrSelectedHero title='Portrait' />
 
 
 
                 <main className="_container _fullwidth_on_mobile">
 
-                    <div className = '_container _fullwidth_on_desktop'>
-                                            <SectionHeader link='google' title='Popular' button={<ButtonPlain type='link'> View all  </ButtonPlain>} />
+                    <div className='_container _fullwidth_on_desktop'>
+                        <SectionHeader link='google' title='Popular' button={<ButtonPlain type='link'> View all  </ButtonPlain>} />
 
                     </div>
 

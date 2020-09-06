@@ -12,12 +12,14 @@ const MansoryGallery = ({ data, loadMore , loading , error }) => {
                 comp={({ data }) => (
                     <div >
                         <Image
-                            alt="Test"
+                            alt={data.alt_description}
                             color={data.color}
                             naturalHeight={data.height}
                             naturalWidth={data.width}
-                            src={data.src}
-                            style={{borderRadius: '30px'}}
+                            src={data.urls.small}
+
+                            // srcSet = {`${data.urls.small} 400w,${data.urls.regular} 800w, ${data.urls.full} 1000w`}
+                            loading='lazy'
                         />
                         <p>{data.name}</p>
                     </div>
