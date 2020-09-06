@@ -10,16 +10,17 @@ const MansoryGallery = ({ data, loadMore , loading , error }) => {
             <Masonry
                 flexible
                 comp={({ data }) => (
-                    <Box>
+                    <div>
                         <Image
                             alt="Test"
                             color={data.color}
                             naturalHeight={data.height}
                             naturalWidth={data.width}
                             src={data.src}
+                            style={{borderRadius: '30px'}}
                         />
                         <p>{data.name}</p>
-                    </Box>
+                    </div>
                 )}
                 gutterWidth={10}
                 columnWidth = {300}

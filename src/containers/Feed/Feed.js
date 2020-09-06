@@ -1,17 +1,17 @@
 import React, { useState, memo } from 'react';
 
-import PostCard from '../../comp-custom/PostCard/PostCard';
-
 import SectionHeader from '../../components/Headers/SectionHeader/SectionHeader';
 import ButtonPlain from '../../components/ButtonPlain/ButtonPlain';
-import HorizontalSlider from '../../comp-custom/HorizontalSlider/HorizontalSlider';
 import fake_data from '../../utils/constants/fakedata.json';
 import useFeedData from '../../utils/customhooks/useFeedData';
 import HeroBasic from '../../components/HeroBasic/HeroBasic';
 import ModalBasic from '../../components/ModalBasic/ModalBasic';
 import ModalPost from '../../comp-custom/ModalPost/ModalPost';
 import MasonryGallery from '../../components/Galleries/MansoryGallery/MansoryGallery'
+import CategoriesList from '../../comp-custom/CategoriesList/CategoriesList';
 
+
+/*---------CONSIDER CHANGING FEED TO DISCOVER ----------*/
 
 const Feed = () => {
 
@@ -21,7 +21,7 @@ const Feed = () => {
         setPageNumber(prevPageNumber => prevPageNumber + 1);
     }
 
-    const [feedArray, feedDataLoading, errorGalleryData] = useFeedData(pageNumber, 15);
+    const [feedArray, feedDataLoading, errorGalleryData] = useFeedData(pageNumber, 10);
 
     const [open, setOpen] = useState(false);
 
@@ -46,18 +46,27 @@ const Feed = () => {
 
     }
 
-    console.log(window.innerHeight)
 
     return (
 
         <>
             <div className='_layout'>
 
-                <HorizontalSlider data={fake_data['fake_categories_data']} />
+                {/* <HorizontalSlider data={fake_data['fake_categories_data']} /> */}
 
-                <div className="_container _layout ">
+                <CategoriesList categoriesArray={fake_data.fake_categories_data} />
 
-                    <HeroBasic bordered title='Live your life' description='loremdddddddddddddddddddddddd' />
+
+                <div className="_container _layout " style={{ textAlign: 'center' }}>
+
+
+                    <h1>Portrait</h1>
+
+
+                </div>
+
+                <div className="_container  ">
+
                     <SectionHeader link='google' title='Popular' button={<ButtonPlain type='link'> View all  </ButtonPlain>} />
 
 
@@ -65,22 +74,6 @@ const Feed = () => {
 
 
                 <main className="_container">
-
-
-                    {/* 
-                    <ResponsiveList>
-
-                        {
-                            feedArray.map(({ description, src, id }) => {
-
-                                return (<PostCard onPostClick={onPostClick} onControlClick={onControlClick} title={description} url={src} key={id} id={id} />)
-
-                            })
-                        }
-
-                    </ResponsiveList>
- */}
-
 
                     <MasonryGallery data={feedArray} loadMore={handlePageNumber} error={errorGalleryData} loading={feedDataLoading} />
 

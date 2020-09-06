@@ -53,7 +53,7 @@
 
     /*-- Box shadows--*/
 
-    --box-shadow: var(--overlay-or-button-text-color) -1px 1px 13px 0px;
+    --box-shadow: rgb(235, 235, 235) -1px 1px 13px 0px;;
 
     /*-- Filter --*/
 

@@ -136,6 +136,34 @@
             "id": "5",
             "background": "https://i.imgur.com/3dnj2jT.jpg",
             "title": "Street"
+        }
+    ],
+
+    "fake_categories_data2": [
+        {
+            "id": "1",
+            "background": "https://i.imgur.com/3dnj2jT.jpg",
+            "title": "Nature"
+        },
+        {
+            "id": "2",
+            "background": "https://i.imgur.com/3dnj2jT.jpg",
+            "title": "Portrait"
+        },
+        {
+            "id": "3",
+            "background": "https://i.imgur.com/3dnj2jT.jpg",
+            "title": "Fashion"
+        },
+        {
+            "id": "4",
+            "background": "https://i.imgur.com/3dnj2jT.jpg",
+            "title": "Marketing"
+        },
+        {
+            "id": "5",
+            "background": "https://i.imgur.com/3dnj2jT.jpg",
+            "title": "Street"
         },
         {
             "id": "6",
