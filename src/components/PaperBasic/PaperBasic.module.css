@@ -1,9 +1,6 @@
 .paper {
     box-shadow: none;
     border-radius: var(--border-radius);
-
-    /* width: fit-content; */ /*---((NOTE)) Change in paper api may cause damage---*/
-
     overflow: hidden;
 
     height: fit-content;

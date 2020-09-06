@@ -1,10 +1,7 @@
 import React from 'react';
 import styles from './InfoCard.module.css'
 import PaperBasic from '../../components/PaperBasic/PaperBasic';
-import ImageBasic from '../../components/ImageBasic/ImageBasic';
 import data from '../../utils/constants/strings.json';
-
-
 
 const InfoCard = ({ title = data['default title'], paragraph = data["default paragraph"], src = data['fake normal sized image'] }) => {
     return (
@@ -15,7 +12,7 @@ const InfoCard = ({ title = data['default title'], paragraph = data["default par
 
                 <div className={styles.cardImage}>
 
-                    <ImageBasic src={src} />
+                    <img src={src} alt={paragraph}/>
 
                 </div>
 

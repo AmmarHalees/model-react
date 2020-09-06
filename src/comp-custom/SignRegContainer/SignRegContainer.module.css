@@ -1,7 +1,5 @@
 .signRegContainer {
 
-
-
         display: grid;
 
         text-align: center;
@@ -10,14 +8,10 @@
 
         align-items: center;
 
-        /* grid-template-columns: 1fr; */
 
-
-                grid-template-areas:
+        grid-template-areas:
                 "b b b b b"
                 "a a a a a";
-
-
 
         height: 100vh;
 
@@ -37,12 +31,12 @@
 
 
                 grid-template-areas:
-                "a a b b b"
-                "a a b b b";
+                        "a a b b b"
+                        "a a b b b";
 
                 width: 100%;
 
-        
+
         }
-    
-    }
+
+}

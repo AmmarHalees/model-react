@@ -5,7 +5,7 @@ import SiteFooter from '../../components/Footers/SiteFooter/SiteFooter';
 import GuestOnlyRoute from '../../comp-router/GuestOnlyRoute';
 import AuthOnlyRoute from '../../comp-router/AuthOnlyRoute';
 import SkeletonBasic from '../../components/Loading/Skeleton/SkeletonBasic';
-import { Feed, Settings, Test, Profile, Requests, RDP, Out, TestGalleries, List } from '../../utils/routes';
+import { Feed, Settings, Profile, Requests, RDP, Out, List } from '../../utils/routes';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import TestPractices from '../../comp-custom/TestPractices/TestPractices';
@@ -43,7 +43,7 @@ function App({ auth_state }) {
 
             return (
 
-              <React.Fragment>
+              <>
 
                 <SiteHeader isDesktop={isDesktop} auth_state={auth_state} />
 
@@ -90,7 +90,7 @@ function App({ auth_state }) {
 
                 <SiteFooter />
 
-              </React.Fragment>
+              </>
 
 
 

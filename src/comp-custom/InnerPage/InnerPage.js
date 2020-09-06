@@ -1,9 +1,8 @@
-import React, { Fragment, memo } from 'react';
+import React, {memo} from 'react';
 import SectionHeader from '../../components/Headers/SectionHeader/SectionHeader';
 import ButtonIcon from '../../components/ButtonIcon/ButtonIcon';
 import InnerContent from '../InnerContent/InnerContent';
 import { ReactComponent as LeftArrowIcon } from '../../assets/icons/arrow-left.svg';
-import styles from './InnerPage.module.css';
 import { DesktopAndUp } from '../../comp-media-query/DesktopAndUp';
 
 const InnerPage = ({ name, loading, children }) => {

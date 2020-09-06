@@ -1,6 +1,5 @@
-import React, { memo, Fragment } from 'react';
+import React, { memo } from 'react';
 import useUserData from './FeedCustomHooks/useUserData';
-import Spinner from '../../components/Loading/Spinner/Spinner';
 import InnerPage from '../../comp-custom/InnerPage/InnerPage';
 import ImageBasic from '../../components/ImageBasic/ImageBasic';
 import Overlay from '../../components/Overlay/Overlay';
@@ -12,9 +11,8 @@ const Profile = ({ match: { params: { id: UserId } } }) => {
 
   const [{ address = {}, name}, loading, error] = useUserData(UserId); //Extracting level one. Fall back to {} passed to useState in useUserdata
 
-  const { city = '', street = '', suite = ''} = address;  //Extracting level 2. Fallback to {} 
+  // const { city = '', street = '', suite = ''} = address;  //Extracting level 2. Fallback to {} 
 
-  // const city = address?.address.city; You can use the recently added optional chaining.
 
 
   const content = error ? ' User Not found' :

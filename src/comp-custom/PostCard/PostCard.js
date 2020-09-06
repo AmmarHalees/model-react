@@ -20,7 +20,6 @@ const PostCard = ({ title =data["default title"],onControlClick, onPostClick, pa
 
             <div  className={styles.postCard}onClick={(e)=>onPostClick(e,id)}>
 
-                {/* <button className={styles.postOverlay} onClick={(e)=>onPostClick(e,id)}></button> */}
 
                 <ImageBasic src={url} alt="car" />
 

@@ -1,16 +1,7 @@
-import { useState, useEffect } from 'react';
 
 export default function usePolyfills() {
-
     //Well this is just a function LOL
 
-    // const [data, setData] = useState([]);
-
-    // useEffect(() => {
-    // console.log('use polyfills')
-
-        
-    // if (!Object.is) {
         Object.is = function(x, y) {
           // SameValue algorithm
           if (x === y) { // Steps 1-5, 7-10
@@ -21,12 +12,6 @@ export default function usePolyfills() {
             return x !== x && y !== y;
           }
         };
-     
-    
 
-
-    // } }, []); 
-
-    // return null;
 
 }

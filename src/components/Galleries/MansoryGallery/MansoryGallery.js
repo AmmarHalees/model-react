@@ -1,5 +1,5 @@
 import React from 'react';
-import { Masonry, Box, Image } from 'gestalt';
+import { Masonry, Image } from 'gestalt';
 import Spinner from '../../Loading/Spinner/Spinner';
 
 const MansoryGallery = ({ data, loadMore , loading , error }) => {
