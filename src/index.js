@@ -23,7 +23,7 @@ ReactDOM.render(
 
         <HashRouter>
 
-          <ScrollToTop />
+          {/* <ScrollToTop /> */}
 
           <App />
 
