@@ -65,15 +65,17 @@ const Feed = () => {
 
                 </div>
 
-                <div className="_container  ">
-
-                    <SectionHeader link='google' title='Popular' button={<ButtonPlain type='link'> View all  </ButtonPlain>} />
 
 
-                </div>
 
 
-                <main className="_container">
+                <main className="_container _fullwidth_on_mobile">
+
+                    <div className = '_container _fullwidth_on_desktop'>
+                                            <SectionHeader link='google' title='Popular' button={<ButtonPlain type='link'> View all  </ButtonPlain>} />
+
+                    </div>
+
 
                     <MasonryGallery data={feedArray} loadMore={handlePageNumber} error={errorGalleryData} loading={feedDataLoading} />
 

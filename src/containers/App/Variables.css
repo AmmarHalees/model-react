@@ -51,6 +51,10 @@
     --font-size: 1rem;
     --font-size-x2: 2em;
 
+
+    --heading-1 : 4rem;
+    
+
     /*-- Box shadows--*/
 
     --box-shadow: rgb(235, 235, 235) -1px 1px 13px 0px;;

@@ -4,7 +4,15 @@
     grid-template-columns: auto 1fr;
     gap: var(--app-gap);
     align-items: center;
-    
+    margin-bottom: calc(0.5 * var(--margin));
+}
+
+
+.buttonContainer{
+
+
+    justify-self: right;
+
 }
 /* 
 
@@ -17,3 +25,15 @@ text-decoration:line-through;
 
 
 } */
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media all and (min-width: 992px) {
+
+    .buttonContainer{
+
+        justify-self: left;
+    }
+    
+    
+}

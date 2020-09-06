@@ -9,8 +9,10 @@ const SectionHeader = ({ title, button, link, iconPosition = 'right' }) => {
 
                 <h2 className={styles.title}>  {title}   </h2>
 
+                <div className={styles.buttonContainer}>
+                                        {button}
 
-                {button}
+                </div>
 
 
             </header>
