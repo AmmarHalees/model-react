@@ -105,6 +105,14 @@ border-radius: 1rem;
 }
 
 
+
+.postControls div a{
+
+
+    width: fit-content;
+}
+
+
 /*---------Interactions-------*/
 
 .postCard:hover{

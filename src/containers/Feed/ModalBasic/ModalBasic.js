@@ -12,7 +12,7 @@ const ModalBasic = ({ children, isOpen, onAfterOpen, onRequestClose, contentLabe
 
       isOpen={isOpen}
       onAfterOpen={() => {
-        document.body.style.overflow = "hidden";
+        // document.body.style.overflow = "hidden";
 
         if (onAfterOpen) {
 
@@ -21,7 +21,9 @@ const ModalBasic = ({ children, isOpen, onAfterOpen, onRequestClose, contentLabe
         }
       }}
 
-      onRequestClose={() => { document.body.style.overflow = ""; 
+      onRequestClose={() => {
+        
+        // document.body.style.overflow = ""; 
     
       if (onRequestClose) {
 
