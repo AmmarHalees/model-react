@@ -12,7 +12,7 @@ const ModalBasic = ({ children, isOpen, onAfterOpen, onRequestClose, contentLabe
 
       isOpen={isOpen}
       onAfterOpen={() => {
-        // document.body.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
 
         if (onAfterOpen) {
 
@@ -23,7 +23,7 @@ const ModalBasic = ({ children, isOpen, onAfterOpen, onRequestClose, contentLabe
 
       onRequestClose={() => {
         
-        // document.body.style.overflow = ""; 
+        document.body.style.overflow = ""; 
     
       if (onRequestClose) {
 
@@ -38,8 +38,12 @@ const ModalBasic = ({ children, isOpen, onAfterOpen, onRequestClose, contentLabe
       className={styles.content}
 
     >
+      <h1>hiii</h1>
+      <div className={styles.imageContainer}>
 
-      {children}
+              {children}
+
+      </div>
 
     </Modal>
 

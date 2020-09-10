@@ -37,8 +37,6 @@ function App({ auth_state }) {
   const [open, setOpen] = useState(background ? true : false);
 
 
-console.log(background)
-
   return (
     <div id='App'>
 
