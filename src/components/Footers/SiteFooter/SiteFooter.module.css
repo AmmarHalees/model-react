@@ -1,6 +1,6 @@
 .footer{
 
-  background-color: var(--bg-primary-color);
+  background-color: var(--title-color);
   color: var(--overlay-or-button-text-color);
 
   min-width: 100%;
