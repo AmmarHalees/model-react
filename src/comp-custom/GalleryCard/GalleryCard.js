@@ -39,7 +39,7 @@ const GalleryCard = ({ data, location, onControlClick }) => {
 
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', alignItems: 'center' }}>
 
-                        <Link to={`/@${data.user.id}`}>
+                        <Link to={`/@${data.user.username}`}>
                             <ImageBasic rounded type='post' src={data.user.profile_image.medium} />
 
                         </Link>

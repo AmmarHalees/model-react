@@ -65,7 +65,7 @@ function App({ auth_state }) {
                     <AuthOnlyRoute path='/Requests' component={Requests} />
                     <AuthOnlyRoute path='/Request/:id' component={RDP} />
 
-                    <Route path='/@:id' component={Profile} />
+                    <Route path='/@:username' component={Profile} />
 
                     <Route path='/photo/:id' component={PDP} />
 
@@ -101,7 +101,7 @@ function App({ auth_state }) {
                       onRequestClose={() => {
 
                         setOpen(false);
-                        history.replace('/')
+                        history.goBack();
 
                       }}
 
